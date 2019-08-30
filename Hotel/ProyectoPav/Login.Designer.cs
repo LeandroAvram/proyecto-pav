@@ -77,6 +77,7 @@
             this.txtUser.Size = new System.Drawing.Size(221, 20);
             this.txtUser.TabIndex = 2;
             this.txtUser.Text = "USUARIO";
+            this.txtUser.TextChanged += new System.EventHandler(this.TxtUser_TextChanged);
             this.txtUser.Enter += new System.EventHandler(this.TxtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.TxtUser_Leave);
             // 
@@ -158,6 +159,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -178,6 +180,7 @@
             this.Text = "Form1";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();

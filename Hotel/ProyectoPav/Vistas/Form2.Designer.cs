@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.jImageButton1 = new JImageButton.JImageButton();
-            this.jImageButton2 = new JImageButton.JImageButton();
-            this.jFlatButton1 = new FlatButton.JFlatButton();
-            this.jThinButton1 = new JThinButton.JThinButton();
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
@@ -44,86 +40,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // jImageButton1
-            // 
-            this.jImageButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.jImageButton1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.jImageButton1.CausesValidation = false;
-            this.jImageButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.jImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("jImageButton1.ErrorImage")));
-            this.jImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("jImageButton1.Image")));
-            this.jImageButton1.ImageHover = null;
-            this.jImageButton1.InitialImage = null;
-            this.jImageButton1.Location = new System.Drawing.Point(94, 114);
-            this.jImageButton1.Name = "jImageButton1";
-            this.jImageButton1.Size = new System.Drawing.Size(230, 47);
-            this.jImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jImageButton1.TabIndex = 0;
-            this.jImageButton1.Zoom = 4;
-            // 
-            // jImageButton2
-            // 
-            this.jImageButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.jImageButton2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.jImageButton2.CausesValidation = false;
-            this.jImageButton2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.jImageButton2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("jImageButton2.ErrorImage")));
-            this.jImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("jImageButton2.Image")));
-            this.jImageButton2.ImageHover = null;
-            this.jImageButton2.InitialImage = null;
-            this.jImageButton2.Location = new System.Drawing.Point(338, 162);
-            this.jImageButton2.Name = "jImageButton2";
-            this.jImageButton2.Size = new System.Drawing.Size(157, 47);
-            this.jImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jImageButton2.TabIndex = 1;
-            this.jImageButton2.Zoom = 4;
-            // 
-            // jFlatButton1
-            // 
-            this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
-            this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
-            this.jFlatButton1.ButtonText = "JFlatButton";
-            this.jFlatButton1.CausesValidation = false;
-            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
-            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
-            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ImageLeft")));
-            this.jFlatButton1.ImageRight = null;
-            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Location = new System.Drawing.Point(402, 48);
-            this.jFlatButton1.Name = "jFlatButton1";
-            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Size = new System.Drawing.Size(254, 43);
-            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton1.TabIndex = 2;
-            // 
-            // jThinButton1
-            // 
-            this.jThinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.jThinButton1.BackgroundColor = System.Drawing.Color.White;
-            this.jThinButton1.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.jThinButton1.BorderRadius = 5;
-            this.jThinButton1.ButtonText = "Submit";
-            this.jThinButton1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jThinButton1.Font_Size = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jThinButton1.ForeColors = System.Drawing.SystemColors.Highlight;
-            this.jThinButton1.HoverBackground = System.Drawing.Color.White;
-            this.jThinButton1.HoverBorder = System.Drawing.Color.Empty;
-            this.jThinButton1.HoverFontColor = System.Drawing.SystemColors.Highlight;
-            this.jThinButton1.LineThickness = 2;
-            this.jThinButton1.Location = new System.Drawing.Point(524, 114);
-            this.jThinButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jThinButton1.Name = "jThinButton1";
-            this.jThinButton1.Size = new System.Drawing.Size(168, 63);
-            this.jThinButton1.TabIndex = 3;
             // 
             // materialContextMenuStrip1
             // 
@@ -212,10 +128,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.metroDateTime1);
-            this.Controls.Add(this.jThinButton1);
-            this.Controls.Add(this.jFlatButton1);
-            this.Controls.Add(this.jImageButton2);
-            this.Controls.Add(this.jImageButton1);
             this.DoubleBuffered = false;
             this.Enabled = false;
             this.MaximizeBox = false;
@@ -232,10 +144,6 @@
 
         #endregion
 
-        private JImageButton.JImageButton jImageButton1;
-        private JImageButton.JImageButton jImageButton2;
-        private FlatButton.JFlatButton jFlatButton1;
-        private JThinButton.JThinButton jThinButton1;
         private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroGrid metroGrid1;

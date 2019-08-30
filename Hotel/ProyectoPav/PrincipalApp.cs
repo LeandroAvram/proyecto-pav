@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProyectoPav.Vistas.Modales;
 
 namespace ProyectoPav
 {
@@ -82,7 +83,7 @@ namespace ProyectoPav
             {
                 
                 formulario = new Forms();
-                //formulario.TopLevel = false;
+                formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
                 pan_form.Controls.Add(formulario);
@@ -200,6 +201,14 @@ namespace ProyectoPav
         private void Btn_minimizar_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnModales_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var modalModal = new ModalCentral();
+            modalModal.Show();
+
         }
 
         private void Btn_maximizar_Click(object sender, EventArgs e)
