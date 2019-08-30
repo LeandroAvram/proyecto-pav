@@ -38,10 +38,6 @@
             this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.jMetroTextBox1 = new JMetroTextBox.JMetroTextBox();
-            this.jMaterialTextbox1 = new JMaterialTextbox.JMaterialTextbox();
-            this.jTextBox1 = new JTextBox.JTextBox();
-            this.jTextBox2 = new JTextBox2.JTextBox();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -49,7 +45,6 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
             this.materialFlatButton1.Location = new System.Drawing.Point(267, 345);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -79,7 +74,6 @@
             this.material.Depth = 0;
             this.material.Hint = "";
             this.material.Location = new System.Drawing.Point(175, 99);
-            this.material.MaxLength = 32767;
             this.material.MouseState = MaterialSkin.MouseState.HOVER;
             this.material.Name = "material";
             this.material.PasswordChar = '\0';
@@ -136,7 +130,6 @@
             this.materialSingleLineTextField2.Depth = 0;
             this.materialSingleLineTextField2.Hint = "";
             this.materialSingleLineTextField2.Location = new System.Drawing.Point(175, 138);
-            this.materialSingleLineTextField2.MaxLength = 32767;
             this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
             this.materialSingleLineTextField2.PasswordChar = '\0';
@@ -153,7 +146,6 @@
             this.materialSingleLineTextField3.Depth = 0;
             this.materialSingleLineTextField3.Hint = "";
             this.materialSingleLineTextField3.Location = new System.Drawing.Point(175, 176);
-            this.materialSingleLineTextField3.MaxLength = 32767;
             this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
             this.materialSingleLineTextField3.PasswordChar = '\0';
@@ -171,7 +163,6 @@
             this.materialSingleLineTextField4.Depth = 0;
             this.materialSingleLineTextField4.Hint = "";
             this.materialSingleLineTextField4.Location = new System.Drawing.Point(175, 212);
-            this.materialSingleLineTextField4.MaxLength = 32767;
             this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
             this.materialSingleLineTextField4.PasswordChar = '\0';
@@ -194,98 +185,11 @@
             this.materialTabSelector1.TabIndex = 9;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // jMetroTextBox1
-            // 
-            this.jMetroTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.jMetroTextBox1.BorderColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox1.BorderRadius = 1;
-            this.jMetroTextBox1.FillColor = System.Drawing.SystemColors.Window;
-            this.jMetroTextBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMetroTextBox1.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMetroTextBox1.ForeColors = System.Drawing.Color.Gray;
-            this.jMetroTextBox1.IsPassword = false;
-            this.jMetroTextBox1.LineThickness = 2;
-            this.jMetroTextBox1.Location = new System.Drawing.Point(492, 196);
-            this.jMetroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMetroTextBox1.MaxLength = 32767;
-            this.jMetroTextBox1.MouseOnHover = System.Drawing.Color.Empty;
-            this.jMetroTextBox1.Name = "jMetroTextBox1";
-            this.jMetroTextBox1.OnCursor = System.Windows.Forms.Cursors.IBeam;
-            this.jMetroTextBox1.OnFocusColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox1.OnFocusFontColor = System.Drawing.Color.Empty;
-            this.jMetroTextBox1.ReadOnly = false;
-            this.jMetroTextBox1.Size = new System.Drawing.Size(141, 39);
-            this.jMetroTextBox1.TabIndex = 10;
-            this.jMetroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMetroTextBox1.TextName = "JMetroTextBox";
-            // 
-            // jMaterialTextbox1
-            // 
-            this.jMaterialTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.jMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.Font_Size = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.jMaterialTextbox1.ForeColors = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.HintText = null;
-            this.jMaterialTextbox1.IsPassword = false;
-            this.jMaterialTextbox1.LineBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.jMaterialTextbox1.LineThickness = 2;
-            this.jMaterialTextbox1.Location = new System.Drawing.Point(492, 268);
-            this.jMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.jMaterialTextbox1.MaxLength = 32767;
-            this.jMaterialTextbox1.Name = "jMaterialTextbox1";
-            this.jMaterialTextbox1.OnFocusedColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.OnFocusedTextColor = System.Drawing.Color.Black;
-            this.jMaterialTextbox1.ReadOnly = false;
-            this.jMaterialTextbox1.Size = new System.Drawing.Size(198, 23);
-            this.jMaterialTextbox1.TabIndex = 11;
-            this.jMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.jMaterialTextbox1.TextName = "User Name";
-            // 
-            // jTextBox1
-            // 
-            this.jTextBox1.AutoSize = true;
-            this.jTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.jTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.jTextBox1.Hint = "";
-            this.jTextBox1.IsPassword = false;
-            this.jTextBox1.Length = 0;
-            this.jTextBox1.Location = new System.Drawing.Point(492, 320);
-            this.jTextBox1.Name = "jTextBox1";
-            this.jTextBox1.OnFocus = System.Drawing.Color.DarkGray;
-            this.jTextBox1.OnlyChar = false;
-            this.jTextBox1.OnlyNumber = false;
-            this.jTextBox1.Size = new System.Drawing.Size(252, 39);
-            this.jTextBox1.TabIndex = 12;
-            this.jTextBox1.TextValue = "";
-            // 
-            // jTextBox2
-            // 
-            this.jTextBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.jTextBox2.Font_Size = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.jTextBox2.HintText = null;
-            this.jTextBox2.IsPassword = false;
-            this.jTextBox2.Location = new System.Drawing.Point(492, 298);
-            this.jTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.jTextBox2.MaxLength = 32767;
-            this.jTextBox2.Name = "jTextBox2";
-            this.jTextBox2.OnFocusedColor = System.Drawing.Color.White;
-            this.jTextBox2.OnFocusedTextColor = System.Drawing.Color.Gray;
-            this.jTextBox2.ReadOnly = false;
-            this.jTextBox2.Right_To_Left = System.Windows.Forms.RightToLeft.No;
-            this.jTextBox2.Size = new System.Drawing.Size(235, 38);
-            this.jTextBox2.TabIndex = 13;
-            this.jTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.jTextBox2.TextName = "";
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.jTextBox2);
-            this.Controls.Add(this.jTextBox1);
-            this.Controls.Add(this.jMaterialTextbox1);
-            this.Controls.Add(this.jMetroTextBox1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialSingleLineTextField4);
             this.Controls.Add(this.materialSingleLineTextField3);
@@ -324,9 +228,5 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
-        private JMetroTextBox.JMetroTextBox jMetroTextBox1;
-        private JMaterialTextbox.JMaterialTextbox jMaterialTextbox1;
-        private JTextBox.JTextBox jTextBox1;
-        private JTextBox2.JTextBox jTextBox2;
     }
 }
