@@ -82,7 +82,7 @@ namespace ProyectoPav
             {
                 
                 formulario = new Forms();
-                //formulario.TopLevel = false;
+                formulario.TopLevel = false;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.Dock = DockStyle.Fill;
                 pan_form.Controls.Add(formulario);

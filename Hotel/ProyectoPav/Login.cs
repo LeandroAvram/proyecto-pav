@@ -93,5 +93,15 @@ namespace ProyectoPav
             Bienvenida formbienvenida = new Bienvenida();
             formbienvenida.Show();
         }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var objeto = e;
+        }
+
+        private void TxtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
