@@ -44,6 +44,7 @@
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnModales = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.pan_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +91,7 @@
             // pan_menu
             // 
             this.pan_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.pan_menu.Controls.Add(this.btnModales);
             this.pan_menu.Controls.Add(this.barra_boton);
             this.pan_menu.Controls.Add(this.button3);
             this.pan_menu.Controls.Add(this.btn2);
@@ -252,6 +254,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Leandro David Avram";
             // 
+            // btnModales
+            // 
+            this.btnModales.FlatAppearance.BorderSize = 0;
+            this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModales.ForeColor = System.Drawing.Color.White;
+            this.btnModales.Image = global::ProyectoPav.Properties.Resources.cama;
+            this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModales.Location = new System.Drawing.Point(12, 213);
+            this.btnModales.Name = "btnModales";
+            this.btnModales.Size = new System.Drawing.Size(171, 37);
+            this.btnModales.TabIndex = 10;
+            this.btnModales.Text = "    Modales";
+            this.btnModales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModales.UseVisualStyleBackColor = true;
+            this.btnModales.Click += new System.EventHandler(this.BtnModales_Click);
+            // 
             // PrincipalApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,5 +312,6 @@
         private System.Windows.Forms.PictureBox btn_restaurar;
         private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnModales;
     }
 }

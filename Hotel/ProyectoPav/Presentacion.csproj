@@ -123,6 +123,12 @@
     <Compile Include="Vistas\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Modales\ModalCentral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalCentral.Designer.cs">
+      <DependentUpon>ModalCentral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Modales\ModalHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalCentral.resx">
+      <DependentUpon>ModalCentral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalHabitacion.resx">
+      <DependentUpon>ModalHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalHuesped.resx">
+      <DependentUpon>ModalHuesped.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modales\ModalUsuario.resx">
       <DependentUpon>ModalUsuario.cs</DependentUpon>
