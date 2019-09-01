@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoPav.Vistas
 {
-    public partial class Form2 : MetroFramework.Forms.MetroForm
+    public partial class Clientes : Form
     {
-        public Form2()
+        public Clientes()
         {
             InitializeComponent();
-        }
-        
-        private void MetroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

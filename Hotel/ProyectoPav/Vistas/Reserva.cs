@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPav.Vistas
 {
-    public partial class Form1 : MaterialForm
+    public partial class Reserva : MaterialForm
     {
-        public Form1()
+        public Reserva()
         {
             InitializeComponent();
             /* MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
@@ -33,7 +33,6 @@ namespace ProyectoPav.Vistas
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
-
         }
 
         private void MaterialLabel1_Click(object sender, EventArgs e)
@@ -47,6 +46,21 @@ namespace ProyectoPav.Vistas
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MetroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void JFlatButton3_MouseMove(object sender, EventArgs e)
         {
 
         }

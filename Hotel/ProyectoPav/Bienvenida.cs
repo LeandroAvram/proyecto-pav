@@ -38,6 +38,7 @@ namespace ProyectoPav
                 timer2.Stop();
                 this.Close();
                 PrincipalApp prin = new PrincipalApp();
+                prin.WindowState = FormWindowState.Maximized;
                 prin.Show();
             }
         }

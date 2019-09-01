@@ -33,10 +33,12 @@
             this.pan_form = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pan_menu = new System.Windows.Forms.Panel();
+            this.btnHabitacion = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnModales = new System.Windows.Forms.Button();
             this.barra_boton = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnReserva = new System.Windows.Forms.Button();
             this.pan_titulo = new System.Windows.Forms.Panel();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
@@ -44,7 +46,6 @@
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnModales = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.pan_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,16 +92,70 @@
             // pan_menu
             // 
             this.pan_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.pan_menu.Controls.Add(this.btnHabitacion);
+            this.pan_menu.Controls.Add(this.btnUsuarios);
             this.pan_menu.Controls.Add(this.btnModales);
             this.pan_menu.Controls.Add(this.barra_boton);
-            this.pan_menu.Controls.Add(this.button3);
-            this.pan_menu.Controls.Add(this.btn2);
-            this.pan_menu.Controls.Add(this.btn1);
+            this.pan_menu.Controls.Add(this.btnClientes);
+            this.pan_menu.Controls.Add(this.btnReserva);
             this.pan_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pan_menu.Location = new System.Drawing.Point(0, 40);
             this.pan_menu.Name = "pan_menu";
             this.pan_menu.Size = new System.Drawing.Size(183, 410);
             this.pan_menu.TabIndex = 1;
+            // 
+            // btnHabitacion
+            // 
+            this.btnHabitacion.FlatAppearance.BorderSize = 0;
+            this.btnHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHabitacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHabitacion.ForeColor = System.Drawing.Color.White;
+            this.btnHabitacion.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHabitacion.Location = new System.Drawing.Point(12, 127);
+            this.btnHabitacion.Name = "btnHabitacion";
+            this.btnHabitacion.Size = new System.Drawing.Size(171, 37);
+            this.btnHabitacion.TabIndex = 12;
+            this.btnHabitacion.Text = "  Habitacion";
+            this.btnHabitacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHabitacion.UseVisualStyleBackColor = true;
+            this.btnHabitacion.Enter += new System.EventHandler(this.BtnHab_Enter);
+            this.btnHabitacion.Leave += new System.EventHandler(this.BtnHab_Leave);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 213);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(171, 37);
+            this.btnUsuarios.TabIndex = 11;
+            this.btnUsuarios.Text = "  Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Enter += new System.EventHandler(this.BtnUsu_Enter);
+            this.btnUsuarios.Leave += new System.EventHandler(this.BtnUsu_Leave);
+            // 
+            // btnModales
+            // 
+            this.btnModales.FlatAppearance.BorderSize = 0;
+            this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModales.ForeColor = System.Drawing.Color.White;
+            this.btnModales.Image = global::ProyectoPav.Properties.Resources.cama;
+            this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModales.Location = new System.Drawing.Point(12, 256);
+            this.btnModales.Name = "btnModales";
+            this.btnModales.Size = new System.Drawing.Size(171, 37);
+            this.btnModales.TabIndex = 10;
+            this.btnModales.Text = "    Modales";
+            this.btnModales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModales.UseVisualStyleBackColor = true;
+            this.btnModales.Click += new System.EventHandler(this.BtnModales_Click);
             // 
             // barra_boton
             // 
@@ -110,56 +165,41 @@
             this.barra_boton.Size = new System.Drawing.Size(6, 37);
             this.barra_boton.TabIndex = 9;
             // 
-            // button3
+            // btnClientes
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::ProyectoPav.Properties.Resources.cama1;
-            this.button3.Location = new System.Drawing.Point(4, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 37);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "  Habitaciones";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(12, 170);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(171, 37);
+            this.btnClientes.TabIndex = 7;
+            this.btnClientes.Text = "  Clientes";
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Enter += new System.EventHandler(this.BtnCli_Enter);
+            this.btnClientes.Leave += new System.EventHandler(this.BtnCli_Leave);
             // 
-            // btn2
+            // btnReserva
             // 
-            this.btn2.FlatAppearance.BorderSize = 0;
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.ForeColor = System.Drawing.Color.White;
-            this.btn2.Image = global::ProyectoPav.Properties.Resources.cama1;
-            this.btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.Location = new System.Drawing.Point(12, 127);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(171, 37);
-            this.btn2.TabIndex = 7;
-            this.btn2.Text = "  Habitaciones";
-            this.btn2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Enter += new System.EventHandler(this.Btn2_Enter);
-            this.btn2.Leave += new System.EventHandler(this.Btn2_Leave);
-            // 
-            // btn1
-            // 
-            this.btn1.FlatAppearance.BorderSize = 0;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Image = global::ProyectoPav.Properties.Resources.cama1;
-            this.btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1.Location = new System.Drawing.Point(12, 84);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(171, 37);
-            this.btn1.TabIndex = 6;
-            this.btn1.Text = "    Reservas";
-            this.btn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Enter += new System.EventHandler(this.Btn1_Enter);
-            this.btn1.Leave += new System.EventHandler(this.Btn1_Leave);
+            this.btnReserva.FlatAppearance.BorderSize = 0;
+            this.btnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReserva.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReserva.ForeColor = System.Drawing.Color.White;
+            this.btnReserva.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReserva.Location = new System.Drawing.Point(12, 84);
+            this.btnReserva.Name = "btnReserva";
+            this.btnReserva.Size = new System.Drawing.Size(171, 37);
+            this.btnReserva.TabIndex = 6;
+            this.btnReserva.Text = "  Reservas";
+            this.btnReserva.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReserva.UseVisualStyleBackColor = true;
+            this.btnReserva.Enter += new System.EventHandler(this.BtnRes_Enter);
+            this.btnReserva.Leave += new System.EventHandler(this.BtnRes_Leave);
             // 
             // pan_titulo
             // 
@@ -254,23 +294,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Leandro David Avram";
             // 
-            // btnModales
-            // 
-            this.btnModales.FlatAppearance.BorderSize = 0;
-            this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModales.ForeColor = System.Drawing.Color.White;
-            this.btnModales.Image = global::ProyectoPav.Properties.Resources.cama;
-            this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModales.Location = new System.Drawing.Point(12, 213);
-            this.btnModales.Name = "btnModales";
-            this.btnModales.Size = new System.Drawing.Size(171, 37);
-            this.btnModales.TabIndex = 10;
-            this.btnModales.Text = "    Modales";
-            this.btnModales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnModales.UseVisualStyleBackColor = true;
-            this.btnModales.Click += new System.EventHandler(this.BtnModales_Click);
-            // 
             // PrincipalApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,14 +327,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel barra_boton;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.PictureBox btn_cerrar;
         private System.Windows.Forms.PictureBox btn_restaurar;
         private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnModales;
+        private System.Windows.Forms.Button btnHabitacion;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
