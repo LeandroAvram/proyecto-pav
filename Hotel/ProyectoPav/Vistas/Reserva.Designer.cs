@@ -1,6 +1,4 @@
-﻿using Metrolib.Controls;
-
-namespace ProyectoPav.Vistas
+﻿namespace ProyectoPav.Vistas
 {
     partial class Reserva
     {
