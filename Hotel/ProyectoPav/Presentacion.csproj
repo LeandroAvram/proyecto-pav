@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlatButton">
-      <HintPath>..\..\..\..\Downloads\JControls\FlatButton.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\FlatButton.dll</HintPath>
     </Reference>
     <Reference Include="JGradient Panel">
       <HintPath>..\..\..\..\..\Downloads\JControls\JGradient Panel.dll</HintPath>
