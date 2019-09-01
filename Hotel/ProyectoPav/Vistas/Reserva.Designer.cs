@@ -33,21 +33,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.jFlatButton1 = new FlatButton.JFlatButton();
-            this.jFlatButton2 = new FlatButton.JFlatButton();
             this.jFlatButton3 = new FlatButton.JFlatButton();
+            this.jFlatButton2 = new FlatButton.JFlatButton();
+            this.jFlatButton1 = new FlatButton.JFlatButton();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,15 +63,104 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // jFlatButton3
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 10);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            this.jFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.jFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton3.ButtonText = "Eliminar Habitacion";
+            this.jFlatButton3.CausesValidation = false;
+            this.jFlatButton3.ErrorImageLeft = null;
+            this.jFlatButton3.ErrorImageRight = null;
+            this.jFlatButton3.FocusBackground = System.Drawing.Color.Yellow;
+            this.jFlatButton3.FocusFontColor = System.Drawing.Color.Yellow;
+            this.jFlatButton3.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton3.HoverBackground = System.Drawing.Color.Gray;
+            this.jFlatButton3.HoverFontColor = System.Drawing.Color.Gray;
+            this.jFlatButton3.ImageLeft = null;
+            this.jFlatButton3.ImageRight = null;
+            this.jFlatButton3.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton3.Location = new System.Drawing.Point(559, 368);
+            this.jFlatButton3.Name = "jFlatButton3";
+            this.jFlatButton3.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton3.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton3.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton3.Size = new System.Drawing.Size(197, 42);
+            this.jFlatButton3.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton3.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton3.TabIndex = 8;
+            this.jFlatButton3.MouseMove += new System.EventHandler(this.JFlatButton3_MouseMove);
+            // 
+            // jFlatButton2
+            // 
+            this.jFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.jFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton2.ButtonText = "Modificar Habitacion";
+            this.jFlatButton2.CausesValidation = false;
+            this.jFlatButton2.ErrorImageLeft = null;
+            this.jFlatButton2.ErrorImageRight = null;
+            this.jFlatButton2.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton2.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton2.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton2.HoverBackground = System.Drawing.Color.Empty;
+            this.jFlatButton2.HoverFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton2.ImageLeft = null;
+            this.jFlatButton2.ImageRight = null;
+            this.jFlatButton2.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton2.Location = new System.Drawing.Point(306, 368);
+            this.jFlatButton2.Name = "jFlatButton2";
+            this.jFlatButton2.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton2.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton2.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton2.Size = new System.Drawing.Size(197, 42);
+            this.jFlatButton2.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton2.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton2.TabIndex = 7;
+            // 
+            // jFlatButton1
+            // 
+            this.jFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton1.ButtonText = "Agregar Habitacion";
+            this.jFlatButton1.CausesValidation = false;
+            this.jFlatButton1.ErrorImageLeft = null;
+            this.jFlatButton1.ErrorImageRight = null;
+            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ImageLeft = null;
+            this.jFlatButton1.ImageRight = null;
+            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Location = new System.Drawing.Point(60, 368);
+            this.jFlatButton1.Name = "jFlatButton1";
+            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Size = new System.Drawing.Size(197, 42);
+            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton1.TabIndex = 6;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.Controls.Add(this.metroGrid1);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(60, 72);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(696, 265);
+            this.metroPanel1.TabIndex = 5;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.MetroPanel1_Paint);
             // 
             // metroGrid1
             // 
@@ -128,105 +217,6 @@
             this.metroGrid1.Size = new System.Drawing.Size(696, 265);
             this.metroGrid1.TabIndex = 4;
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel1.Controls.Add(this.metroGrid1);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(60, 72);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(696, 265);
-            this.metroPanel1.TabIndex = 5;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.MetroPanel1_Paint);
-            // 
-            // jFlatButton1
-            // 
-            this.jFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton1.ButtonText = "Agregar Habitacion";
-            this.jFlatButton1.CausesValidation = false;
-            this.jFlatButton1.ErrorImageLeft = null;
-            this.jFlatButton1.ErrorImageRight = null;
-            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton1.HoverBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ImageLeft = null;
-            this.jFlatButton1.ImageRight = null;
-            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Location = new System.Drawing.Point(60, 368);
-            this.jFlatButton1.Name = "jFlatButton1";
-            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Size = new System.Drawing.Size(197, 42);
-            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton1.TabIndex = 6;
-            // 
-            // jFlatButton2
-            // 
-            this.jFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.jFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton2.ButtonText = "Modificar Habitacion";
-            this.jFlatButton2.CausesValidation = false;
-            this.jFlatButton2.ErrorImageLeft = null;
-            this.jFlatButton2.ErrorImageRight = null;
-            this.jFlatButton2.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton2.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton2.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton2.HoverBackground = System.Drawing.Color.Empty;
-            this.jFlatButton2.HoverFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton2.ImageLeft = null;
-            this.jFlatButton2.ImageRight = null;
-            this.jFlatButton2.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton2.Location = new System.Drawing.Point(306, 368);
-            this.jFlatButton2.Name = "jFlatButton2";
-            this.jFlatButton2.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton2.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton2.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton2.Size = new System.Drawing.Size(197, 42);
-            this.jFlatButton2.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton2.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton2.TabIndex = 7;
-            // 
-            // jFlatButton3
-            // 
-            this.jFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.jFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton3.ButtonText = "Eliminar Habitacion";
-            this.jFlatButton3.CausesValidation = false;
-            this.jFlatButton3.ErrorImageLeft = null;
-            this.jFlatButton3.ErrorImageRight = null;
-            this.jFlatButton3.FocusBackground = System.Drawing.Color.Yellow;
-            this.jFlatButton3.FocusFontColor = System.Drawing.Color.Yellow;
-            this.jFlatButton3.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton3.HoverBackground = System.Drawing.Color.Gray;
-            this.jFlatButton3.HoverFontColor = System.Drawing.Color.Gray;
-            this.jFlatButton3.ImageLeft = null;
-            this.jFlatButton3.ImageRight = null;
-            this.jFlatButton3.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton3.Location = new System.Drawing.Point(559, 368);
-            this.jFlatButton3.Name = "jFlatButton3";
-            this.jFlatButton3.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton3.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton3.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton3.Size = new System.Drawing.Size(197, 42);
-            this.jFlatButton3.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton3.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton3.TabIndex = 8;
-            this.jFlatButton3.MouseMove += new System.EventHandler(this.JFlatButton3_MouseMove);
-            // 
             // Column1
             // 
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -266,7 +256,17 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // Form1
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 7);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // Reserva
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -276,15 +276,15 @@
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Reserva";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Sizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
