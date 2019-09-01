@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPav.Vistas
 {
-    public partial class Form1 : MaterialForm
+    public partial class Reserva : MaterialForm
     {
-        public Form1()
+        public Reserva()
         {
             InitializeComponent();
             /* MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoPav.Vistas
 {
-    partial class Form1
+    partial class Reserva
     {
         /// <summary>
         /// Required designer variable.

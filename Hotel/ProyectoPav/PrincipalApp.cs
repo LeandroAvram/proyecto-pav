@@ -106,82 +106,6 @@ namespace ProyectoPav
             }
         }
 
-        private void AbrirFormEnPanel2<Forms>() where Forms : MetroFramework.Forms.MetroForm, new()
-        {
-            MetroFramework.Forms.MetroForm formulario;
-            formulario = new Forms();
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
-            pan_form.Controls.Add(formulario);
-            pan_form.Tag = formulario;
-            formulario.Show();
-            //formulario = pan_form.Controls.OfType<Forms>().FirstOrDefault();
-            //si el formulario/instancia no existe, creamos nueva instancia y mostramos Jaiflyer - Candela
-            /* if (formulario == null)
-             {
-
-                 formulario = new Forms();
-                 formulario.TopLevel = false;
-                 formulario.FormBorderStyle = FormBorderStyle.None;
-                 formulario.Dock = DockStyle.Fill;
-                 pan_form.Controls.Add(formulario);
-                 pan_form.Tag = formulario;
-                 formulario.Show();
-
-                 formulario.BringToFront();
-             }
-             else
-             {
-                 //si la Formulario/instancia existe, lo traemos a frente
-                 formulario.BringToFront();
-
-                 //Si la instancia esta minimizada mostramos
-                 if (formulario.WindowState == FormWindowState.Minimized)
-                 {
-                     formulario.WindowState = FormWindowState.Normal;
-                 }
-
-             }*/
-        }
-
-
-        private void Btn1_Enter(object sender, EventArgs e)
-        {
-            btn1.Image = Properties.Resources.cama_color;
-            btn1.ForeColor = Color.FromArgb(78, 184, 206);
-            barra_boton.Height = btn1.Height;
-            barra_boton.Top = btn1.Top;
-            AbrirFormEnPanel<Vistas.Form1>();
-        }
-
-        private void Btn2_Enter(object sender, EventArgs e)
-        {
-            btn2.Image = Properties.Resources.cama_color;
-            btn2.ForeColor = Color.FromArgb(78, 184, 206);
-            barra_boton.Height = btn2.Height;
-            barra_boton.Top = btn2.Top;
-            AbrirFormEnPanel<Vistas.Form2>();
-          /* Vistas.Form2 form = new Vistas.Form2();
-            form.Enabled = true;
-            //form.TopLevel = false;
-            this.pan_form.Controls.Add(form);
-            form.Show();*/
-           // AbrirFormEnPanel2<Vistas.Form2>();
-
-        }
-
-        private void Btn1_Leave(object sender, EventArgs e)
-        {
-            btn1.Image = Properties.Resources.cama1;
-            btn1.ForeColor = Color.White;
-        }
-
-        private void Btn2_Leave(object sender, EventArgs e)
-        {
-            btn2.Image = Properties.Resources.cama1;
-            btn2.ForeColor = Color.White;
-        }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
         {
@@ -209,6 +133,66 @@ namespace ProyectoPav
             var modalModal = new ModalCentral();
             modalModal.Show();
 
+        }
+
+        private void BtnRes_Enter(object sender, EventArgs e)
+        {
+            btnReserva.Image = Properties.Resources.cama_color;
+            btnReserva.ForeColor = Color.FromArgb(78, 184, 206);
+            barra_boton.Height = btnReserva.Height;
+            barra_boton.Top = btnReserva.Top;
+            AbrirFormEnPanel<Vistas.Reserva>();
+        }
+
+        private void BtnRes_Leave(object sender, EventArgs e)
+        {
+            btnReserva.Image = Properties.Resources.cama1;
+            btnReserva.ForeColor = Color.White;
+        }
+
+        private void BtnHab_Enter(object sender, EventArgs e)
+        {
+            btnHabitacion.Image = Properties.Resources.cama_color;
+            btnHabitacion.ForeColor = Color.FromArgb(78, 184, 206);
+            barra_boton.Height = btnHabitacion.Height;
+            barra_boton.Top = btnHabitacion.Top;
+            AbrirFormEnPanel<Vistas.Habitaciones>();
+        }
+
+        private void BtnHab_Leave(object sender, EventArgs e)
+        {
+            btnHabitacion.Image = Properties.Resources.cama1;
+            btnHabitacion.ForeColor = Color.White;
+        }
+
+        private void BtnCli_Enter(object sender, EventArgs e)
+        {
+            btnClientes.Image = Properties.Resources.cama_color;
+            btnClientes.ForeColor = Color.FromArgb(78, 184, 206);
+            barra_boton.Height = btnClientes.Height;
+            barra_boton.Top = btnClientes.Top;
+            AbrirFormEnPanel<Vistas.Clientes>();
+        }
+
+        private void BtnCli_Leave(object sender, EventArgs e)
+        {
+            btnClientes.Image = Properties.Resources.cama1;
+            btnClientes.ForeColor = Color.White;
+        }
+
+        private void BtnUsu_Enter(object sender, EventArgs e)
+        {
+            btnUsuarios.Image = Properties.Resources.cama_color;
+            btnUsuarios.ForeColor = Color.FromArgb(78, 184, 206);
+            barra_boton.Height = btnUsuarios.Height;
+            barra_boton.Top = btnUsuarios.Top;
+            AbrirFormEnPanel<Vistas.Usuarios>();
+        }
+
+        private void BtnUsu_Leave(object sender, EventArgs e)
+        {
+            btnUsuarios.Image = Properties.Resources.cama1;
+            btnUsuarios.ForeColor = Color.White;
         }
 
         private void Btn_maximizar_Click(object sender, EventArgs e)

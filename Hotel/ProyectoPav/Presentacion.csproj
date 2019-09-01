@@ -108,17 +108,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vistas\Form1.cs">
+    <Compile Include="Vistas\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vistas\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Form2.cs">
+    <Compile Include="Vistas\Habitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Vistas\Habitaciones.Designer.cs">
+      <DependentUpon>Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Reserva.Designer.cs">
+      <DependentUpon>Reserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Modales\ModalCentral.cs">
       <SubType>Form</SubType>
@@ -144,6 +150,12 @@
     <Compile Include="Vistas\Modales\ModalUsuario.Designer.cs">
       <DependentUpon>ModalUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,11 +170,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Reserva.resx">
+      <DependentUpon>Reserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modales\ModalCentral.resx">
       <DependentUpon>ModalCentral.cs</DependentUpon>
