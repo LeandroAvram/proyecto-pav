@@ -44,5 +44,9 @@
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dao\Implementacion\" />
+    <Folder Include="Dao\Interfaz\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
