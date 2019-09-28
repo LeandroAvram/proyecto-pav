@@ -8,14 +8,14 @@ using System.Data.SqlClient;
 
 namespace DataAccess.Helper
 {
-    class DBHelper
+    public class DBHelper
     {
         private readonly string string_conexion;
         private static DBHelper instance = new DBHelper();
 
         private DBHelper()
         {
-            string_conexion = "";
+            string_conexion = "Data Source=DESKTOP-P0MOIVD\\SQLEXPRESS;Initial Catalog=db_Hotel;Integrated Security=True";
         }
 
         public static DBHelper GetDBHelper()
@@ -49,7 +49,65 @@ namespace DataAccess.Helper
                 this.CloseConnection(cnn);
             }
         }
+        //---------------------------------------------------------------------------------------------------------------------------
+        /// Resumen:
+        ///     Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”. Recibe por valor una sentencia sql como string
+        /// Devuelve:
+        ///      un valor entero con el número de filas afectadas por la sentencia ejecutada
+        /// Excepciones:
+        ///      System.Data.SqlClient.SqlException:
+        ///          El error de conexión se produce:
+        ///              a) durante la apertura de la conexión
+        ///              b) durante la ejecución del comando.
+        public int EjecutarSQL(string strSql, Dictionary<string, object> parametros = null)
+        {
+            // Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlTransaction t = null/* TODO Change to default(_) if this is not a reference type */;
+            int rtdo = 0;
 
+            // Try Catch Finally
+            // Trata de ejecutar el código contenido dentro del bloque Try - Catch
+            // Si hay error lo capta a través de una excepción
+            // Si no hubo error
+            try
+            {
+                // Establece que conexión usar
+                conexion.ConnectionString = string_conexion;
+                // Abre la conexión
+                conexion.Open();
+                t = conexion.BeginTransaction();
+                cmd.Connection = conexion;
+                cmd.Transaction = t;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
+                cmd.CommandText = strSql;
+                //Agregamos a la colección de parámetros del comando los filtros recibidos
+                foreach (var item in parametros)
+                {
+                    cmd.Parameters.AddWithValue(item.Key, item.Value);
+                }
+
+                // Retorna el resultado de ejecutar el comando
+                rtdo = cmd.ExecuteNonQuery();
+                t.Commit();
+            }
+            catch (Exception ex)
+            {
+                if (t != null)
+                    t.Rollback();
+            }
+            finally
+            {
+                // Cierra la conexión 
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
+                conexion.Dispose();
+            }
+            return rtdo;
+        }
+        //---------------------------------------------------------------------------------------------------------------------------
         //     Se utiliza para sentencias SQL del tipo “Select”. Recibe por valor una sentencia sql como string
         public DataTable ConsultaSQL(string strSql)
         {
@@ -123,6 +181,11 @@ namespace DataAccess.Helper
                 cnn.Close();
                 cnn.Dispose();
             }
+        }
+
+        public DataTable ConsultarTabla(string tabla)
+        {
+            return this.ConsultaSQL("Select * from " + tabla);
         }
 
     }
