@@ -47,7 +47,7 @@ namespace DataAccess.Dao.Implementacion
                                            "       u.id_rol, ",
                                            "       r.nombre as nom_rol ",
                                            "FROM T_Usuario u",
-                                           " INNER JOIN T_Rol r ON u.id_rol = r.id_rol ");
+                                           " INNER JOIN T_Rol r ON u.id_rol = r.id_rol WHERE u.estado = 'S'");
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
 
             foreach(DataRow row in resultado.Rows)
