@@ -31,15 +31,15 @@
             this.btnCancelarHabitacion = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnRegistrarHabitacion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.comboTipoHabitacion = new MetroFramework.Controls.MetroComboBox();
-            this.txtApellidoUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNumeroHabitacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTipoHabitacion = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPiso = new MaterialSkin.Controls.MaterialLabel();
             this.LblNumeroHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.comboCategoriaHabitacion = new MetroFramework.Controls.MetroComboBox();
             this.lblCategoriaHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.comboEstadoHabitacion = new MetroFramework.Controls.MetroComboBox();
             this.lblEstadoHabitacion = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPiso = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // btnCancelarHabitacion
@@ -68,6 +68,7 @@
             this.btnRegistrarHabitacion.TabIndex = 120;
             this.btnRegistrarHabitacion.Text = "Registrar";
             this.btnRegistrarHabitacion.UseVisualStyleBackColor = true;
+            this.btnRegistrarHabitacion.Click += new System.EventHandler(this.BtnRegistrarHabitacion_Click);
             // 
             // comboTipoHabitacion
             // 
@@ -81,20 +82,20 @@
             this.comboTipoHabitacion.TabIndex = 119;
             this.comboTipoHabitacion.UseSelectable = true;
             // 
-            // txtApellidoUsuario
+            // txtPrecio
             // 
-            this.txtApellidoUsuario.Depth = 0;
-            this.txtApellidoUsuario.Hint = "";
-            this.txtApellidoUsuario.Location = new System.Drawing.Point(156, 122);
-            this.txtApellidoUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApellidoUsuario.Name = "txtApellidoUsuario";
-            this.txtApellidoUsuario.PasswordChar = '\0';
-            this.txtApellidoUsuario.SelectedText = "";
-            this.txtApellidoUsuario.SelectionLength = 0;
-            this.txtApellidoUsuario.SelectionStart = 0;
-            this.txtApellidoUsuario.Size = new System.Drawing.Size(101, 23);
-            this.txtApellidoUsuario.TabIndex = 116;
-            this.txtApellidoUsuario.UseSystemPasswordChar = false;
+            this.txtPrecio.Depth = 0;
+            this.txtPrecio.Hint = "";
+            this.txtPrecio.Location = new System.Drawing.Point(156, 122);
+            this.txtPrecio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.PasswordChar = '\0';
+            this.txtPrecio.SelectedText = "";
+            this.txtPrecio.SelectionLength = 0;
+            this.txtPrecio.SelectionStart = 0;
+            this.txtPrecio.Size = new System.Drawing.Size(101, 23);
+            this.txtPrecio.TabIndex = 116;
+            this.txtPrecio.UseSystemPasswordChar = false;
             // 
             // txtNumeroHabitacion
             // 
@@ -123,19 +124,6 @@
             this.lblTipoHabitacion.Size = new System.Drawing.Size(116, 19);
             this.lblTipoHabitacion.TabIndex = 117;
             this.lblTipoHabitacion.Text = "Tipo Habitacion";
-            // 
-            // lblPiso
-            // 
-            this.lblPiso.AutoSize = true;
-            this.lblPiso.Depth = 0;
-            this.lblPiso.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPiso.Location = new System.Drawing.Point(21, 122);
-            this.lblPiso.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPiso.Name = "lblPiso";
-            this.lblPiso.Size = new System.Drawing.Size(39, 19);
-            this.lblPiso.TabIndex = 114;
-            this.lblPiso.Text = "Piso";
             // 
             // LblNumeroHabitacion
             // 
@@ -200,6 +188,19 @@
             this.lblEstadoHabitacion.TabIndex = 124;
             this.lblEstadoHabitacion.Text = "Estado";
             // 
+            // lblPiso
+            // 
+            this.lblPiso.AutoSize = true;
+            this.lblPiso.Depth = 0;
+            this.lblPiso.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPiso.Location = new System.Drawing.Point(21, 122);
+            this.lblPiso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPiso.Name = "lblPiso";
+            this.lblPiso.Size = new System.Drawing.Size(52, 19);
+            this.lblPiso.TabIndex = 114;
+            this.lblPiso.Text = "Precio";
+            // 
             // ModalHabitacion
             // 
             this.AcceptButton = this.btnRegistrarHabitacion;
@@ -213,13 +214,14 @@
             this.Controls.Add(this.btnCancelarHabitacion);
             this.Controls.Add(this.btnRegistrarHabitacion);
             this.Controls.Add(this.comboTipoHabitacion);
-            this.Controls.Add(this.txtApellidoUsuario);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNumeroHabitacion);
             this.Controls.Add(this.lblTipoHabitacion);
             this.Controls.Add(this.lblPiso);
             this.Controls.Add(this.LblNumeroHabitacion);
             this.Name = "ModalHabitacion";
             this.Text = "Registrar Habitacion";
+            this.Load += new System.EventHandler(this.ModalHabitacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,14 +231,14 @@
         private MaterialSkin.Controls.MaterialFlatButton btnCancelarHabitacion;
         private MaterialSkin.Controls.MaterialRaisedButton btnRegistrarHabitacion;
         private MetroFramework.Controls.MetroComboBox comboTipoHabitacion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecio;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNumeroHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblTipoHabitacion;
-        private MaterialSkin.Controls.MaterialLabel lblPiso;
         private MaterialSkin.Controls.MaterialLabel LblNumeroHabitacion;
         private MetroFramework.Controls.MetroComboBox comboCategoriaHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblCategoriaHabitacion;
         private MetroFramework.Controls.MetroComboBox comboEstadoHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblEstadoHabitacion;
+        private MaterialSkin.Controls.MaterialLabel lblPiso;
     }
 }

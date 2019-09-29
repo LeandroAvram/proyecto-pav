@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\Implementacion\habitacionDao.cs" />
     <Compile Include="Dao\Implementacion\UserDao.cs" />
+    <Compile Include="Dao\Interfaz\IHabitacionDao.cs" />
     <Compile Include="Dao\Interfaz\IUserDao.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,7 +15,7 @@ namespace DataAccess.Helper
 
         private DBHelper()
         {
-            string_conexion = "Data Source=DESKTOP-P0MOIVD\\SQLEXPRESS;Initial Catalog=db_Hotel;Integrated Security=True";
+            string_conexion = "Data Source=LAPTOP-B7HPTV3F\\SQLEXPRESS01;Initial Catalog=db_Hotel;Integrated Security=True";
         }
 
         public static DBHelper GetDBHelper()

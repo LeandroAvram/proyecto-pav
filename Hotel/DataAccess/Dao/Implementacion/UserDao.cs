@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Dao.Interfaz;
 using DataAccess.Helper;
 using Entidades;
 
@@ -101,5 +102,6 @@ namespace DataAccess.Dao.Implementacion
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
+
     }
 }
