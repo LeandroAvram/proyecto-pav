@@ -58,6 +58,7 @@ namespace ProyectoPav.Vistas
             var usuario = (Usuario)dgvUsers.CurrentRow.DataBoundItem;
             form.InicializarFormulario(Modales.ModalUsuario.FormMode.update, usuario);
             form.ShowDialog();
+            dgvUsers.DataSource = oUserService.ObtenerTodos();
         }
 
         private void BtnEliminarUsuario_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace ProyectoPav.Vistas
                 if (oUserService.ModificarEstadoUsuario(usuario))
                 {
                     MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvUsers.DataSource = oUserService.ObtenerTodos();
                 }
                 else
                     MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
