@@ -262,6 +262,7 @@
             // 
             // id
             // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
@@ -269,13 +270,13 @@
             // 
             // nombre
             // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             this.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nombre.ToolTipText = "Nombre del Usuario";
+            this.nombre.Width = 145;
             // 
             // apellido
             // 
@@ -283,6 +284,7 @@
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
+            this.apellido.Width = 145;
             // 
             // email
             // 
@@ -318,6 +320,7 @@
             // 
             // estado
             // 
+            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.estado.DataPropertyName = "estado";
             this.estado.HeaderText = "estado";
             this.estado.Name = "estado";

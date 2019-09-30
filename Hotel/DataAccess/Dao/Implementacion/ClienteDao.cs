@@ -42,7 +42,7 @@ namespace DataAccess.Dao.Implementacion
                                            "       nro_documento, ",
                                            "       td.nombre as nombreTipo ",
                                            "FROM T_Cliente c " +
-                                           "INNER JOIN T_TIPO_DOCUMENTO td on c.id_tipo_documento = td.id_tipo_documento" +
+                                           "INNER JOIN T_TIPO_DOCUMENTO td on c.id_tipo_documento = td.id_tipo_documento " +
                                            "WHERE c.estado = 'S'");
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
 

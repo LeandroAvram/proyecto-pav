@@ -33,24 +33,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnEliminarCliente = new FlatButton.JFlatButton();
             this.btnModificarCliente = new FlatButton.JFlatButton();
+            this.btnNuevoCliente = new FlatButton.JFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvClientes = new MetroFramework.Controls.MetroGrid();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnNuevoCliente = new FlatButton.JFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,14 +67,22 @@
             this.panel1.Size = new System.Drawing.Size(1121, 685);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 7);
-            this.panel2.TabIndex = 2;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtBuscar);
+            this.panel4.Controls.Add(this.btnEliminarCliente);
+            this.panel4.Controls.Add(this.btnModificarCliente);
+            this.panel4.Controls.Add(this.btnNuevoCliente);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1121, 685);
+            this.panel4.TabIndex = 100;
             // 
             // label2
             // 
@@ -159,6 +172,33 @@
             this.btnModificarCliente.TabIndex = 3;
             this.btnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
+            // btnNuevoCliente
+            // 
+            this.btnNuevoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnNuevoCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnNuevoCliente.ButtonText = "Nuevo Cliente";
+            this.btnNuevoCliente.CausesValidation = false;
+            this.btnNuevoCliente.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ErrorImageLeft")));
+            this.btnNuevoCliente.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ErrorImageRight")));
+            this.btnNuevoCliente.FocusBackground = System.Drawing.Color.Empty;
+            this.btnNuevoCliente.FocusFontColor = System.Drawing.Color.Empty;
+            this.btnNuevoCliente.ForeColors = System.Drawing.Color.White;
+            this.btnNuevoCliente.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.btnNuevoCliente.HoverFontColor = System.Drawing.Color.Black;
+            this.btnNuevoCliente.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ImageLeft")));
+            this.btnNuevoCliente.ImageRight = null;
+            this.btnNuevoCliente.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.btnNuevoCliente.Location = new System.Drawing.Point(125, 606);
+            this.btnNuevoCliente.Name = "btnNuevoCliente";
+            this.btnNuevoCliente.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.btnNuevoCliente.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.btnNuevoCliente.RightPictureColor = System.Drawing.Color.Transparent;
+            this.btnNuevoCliente.Size = new System.Drawing.Size(254, 43);
+            this.btnNuevoCliente.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnNuevoCliente.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btnNuevoCliente.TabIndex = 2;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.BtnNuevoCliente_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgvClientes);
@@ -187,9 +227,14 @@
             this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Nombre,
-            this.Estado,
-            this.Id});
+            this.Apellido,
+            this.Email,
+            this.Telefono,
+            this.TipoDocumento,
+            this.NumDocumento,
+            this.Estado});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -223,50 +268,6 @@
             this.dgvClientes.UseCustomForeColor = true;
             this.dgvClientes.UseStyleColors = true;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtBuscar);
-            this.panel4.Controls.Add(this.btnEliminarCliente);
-            this.panel4.Controls.Add(this.btnModificarCliente);
-            this.panel4.Controls.Add(this.btnNuevoCliente);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1121, 685);
-            this.panel4.TabIndex = 100;
-            // 
-            // btnNuevoCliente
-            // 
-            this.btnNuevoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnNuevoCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnNuevoCliente.ButtonText = "Nuevo Cliente";
-            this.btnNuevoCliente.CausesValidation = false;
-            this.btnNuevoCliente.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ErrorImageLeft")));
-            this.btnNuevoCliente.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ErrorImageRight")));
-            this.btnNuevoCliente.FocusBackground = System.Drawing.Color.Empty;
-            this.btnNuevoCliente.FocusFontColor = System.Drawing.Color.Empty;
-            this.btnNuevoCliente.ForeColors = System.Drawing.Color.White;
-            this.btnNuevoCliente.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.btnNuevoCliente.HoverFontColor = System.Drawing.Color.Black;
-            this.btnNuevoCliente.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnNuevoCliente.ImageLeft")));
-            this.btnNuevoCliente.ImageRight = null;
-            this.btnNuevoCliente.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(125, 606);
-            this.btnNuevoCliente.Name = "btnNuevoCliente";
-            this.btnNuevoCliente.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.btnNuevoCliente.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.btnNuevoCliente.RightPictureColor = System.Drawing.Color.Transparent;
-            this.btnNuevoCliente.Size = new System.Drawing.Size(254, 43);
-            this.btnNuevoCliente.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnNuevoCliente.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.btnNuevoCliente.TabIndex = 2;
-            this.btnNuevoCliente.Click += new System.EventHandler(this.BtnNuevoCliente_Click);
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
@@ -276,20 +277,14 @@
             this.panel5.Size = new System.Drawing.Size(1121, 7);
             this.panel5.TabIndex = 1;
             // 
-            // Nombre
+            // panel2
             // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1121, 7);
+            this.panel2.TabIndex = 2;
             // 
             // Id
             // 
@@ -298,6 +293,62 @@
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TipoDocumento.DataPropertyName = "TipoDocumento";
+            this.TipoDocumento.HeaderText = "Tipo Documento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
+            // NumDocumento
+            // 
+            this.NumDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NumDocumento.DataPropertyName = "NroDocumento";
+            this.NumDocumento.HeaderText = "NumDocumento";
+            this.NumDocumento.Name = "NumDocumento";
+            this.NumDocumento.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
             // 
             // Clientes
             // 
@@ -309,10 +360,10 @@
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,8 +382,13 @@
         private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroGrid dgvClientes;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumDocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

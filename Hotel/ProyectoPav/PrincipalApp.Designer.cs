@@ -81,7 +81,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoPav.Properties.Resources.hoteless;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.hoteless;
             this.pictureBox1.Location = new System.Drawing.Point(215, 105);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(192, 196);
@@ -110,7 +110,7 @@
             this.btnHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabitacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHabitacion.ForeColor = System.Drawing.Color.White;
-            this.btnHabitacion.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnHabitacion.Image = global::Presentacion.Properties.Resources.cama1;
             this.btnHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHabitacion.Location = new System.Drawing.Point(12, 127);
             this.btnHabitacion.Name = "btnHabitacion";
@@ -128,7 +128,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnUsuarios.Image = global::Presentacion.Properties.Resources.cama1;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.Location = new System.Drawing.Point(12, 213);
             this.btnUsuarios.Name = "btnUsuarios";
@@ -146,7 +146,7 @@
             this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModales.ForeColor = System.Drawing.Color.White;
-            this.btnModales.Image = global::ProyectoPav.Properties.Resources.cama;
+            this.btnModales.Image = global::Presentacion.Properties.Resources.cama;
             this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModales.Location = new System.Drawing.Point(12, 256);
             this.btnModales.Name = "btnModales";
@@ -171,7 +171,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnClientes.Image = global::Presentacion.Properties.Resources.cama1;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.Location = new System.Drawing.Point(12, 170);
             this.btnClientes.Name = "btnClientes";
@@ -189,7 +189,7 @@
             this.btnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReserva.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReserva.ForeColor = System.Drawing.Color.White;
-            this.btnReserva.Image = global::ProyectoPav.Properties.Resources.cama1;
+            this.btnReserva.Image = global::Presentacion.Properties.Resources.cama1;
             this.btnReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReserva.Location = new System.Drawing.Point(12, 84);
             this.btnReserva.Name = "btnReserva";
