@@ -41,6 +41,7 @@
             this.btnNuevoUsuario = new FlatButton.JFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvUsers = new MetroFramework.Controls.MetroGrid();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,6 @@
             this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -260,8 +260,18 @@
             this.dgvUsers.UseStyleColors = true;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MetroGrid1_CellContentClick);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1121, 7);
+            this.panel2.TabIndex = 1;
+            // 
             // id
             // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
@@ -269,13 +279,13 @@
             // 
             // nombre
             // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             this.nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nombre.ToolTipText = "Nombre del Usuario";
+            this.nombre.Width = 145;
             // 
             // apellido
             // 
@@ -283,6 +293,7 @@
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
+            this.apellido.Width = 145;
             // 
             // email
             // 
@@ -318,20 +329,12 @@
             // 
             // estado
             // 
+            this.estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.estado.DataPropertyName = "estado";
             this.estado.HeaderText = "estado";
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
             this.estado.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 7);
-            this.panel2.TabIndex = 1;
             // 
             // Usuarios
             // 
