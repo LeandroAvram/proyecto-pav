@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{59060A4E-1504-444B-ABE4-29EB88243526}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProyectoPav</RootNamespace>
-    <AssemblyName>ProyectoPav</AssemblyName>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,26 +36,29 @@
     <Reference Include="FlatButton">
       <HintPath>..\..\Recursos\JControls\FlatButton.dll</HintPath>
     </Reference>
+    <Reference Include="JDragControl">
+      <HintPath>..\..\Recursos\JControls\JDragControl.dll</HintPath>
+    </Reference>
     <Reference Include="JGradient Panel">
-      <HintPath>..\..\..\..\..\Downloads\JControls\JGradient Panel.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JGradient Panel.dll</HintPath>
     </Reference>
     <Reference Include="JImageButton">
-      <HintPath>..\..\..\..\Downloads\JControls\JImageButton.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JImageButton.dll</HintPath>
     </Reference>
     <Reference Include="JMaterialTextbox">
-      <HintPath>..\..\..\..\Downloads\JControls\JMaterialTextbox.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JMaterialTextbox.dll</HintPath>
     </Reference>
     <Reference Include="JMetroTextBox">
-      <HintPath>..\..\..\..\Downloads\JControls\JMetroTextBox.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JMetroTextBox.dll</HintPath>
     </Reference>
     <Reference Include="JTextBox">
-      <HintPath>..\..\..\..\Downloads\JControls\JTextBox.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JTextBox.dll</HintPath>
     </Reference>
     <Reference Include="JTextBox2">
-      <HintPath>..\..\..\..\Downloads\JControls\JTextBox2.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JTextBox2.dll</HintPath>
     </Reference>
     <Reference Include="JThinButton">
-      <HintPath>..\..\..\..\Downloads\JControls\JThinButton.dll</HintPath>
+      <HintPath>..\..\Recursos\JControls\JThinButton.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -250,9 +253,13 @@
     <None Include="Resources\usuario-color.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dominio\Dominio.csproj">
-      <Project>{89c2a6a9-7185-45ab-971c-d07b33a3af2d}</Project>
-      <Name>Dominio</Name>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{ae4fb336-9055-429c-8b61-fc17c44875d0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{3fbc12b6-3243-48d0-b96d-de5d1394c157}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

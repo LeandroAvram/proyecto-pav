@@ -29,79 +29,23 @@
         private void InitializeComponent()
         {
             MaterialSkin.Controls.MaterialDivider materialDivider1;
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtDocumentoCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblDocumento = new MaterialSkin.Controls.MaterialLabel();
-            this.txtTelefonoUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtTelefonoCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTelefono = new MaterialSkin.Controls.MaterialLabel();
             this.lblDatosHuesped = new MaterialSkin.Controls.MaterialLabel();
             this.btnCancelarHuesped = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnRegistrarHuesped = new MaterialSkin.Controls.MaterialRaisedButton();
             this.comboTipoDocumento = new MetroFramework.Controls.MetroComboBox();
-            this.txtMailUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtApellidoUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNombreUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtMailCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtApellidoCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtNombreCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTipo = new MaterialSkin.Controls.MaterialLabel();
             this.LblMail = new MaterialSkin.Controls.MaterialLabel();
             this.LblApellido = new MaterialSkin.Controls.MaterialLabel();
             this.LblNombre = new MaterialSkin.Controls.MaterialLabel();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.SuspendLayout();
-            // 
-            // materialSingleLineTextField1
-            // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(520, 163);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField1.TabIndex = 111;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = true;
-            // 
-            // lblDocumento
-            // 
-            this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Depth = 0;
-            this.lblDocumento.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDocumento.Location = new System.Drawing.Point(395, 163);
-            this.lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(87, 19);
-            this.lblDocumento.TabIndex = 110;
-            this.lblDocumento.Text = "Documento";
-            // 
-            // txtTelefonoUsuario
-            // 
-            this.txtTelefonoUsuario.Depth = 0;
-            this.txtTelefonoUsuario.Hint = "";
-            this.txtTelefonoUsuario.Location = new System.Drawing.Point(119, 205);
-            this.txtTelefonoUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtTelefonoUsuario.Name = "txtTelefonoUsuario";
-            this.txtTelefonoUsuario.PasswordChar = '\0';
-            this.txtTelefonoUsuario.SelectedText = "";
-            this.txtTelefonoUsuario.SelectionLength = 0;
-            this.txtTelefonoUsuario.SelectionStart = 0;
-            this.txtTelefonoUsuario.Size = new System.Drawing.Size(215, 23);
-            this.txtTelefonoUsuario.TabIndex = 109;
-            this.txtTelefonoUsuario.UseSystemPasswordChar = false;
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Depth = 0;
-            this.lblTelefono.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTelefono.Location = new System.Drawing.Point(22, 205);
-            this.lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(69, 19);
-            this.lblTelefono.TabIndex = 108;
-            this.lblTelefono.Text = "Telefono";
             // 
             // materialDivider1
             // 
@@ -115,6 +59,62 @@
             materialDivider1.Size = new System.Drawing.Size(2, 125);
             materialDivider1.TabIndex = 107;
             materialDivider1.TabStop = false;
+            // 
+            // txtDocumentoCliente
+            // 
+            this.txtDocumentoCliente.Depth = 0;
+            this.txtDocumentoCliente.Hint = "";
+            this.txtDocumentoCliente.Location = new System.Drawing.Point(520, 204);
+            this.txtDocumentoCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
+            this.txtDocumentoCliente.PasswordChar = '\0';
+            this.txtDocumentoCliente.SelectedText = "";
+            this.txtDocumentoCliente.SelectionLength = 0;
+            this.txtDocumentoCliente.SelectionStart = 0;
+            this.txtDocumentoCliente.Size = new System.Drawing.Size(215, 23);
+            this.txtDocumentoCliente.TabIndex = 6;
+            this.txtDocumentoCliente.UseSystemPasswordChar = true;
+            // 
+            // lblDocumento
+            // 
+            this.lblDocumento.AutoSize = true;
+            this.lblDocumento.Depth = 0;
+            this.lblDocumento.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDocumento.Location = new System.Drawing.Point(395, 204);
+            this.lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDocumento.Name = "lblDocumento";
+            this.lblDocumento.Size = new System.Drawing.Size(87, 19);
+            this.lblDocumento.TabIndex = 110;
+            this.lblDocumento.Text = "Documento";
+            // 
+            // txtTelefonoCliente
+            // 
+            this.txtTelefonoCliente.Depth = 0;
+            this.txtTelefonoCliente.Hint = "";
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(119, 205);
+            this.txtTelefonoCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
+            this.txtTelefonoCliente.PasswordChar = '\0';
+            this.txtTelefonoCliente.SelectedText = "";
+            this.txtTelefonoCliente.SelectionLength = 0;
+            this.txtTelefonoCliente.SelectionStart = 0;
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(215, 23);
+            this.txtTelefonoCliente.TabIndex = 3;
+            this.txtTelefonoCliente.UseSystemPasswordChar = false;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Depth = 0;
+            this.lblTelefono.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTelefono.Location = new System.Drawing.Point(22, 205);
+            this.lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(69, 19);
+            this.lblTelefono.TabIndex = 108;
+            this.lblTelefono.Text = "Telefono";
             // 
             // lblDatosHuesped
             // 
@@ -140,9 +140,10 @@
             this.btnCancelarHuesped.Name = "btnCancelarHuesped";
             this.btnCancelarHuesped.Primary = false;
             this.btnCancelarHuesped.Size = new System.Drawing.Size(82, 36);
-            this.btnCancelarHuesped.TabIndex = 104;
+            this.btnCancelarHuesped.TabIndex = 8;
             this.btnCancelarHuesped.Text = "Cancelar";
             this.btnCancelarHuesped.UseVisualStyleBackColor = true;
+            this.btnCancelarHuesped.Click += new System.EventHandler(this.BtnCancelarHuesped_Click);
             // 
             // btnRegistrarHuesped
             // 
@@ -152,9 +153,10 @@
             this.btnRegistrarHuesped.Name = "btnRegistrarHuesped";
             this.btnRegistrarHuesped.Primary = true;
             this.btnRegistrarHuesped.Size = new System.Drawing.Size(126, 36);
-            this.btnRegistrarHuesped.TabIndex = 103;
+            this.btnRegistrarHuesped.TabIndex = 7;
             this.btnRegistrarHuesped.Text = "Registrar";
             this.btnRegistrarHuesped.UseVisualStyleBackColor = true;
+            this.btnRegistrarHuesped.Click += new System.EventHandler(this.BtnRegistrarHuesped_Click);
             // 
             // comboTipoDocumento
             // 
@@ -162,56 +164,57 @@
             this.comboTipoDocumento.FormattingEnabled = true;
             this.comboTipoDocumento.IntegralHeight = false;
             this.comboTipoDocumento.ItemHeight = 23;
-            this.comboTipoDocumento.Location = new System.Drawing.Point(520, 205);
+            this.comboTipoDocumento.Location = new System.Drawing.Point(520, 163);
             this.comboTipoDocumento.Name = "comboTipoDocumento";
             this.comboTipoDocumento.Size = new System.Drawing.Size(215, 29);
-            this.comboTipoDocumento.TabIndex = 102;
+            this.comboTipoDocumento.TabIndex = 5;
             this.comboTipoDocumento.UseSelectable = true;
             // 
-            // txtMailUsuario
+            // txtMailCliente
             // 
-            this.txtMailUsuario.Depth = 0;
-            this.txtMailUsuario.Hint = "";
-            this.txtMailUsuario.Location = new System.Drawing.Point(520, 122);
-            this.txtMailUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMailUsuario.Name = "txtMailUsuario";
-            this.txtMailUsuario.PasswordChar = '\0';
-            this.txtMailUsuario.SelectedText = "";
-            this.txtMailUsuario.SelectionLength = 0;
-            this.txtMailUsuario.SelectionStart = 0;
-            this.txtMailUsuario.Size = new System.Drawing.Size(215, 23);
-            this.txtMailUsuario.TabIndex = 101;
-            this.txtMailUsuario.UseSystemPasswordChar = false;
+            this.txtMailCliente.Depth = 0;
+            this.txtMailCliente.Hint = "";
+            this.txtMailCliente.Location = new System.Drawing.Point(520, 122);
+            this.txtMailCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMailCliente.Name = "txtMailCliente";
+            this.txtMailCliente.PasswordChar = '\0';
+            this.txtMailCliente.SelectedText = "";
+            this.txtMailCliente.SelectionLength = 0;
+            this.txtMailCliente.SelectionStart = 0;
+            this.txtMailCliente.Size = new System.Drawing.Size(215, 23);
+            this.txtMailCliente.TabIndex = 4;
+            this.txtMailCliente.UseSystemPasswordChar = false;
+            this.txtMailCliente.Click += new System.EventHandler(this.TxtMailCliente_Click);
             // 
-            // txtApellidoUsuario
+            // txtApellidoCliente
             // 
-            this.txtApellidoUsuario.Depth = 0;
-            this.txtApellidoUsuario.Hint = "";
-            this.txtApellidoUsuario.Location = new System.Drawing.Point(119, 163);
-            this.txtApellidoUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApellidoUsuario.Name = "txtApellidoUsuario";
-            this.txtApellidoUsuario.PasswordChar = '\0';
-            this.txtApellidoUsuario.SelectedText = "";
-            this.txtApellidoUsuario.SelectionLength = 0;
-            this.txtApellidoUsuario.SelectionStart = 0;
-            this.txtApellidoUsuario.Size = new System.Drawing.Size(215, 23);
-            this.txtApellidoUsuario.TabIndex = 99;
-            this.txtApellidoUsuario.UseSystemPasswordChar = false;
+            this.txtApellidoCliente.Depth = 0;
+            this.txtApellidoCliente.Hint = "";
+            this.txtApellidoCliente.Location = new System.Drawing.Point(119, 163);
+            this.txtApellidoCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.PasswordChar = '\0';
+            this.txtApellidoCliente.SelectedText = "";
+            this.txtApellidoCliente.SelectionLength = 0;
+            this.txtApellidoCliente.SelectionStart = 0;
+            this.txtApellidoCliente.Size = new System.Drawing.Size(215, 23);
+            this.txtApellidoCliente.TabIndex = 2;
+            this.txtApellidoCliente.UseSystemPasswordChar = false;
             // 
-            // txtNombreUsuario
+            // txtNombreCliente
             // 
-            this.txtNombreUsuario.Depth = 0;
-            this.txtNombreUsuario.Hint = "";
-            this.txtNombreUsuario.Location = new System.Drawing.Point(119, 122);
-            this.txtNombreUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.PasswordChar = '\0';
-            this.txtNombreUsuario.SelectedText = "";
-            this.txtNombreUsuario.SelectionLength = 0;
-            this.txtNombreUsuario.SelectionStart = 0;
-            this.txtNombreUsuario.Size = new System.Drawing.Size(215, 23);
-            this.txtNombreUsuario.TabIndex = 96;
-            this.txtNombreUsuario.UseSystemPasswordChar = false;
+            this.txtNombreCliente.Depth = 0;
+            this.txtNombreCliente.Hint = "";
+            this.txtNombreCliente.Location = new System.Drawing.Point(119, 122);
+            this.txtNombreCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.PasswordChar = '\0';
+            this.txtNombreCliente.SelectedText = "";
+            this.txtNombreCliente.SelectionLength = 0;
+            this.txtNombreCliente.SelectionStart = 0;
+            this.txtNombreCliente.Size = new System.Drawing.Size(215, 23);
+            this.txtNombreCliente.TabIndex = 1;
+            this.txtNombreCliente.UseSystemPasswordChar = false;
             // 
             // lblTipo
             // 
@@ -219,7 +222,7 @@
             this.lblTipo.Depth = 0;
             this.lblTipo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTipo.Location = new System.Drawing.Point(395, 205);
+            this.lblTipo.Location = new System.Drawing.Point(395, 163);
             this.lblTipo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(121, 19);
@@ -271,24 +274,25 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 314);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtDocumentoCliente);
             this.Controls.Add(this.lblDocumento);
-            this.Controls.Add(this.txtTelefonoUsuario);
+            this.Controls.Add(this.txtTelefonoCliente);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(materialDivider1);
             this.Controls.Add(this.lblDatosHuesped);
             this.Controls.Add(this.btnCancelarHuesped);
             this.Controls.Add(this.btnRegistrarHuesped);
             this.Controls.Add(this.comboTipoDocumento);
-            this.Controls.Add(this.txtMailUsuario);
-            this.Controls.Add(this.txtApellidoUsuario);
-            this.Controls.Add(this.txtNombreUsuario);
+            this.Controls.Add(this.txtMailCliente);
+            this.Controls.Add(this.txtApellidoCliente);
+            this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.LblMail);
             this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalHuesped";
-            this.Text = "Registrar Huesped";
+            this.Text = "Registrar Cliente";
+            this.Load += new System.EventHandler(this.ModalHuesped_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,17 +300,17 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumentoCliente;
         private MaterialSkin.Controls.MaterialLabel lblDocumento;
-        protected internal MaterialSkin.Controls.MaterialSingleLineTextField txtTelefonoUsuario;
+        protected internal MaterialSkin.Controls.MaterialSingleLineTextField txtTelefonoCliente;
         private MaterialSkin.Controls.MaterialLabel lblTelefono;
         private MaterialSkin.Controls.MaterialLabel lblDatosHuesped;
         private MaterialSkin.Controls.MaterialFlatButton btnCancelarHuesped;
         private MaterialSkin.Controls.MaterialRaisedButton btnRegistrarHuesped;
         private MetroFramework.Controls.MetroComboBox comboTipoDocumento;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMailUsuario;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoUsuario;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreUsuario;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtMailCliente;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoCliente;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreCliente;
         private MaterialSkin.Controls.MaterialLabel lblTipo;
         private MaterialSkin.Controls.MaterialLabel LblMail;
         private MaterialSkin.Controls.MaterialLabel LblApellido;

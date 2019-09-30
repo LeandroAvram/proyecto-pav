@@ -37,13 +37,13 @@
             this.txtApellidoUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtMailUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.comboRolUsuario = new MetroFramework.Controls.MetroComboBox();
-            this.btnRegistrarUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnModalUsuario = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
             this.lblDatosUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.lblCredencialesUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.lblTelefono = new MaterialSkin.Controls.MaterialLabel();
             this.txtTelefonoUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtPassUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.SuspendLayout();
@@ -171,17 +171,18 @@
             this.comboRolUsuario.TabIndex = 4;
             this.comboRolUsuario.UseSelectable = true;
             // 
-            // btnRegistrarUsuario
+            // btnModalUsuario
             // 
-            this.btnRegistrarUsuario.Depth = 0;
-            this.btnRegistrarUsuario.Location = new System.Drawing.Point(537, 302);
-            this.btnRegistrarUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegistrarUsuario.Name = "btnRegistrarUsuario";
-            this.btnRegistrarUsuario.Primary = true;
-            this.btnRegistrarUsuario.Size = new System.Drawing.Size(126, 36);
-            this.btnRegistrarUsuario.TabIndex = 5;
-            this.btnRegistrarUsuario.Text = "Registrar";
-            this.btnRegistrarUsuario.UseVisualStyleBackColor = true;
+            this.btnModalUsuario.Depth = 0;
+            this.btnModalUsuario.Location = new System.Drawing.Point(537, 302);
+            this.btnModalUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModalUsuario.Name = "btnModalUsuario";
+            this.btnModalUsuario.Primary = true;
+            this.btnModalUsuario.Size = new System.Drawing.Size(126, 36);
+            this.btnModalUsuario.TabIndex = 5;
+            this.btnModalUsuario.Text = "Registrar";
+            this.btnModalUsuario.UseVisualStyleBackColor = true;
+            this.btnModalUsuario.Click += new System.EventHandler(this.BtnRegistrarUsuario_Click);
             // 
             // btnCancelarUsuario
             // 
@@ -252,20 +253,20 @@
             this.txtTelefonoUsuario.TabIndex = 92;
             this.txtTelefonoUsuario.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // txtPassUsuario
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(524, 173);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(215, 23);
-            this.materialSingleLineTextField1.TabIndex = 94;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = true;
+            this.txtPassUsuario.Depth = 0;
+            this.txtPassUsuario.Hint = "";
+            this.txtPassUsuario.Location = new System.Drawing.Point(524, 173);
+            this.txtPassUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPassUsuario.Name = "txtPassUsuario";
+            this.txtPassUsuario.PasswordChar = '\0';
+            this.txtPassUsuario.SelectedText = "";
+            this.txtPassUsuario.SelectionLength = 0;
+            this.txtPassUsuario.SelectionStart = 0;
+            this.txtPassUsuario.Size = new System.Drawing.Size(215, 23);
+            this.txtPassUsuario.TabIndex = 94;
+            this.txtPassUsuario.UseSystemPasswordChar = true;
             // 
             // materialLabel1
             // 
@@ -282,11 +283,11 @@
             // 
             // ModalUsuario
             // 
-            this.AcceptButton = this.btnRegistrarUsuario;
+            this.AcceptButton = this.btnModalUsuario;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 349);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtPassUsuario);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.txtTelefonoUsuario);
             this.Controls.Add(this.lblTelefono);
@@ -294,7 +295,7 @@
             this.Controls.Add(this.lblCredencialesUsuario);
             this.Controls.Add(this.lblDatosUsuario);
             this.Controls.Add(this.btnCancelarUsuario);
-            this.Controls.Add(this.btnRegistrarUsuario);
+            this.Controls.Add(this.btnModalUsuario);
             this.Controls.Add(this.comboRolUsuario);
             this.Controls.Add(this.txtMailUsuario);
             this.Controls.Add(this.txtApellidoUsuario);
@@ -305,6 +306,7 @@
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalUsuario";
             this.Text = "Registrar Nuevo Usuario";
+            this.Load += new System.EventHandler(this.ModalUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,13 +322,13 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtMailUsuario;
         private MetroFramework.Controls.MetroComboBox comboRolUsuario;
-        private MaterialSkin.Controls.MaterialRaisedButton btnRegistrarUsuario;
+        private MaterialSkin.Controls.MaterialRaisedButton btnModalUsuario;
         private MaterialSkin.Controls.MaterialFlatButton btnCancelarUsuario;
         private MaterialSkin.Controls.MaterialLabel lblDatosUsuario;
         private MaterialSkin.Controls.MaterialLabel lblCredencialesUsuario;
         private MaterialSkin.Controls.MaterialLabel lblTelefono;
         protected internal MaterialSkin.Controls.MaterialSingleLineTextField txtTelefonoUsuario;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPassUsuario;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }
