@@ -58,7 +58,7 @@
             // 
             // imgUser
             // 
-            this.imgUser.Image = global::ProyectoPav.Properties.Resources.usuario;
+            this.imgUser.Image = global::Presentacion.Properties.Resources.usuario;
             this.imgUser.Location = new System.Drawing.Point(34, 182);
             this.imgUser.Name = "imgUser";
             this.imgUser.Size = new System.Drawing.Size(30, 30);
@@ -138,7 +138,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::ProyectoPav.Properties.Resources.cerrar;
+            this.pictureBox4.Image = global::Presentacion.Properties.Resources.cerrar;
             this.pictureBox4.Location = new System.Drawing.Point(320, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(20, 20);

@@ -40,7 +40,7 @@ namespace ProyectoPav
                 txtUser.Clear();
             }
             //imgUser.BackgroundImage = Properties.Resources.usuario_color;
-            imgUser.Image = Properties.Resources.usuario_color;
+            imgUser.Image = Presentacion.Properties.Resources.usuario_color;
             pan1.BackColor = Color.FromArgb(78, 184, 206);
             txtUser.ForeColor = Color.FromArgb(78, 184, 206);
 
@@ -52,7 +52,7 @@ namespace ProyectoPav
             {
                 txtUser.Text = "USUARIO";
             }
-            imgUser.Image = Properties.Resources.usuario;
+            imgUser.Image = Presentacion.Properties.Resources.usuario;
             pan1.BackColor = Color.WhiteSmoke;
             txtUser.ForeColor = Color.WhiteSmoke;
         }
@@ -64,7 +64,7 @@ namespace ProyectoPav
                 txtPass.Clear();
                 txtPass.UseSystemPasswordChar = true;
             }
-            imgPass.Image = Properties.Resources.candado_color;
+            imgPass.Image = Presentacion.Properties.Resources.candado_color;
             panel2.BackColor = Color.FromArgb(78, 184, 206);
             txtPass.ForeColor = Color.FromArgb(78, 184, 206);
         }
@@ -76,7 +76,7 @@ namespace ProyectoPav
                 txtPass.Text = "CONTRASEÑA";
                 txtPass.UseSystemPasswordChar = false;
             }
-            imgPass.Image = Properties.Resources.candado;
+            imgPass.Image = Presentacion.Properties.Resources.candado;
             panel2.BackColor = Color.WhiteSmoke;
             txtPass.ForeColor = Color.WhiteSmoke;
         }

@@ -137,7 +137,7 @@ namespace ProyectoPav
 
         private void BtnRes_Enter(object sender, EventArgs e)
         {
-            btnReserva.Image = Properties.Resources.cama_color;
+            btnReserva.Image = Presentacion.Properties.Resources.cama_color;
             btnReserva.ForeColor = Color.FromArgb(78, 184, 206);
             barra_boton.Height = btnReserva.Height;
             barra_boton.Top = btnReserva.Top;
@@ -146,13 +146,13 @@ namespace ProyectoPav
 
         private void BtnRes_Leave(object sender, EventArgs e)
         {
-            btnReserva.Image = Properties.Resources.cama1;
+            btnReserva.Image = Presentacion.Properties.Resources.cama1;
             btnReserva.ForeColor = Color.White;
         }
 
         private void BtnHab_Enter(object sender, EventArgs e)
         {
-            btnHabitacion.Image = Properties.Resources.cama_color;
+            btnHabitacion.Image = Presentacion.Properties.Resources.cama_color;
             btnHabitacion.ForeColor = Color.FromArgb(78, 184, 206);
             barra_boton.Height = btnHabitacion.Height;
             barra_boton.Top = btnHabitacion.Top;
@@ -161,13 +161,13 @@ namespace ProyectoPav
 
         private void BtnHab_Leave(object sender, EventArgs e)
         {
-            btnHabitacion.Image = Properties.Resources.cama1;
+            btnHabitacion.Image = Presentacion.Properties.Resources.cama1;
             btnHabitacion.ForeColor = Color.White;
         }
 
         private void BtnCli_Enter(object sender, EventArgs e)
         {
-            btnClientes.Image = Properties.Resources.cama_color;
+            btnClientes.Image = Presentacion.Properties.Resources.cama_color;
             btnClientes.ForeColor = Color.FromArgb(78, 184, 206);
             barra_boton.Height = btnClientes.Height;
             barra_boton.Top = btnClientes.Top;
@@ -176,13 +176,13 @@ namespace ProyectoPav
 
         private void BtnCli_Leave(object sender, EventArgs e)
         {
-            btnClientes.Image = Properties.Resources.cama1;
+            btnClientes.Image = Presentacion.Properties.Resources.cama1;
             btnClientes.ForeColor = Color.White;
         }
 
         private void BtnUsu_Enter(object sender, EventArgs e)
         {
-            btnUsuarios.Image = Properties.Resources.cama_color;
+            btnUsuarios.Image = Presentacion.Properties.Resources.cama_color;
             btnUsuarios.ForeColor = Color.FromArgb(78, 184, 206);
             barra_boton.Height = btnUsuarios.Height;
             barra_boton.Top = btnUsuarios.Top;
@@ -191,7 +191,7 @@ namespace ProyectoPav
 
         private void BtnUsu_Leave(object sender, EventArgs e)
         {
-            btnUsuarios.Image = Properties.Resources.cama1;
+            btnUsuarios.Image = Presentacion.Properties.Resources.cama1;
             btnUsuarios.ForeColor = Color.White;
         }
 
