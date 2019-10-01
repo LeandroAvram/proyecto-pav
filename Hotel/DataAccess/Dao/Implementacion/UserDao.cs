@@ -67,7 +67,7 @@ namespace DataAccess.Dao.Implementacion
                 nombre = row["nombre"].ToString(),
                 apellido = row["apellido"].ToString(),
                 email = row["email"].ToString(),
-                telefono = Convert.ToInt32(row["telefono"].ToString()),
+                telefono = row["telefono"].ToString(),
                 pass = row["contraseña"].ToString(),
                 estado = row["estado"].ToString(),
                 rolUsuario = new RolUsuario()

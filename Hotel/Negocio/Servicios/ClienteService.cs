@@ -33,5 +33,10 @@ namespace Negocio.Servicios
         {
             return clienteService.Update(oCliente);
         }
+
+        public bool EliminarCliente(Cliente cliente)
+        {
+            return true;
+        }
     }
 }
