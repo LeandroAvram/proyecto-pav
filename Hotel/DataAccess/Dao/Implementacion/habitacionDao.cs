@@ -14,17 +14,15 @@ namespace DataAccess.Dao.Implementacion
     public class habitacionDao : IhabitacionDao<Habitacion>
     {
 
-            private object id_habitacion;
-
-            DataTable getCombOCategoria(string tabla)
+            public DataTable getCombOCategoria(string tabla)
             {
                 return DBHelper.GetDBHelper().ConsultarTabla(tabla);
             }
-            DataTable getCombOTipoHab(string tabla)
+            public DataTable getCombOTipoHab(string tabla)
             {
                 return DBHelper.GetDBHelper().ConsultarTabla(tabla);
             }
-            DataTable getCombOEstado(string tabla)
+            public DataTable getCombOEstado(string tabla)
             {
                 return DBHelper.GetDBHelper().ConsultarTabla(tabla);
             }
@@ -136,19 +134,8 @@ namespace DataAccess.Dao.Implementacion
               return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
         }
 
-        DataTable IhabitacionDao<Habitacion>.getCombOCategoria(string tabla)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        DataTable IhabitacionDao<Habitacion>.getCombOTipoHab(string tabla)
-        {
-            throw new NotImplementedException();
-        }
-
-        DataTable IhabitacionDao<Habitacion>.getCombOEstado(string tabla)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
     }

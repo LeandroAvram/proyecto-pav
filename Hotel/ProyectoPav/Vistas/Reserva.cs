@@ -64,5 +64,10 @@ namespace ProyectoPav.Vistas
         {
 
         }
+
+        private void MetroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

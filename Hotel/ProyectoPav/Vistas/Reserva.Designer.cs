@@ -38,13 +38,16 @@
             this.jFlatButton1 = new FlatButton.JFlatButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.id_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_tipo_reserva = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_estado_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_egreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -68,7 +71,7 @@
             this.jFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.jFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.jFlatButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton3.ButtonText = "Eliminar Habitacion";
+            this.jFlatButton3.ButtonText = "Eliminar Reserva";
             this.jFlatButton3.CausesValidation = false;
             this.jFlatButton3.ErrorImageLeft = null;
             this.jFlatButton3.ErrorImageRight = null;
@@ -96,7 +99,7 @@
             this.jFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.jFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.jFlatButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton2.ButtonText = "Modificar Habitacion";
+            this.jFlatButton2.ButtonText = "Modificar Reserva";
             this.jFlatButton2.CausesValidation = false;
             this.jFlatButton2.ErrorImageLeft = null;
             this.jFlatButton2.ErrorImageRight = null;
@@ -123,7 +126,7 @@
             this.jFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
             this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton1.ButtonText = "Agregar Habitacion";
+            this.jFlatButton1.ButtonText = "Agregar Reserva";
             this.jFlatButton1.CausesValidation = false;
             this.jFlatButton1.ErrorImageLeft = null;
             this.jFlatButton1.ErrorImageRight = null;
@@ -182,12 +185,15 @@
             this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column6,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column2});
+            this.id_reserva,
+            this.id_tipo_reserva,
+            this.id_estado_reserva,
+            this.id_usuario,
+            this.personas,
+            this.fecha_egreso,
+            this.fecha_ingreso,
+            this.id_habitacion,
+            this.cliente});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -216,45 +222,7 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(696, 265);
             this.metroGrid1.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Inoformacion";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MetroGrid1_CellContentClick);
             // 
             // panel2
             // 
@@ -265,6 +233,63 @@
             this.panel2.Size = new System.Drawing.Size(800, 7);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // id_reserva
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
+            this.id_reserva.DefaultCellStyle = dataGridViewCellStyle2;
+            this.id_reserva.HeaderText = "Id";
+            this.id_reserva.Name = "id_reserva";
+            this.id_reserva.ReadOnly = true;
+            // 
+            // id_tipo_reserva
+            // 
+            this.id_tipo_reserva.HeaderText = "Tipo";
+            this.id_tipo_reserva.Name = "id_tipo_reserva";
+            this.id_tipo_reserva.ReadOnly = true;
+            // 
+            // id_estado_reserva
+            // 
+            this.id_estado_reserva.HeaderText = "Estado";
+            this.id_estado_reserva.Name = "id_estado_reserva";
+            this.id_estado_reserva.ReadOnly = true;
+            // 
+            // id_usuario
+            // 
+            this.id_usuario.HeaderText = "Usuario";
+            this.id_usuario.Name = "id_usuario";
+            this.id_usuario.ReadOnly = true;
+            // 
+            // personas
+            // 
+            this.personas.HeaderText = "Cant Personas";
+            this.personas.Name = "personas";
+            this.personas.ReadOnly = true;
+            // 
+            // fecha_egreso
+            // 
+            this.fecha_egreso.HeaderText = "Fecha Egreso";
+            this.fecha_egreso.Name = "fecha_egreso";
+            this.fecha_egreso.ReadOnly = true;
+            // 
+            // fecha_ingreso
+            // 
+            this.fecha_ingreso.HeaderText = "Fecha Ingreso";
+            this.fecha_ingreso.Name = "fecha_ingreso";
+            this.fecha_ingreso.ReadOnly = true;
+            // 
+            // id_habitacion
+            // 
+            this.id_habitacion.HeaderText = "Habitacion";
+            this.id_habitacion.Name = "id_habitacion";
+            this.id_habitacion.ReadOnly = true;
+            // 
+            // cliente
+            // 
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
             // 
             // Reserva
             // 
@@ -298,11 +323,14 @@
         private FlatButton.JFlatButton jFlatButton1;
         private FlatButton.JFlatButton jFlatButton3;
         private FlatButton.JFlatButton jFlatButton2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_reserva;
+        private System.Windows.Forms.DataGridViewButtonColumn id_tipo_reserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_estado_reserva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_egreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ingreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_habitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
     }
 }

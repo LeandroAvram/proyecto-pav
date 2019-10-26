@@ -11,7 +11,7 @@ namespace Entidades
     {
         public int Id_habitacion { get; set; }
         public int nro_habitacion { get; set; }
-        public double precio { get; set; }
+        public int precio { get; set; }
         public TipoHabitacion tipoHab { get; set; }
         public Cathabitacion catHab { get; set; }
         public Estadohabit estadoHab { get; set; }
