@@ -67,6 +67,7 @@ namespace ProyectoPav.Vistas.Modales
                 txtTelefonoUsuario.Text = oUsuarioSelected.telefono.ToString();
                 txtMailUsuario.Text = oUsuarioSelected.email;
                 txtPassUsuario.Text = oUsuarioSelected.pass;
+                comboRolUsuario.Text = oUsuarioSelected.rolUsuario.Nombre;
             }
         }
 
