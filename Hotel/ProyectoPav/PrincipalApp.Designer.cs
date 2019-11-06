@@ -44,7 +44,6 @@
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.pan_form.SuspendLayout();
@@ -208,7 +207,6 @@
             this.pan_titulo.Controls.Add(this.btn_maximizar);
             this.pan_titulo.Controls.Add(this.btn_minimizar);
             this.pan_titulo.Controls.Add(this.btn_cerrar);
-            this.pan_titulo.Controls.Add(this.label2);
             this.pan_titulo.Controls.Add(this.label1);
             this.pan_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pan_titulo.Location = new System.Drawing.Point(0, 0);
@@ -270,18 +268,6 @@
             this.btn_cerrar.TabStop = false;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(365, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "15:30";
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -290,9 +276,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 22);
+            this.label1.Size = new System.Drawing.Size(270, 22);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Leandro David Avram";
+            this.label1.Text = "Sistema de Reserva para hotel";
             // 
             // PrincipalApp
             // 
@@ -325,7 +311,6 @@
         private System.Windows.Forms.Panel pan_form;
         private System.Windows.Forms.Panel pan_menu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel barra_boton;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnReserva;
