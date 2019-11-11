@@ -12,7 +12,7 @@ namespace Entidades
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string email { get; set; }
-        public int telefono { get; set; }
+        public string telefono { get; set; }
         public string pass { get; set; }
         public RolUsuario rolUsuario { get; set; }
         public string estado { get; set; }

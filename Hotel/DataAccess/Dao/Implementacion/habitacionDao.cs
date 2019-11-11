@@ -71,10 +71,53 @@ namespace DataAccess.Dao.Implementacion
                     listadoHab.Add(ObjectMapping(row));
                 }
                 return listadoHab;
+        }
+
+        public IList<Habitacion> FiltrarHabitaciones(FiltrosHabitacion filtros)
+        {
+            List<Habitacion> listadoHab = new List<Habitacion>();
+
+            var condiciones = new StringBuilder();
+
+            condiciones.Append("WHERE ");
+
+            if (filtros.Categoria > 0)
+            {
+                condiciones.Append("h.id_cat_habitacion = " + filtros.Categoria + " AND ");
             }
 
+            if (filtros.Tipo > 0)
+            {
+                condiciones.Append("h.id_tipo_habitacion = " + filtros.Tipo + " AND ");
+            }
 
-            private Habitacion ObjectMapping(DataRow row)
+            condiciones.Append("");//TODO validacion por fecha
+
+            var strSql = string.Concat("SELECT h.id_habitacion, ",
+                "       h.nro_habitacion, ",
+                "       h.precio, ",
+                "       th.id_tipo_habitacion, ",
+                "       th.nombre as nom_tipo_habitacion, ",
+                "       ch.id_cat_habitacion, ",
+                "       ch.nombre as nom_cat_habitacion, ",
+                "       e.id_estado_habitacion, ",
+                "       e.nombre as nom_estado_habitacion",
+                " FROM T_Habitacion h ",
+                "INNER JOIN T_Tipo_Habitacion th ON h.id_tipo_habitacion = th.id_tipo_habitacion ",
+                "INNER JOIN T_Categoria_Habitacion ch ON h.id_cat_habitacion = ch.id_cat_habitacion ",
+                "INNER JOIN T_Estado_Habitacion e ON h.id_estado_habitacion = e.id_estado_habitacion ",
+                condiciones.ToString()
+            );
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoHab.Add(ObjectMapping(row));
+            }
+            return listadoHab;
+        }
+
+        private Habitacion ObjectMapping(DataRow row)
             {
             Habitacion oHabitacion = new Habitacion()
             {

@@ -15,7 +15,7 @@ namespace DataAccess.Helper
 
         private DBHelper()
         {
-            string_conexion = "Data Source=DESKTOP-P0MOIVD\\SQLEXPRESS;Initial Catalog=db_Hotel;Integrated Security=True";
+            string_conexion = "workstation id=ProyectoPav.mssql.somee.com;packet size=4096;user id=lautaF_SQLLogin_2;pwd=1i2993ibdv;data source=ProyectoPav.mssql.somee.com;persist security info=False;initial catalog=ProyectoPav";
         }
 
         public static DBHelper GetDBHelper()

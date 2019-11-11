@@ -97,7 +97,7 @@ namespace ProyectoPav.Vistas.Modales
                                 var oUsuario = new Usuario();
                                 oUsuario.nombre = txtNombreUsuario.Text;
                                 oUsuario.apellido = txtApellidoUsuario.Text;
-                                oUsuario.telefono = Int32.Parse(txtTelefonoUsuario.Text);
+                                oUsuario.telefono = txtTelefonoUsuario.Text;
                                 oUsuario.email = txtMailUsuario.Text;
                                 oUsuario.pass = txtPassUsuario.Text;
                                 oUsuario.rolUsuario = new RolUsuario();
@@ -124,7 +124,7 @@ namespace ProyectoPav.Vistas.Modales
                         {
                             oUsuarioSelected.nombre = txtNombreUsuario.Text;
                             oUsuarioSelected.apellido = txtApellidoUsuario.Text;
-                            oUsuarioSelected.telefono = Int32.Parse(txtTelefonoUsuario.Text);
+                            oUsuarioSelected.telefono = txtTelefonoUsuario.Text;
                             oUsuarioSelected.email = txtMailUsuario.Text;
                             oUsuarioSelected.pass = txtPassUsuario.Text;
                             oUsuarioSelected.rolUsuario.IdRolUsuario = (int)comboRolUsuario.SelectedValue;
