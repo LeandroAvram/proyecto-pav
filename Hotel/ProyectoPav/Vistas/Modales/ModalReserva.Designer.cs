@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDocumentoCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblDocumento = new MaterialSkin.Controls.MaterialLabel();
             this.btnRegistrarHuesped = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtApellidoCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNombreCliente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.LblApellido = new MaterialSkin.Controls.MaterialLabel();
             this.LblNombre = new MaterialSkin.Controls.MaterialLabel();
             this.btnCancelarUsuario = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.comboTipoDocumento = new MetroFramework.Controls.MetroComboBox();
+            this.BtnIngresarCliente = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblTipo = new MaterialSkin.Controls.MaterialLabel();
             this.comboRolUsuario = new MetroFramework.Controls.MetroComboBox();
             this.lblRol = new MaterialSkin.Controls.MaterialLabel();
@@ -47,33 +43,22 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.comboCategoriaHabitacion = new MetroFramework.Controls.MetroComboBox();
+            this.BtnIngresarHabitacion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lblCategoriaHabitacion = new MaterialSkin.Controls.MaterialLabel();
-            this.comboTipoHabitacion = new MetroFramework.Controls.MetroComboBox();
-            this.txtPrecio = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNumeroHabitacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTipoHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.lblPiso = new MaterialSkin.Controls.MaterialLabel();
             this.LblNumeroHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.LblNombreCliente = new MaterialSkin.Controls.MaterialLabel();
+            this.LblApellidoCliente = new MaterialSkin.Controls.MaterialLabel();
+            this.LblNumeroDocumento = new MaterialSkin.Controls.MaterialLabel();
+            this.LblTipoDocumento = new MaterialSkin.Controls.MaterialLabel();
+            this.LblNroHabitacion = new MaterialSkin.Controls.MaterialLabel();
+            this.LblPrecioHabitacion = new MaterialSkin.Controls.MaterialLabel();
+            this.LblCatHabi = new MaterialSkin.Controls.MaterialLabel();
+            this.LblTipoHab = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
-            // 
-            // txtDocumentoCliente
-            // 
-            this.txtDocumentoCliente.Depth = 0;
-            this.txtDocumentoCliente.Hint = "";
-            this.txtDocumentoCliente.Location = new System.Drawing.Point(503, 185);
-            this.txtDocumentoCliente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
-            this.txtDocumentoCliente.PasswordChar = '\0';
-            this.txtDocumentoCliente.SelectedText = "";
-            this.txtDocumentoCliente.SelectionLength = 0;
-            this.txtDocumentoCliente.SelectionStart = 0;
-            this.txtDocumentoCliente.Size = new System.Drawing.Size(215, 23);
-            this.txtDocumentoCliente.TabIndex = 116;
-            this.txtDocumentoCliente.UseSystemPasswordChar = true;
             // 
             // lblDocumento
             // 
@@ -81,7 +66,7 @@
             this.lblDocumento.Depth = 0;
             this.lblDocumento.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDocumento.Location = new System.Drawing.Point(393, 189);
+            this.lblDocumento.Location = new System.Drawing.Point(413, 185);
             this.lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(87, 19);
@@ -99,36 +84,6 @@
             this.btnRegistrarHuesped.TabIndex = 117;
             this.btnRegistrarHuesped.Text = "Registrar";
             this.btnRegistrarHuesped.UseVisualStyleBackColor = true;
-            // 
-            // txtApellidoCliente
-            // 
-            this.txtApellidoCliente.Depth = 0;
-            this.txtApellidoCliente.Hint = "";
-            this.txtApellidoCliente.Location = new System.Drawing.Point(131, 185);
-            this.txtApellidoCliente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.PasswordChar = '\0';
-            this.txtApellidoCliente.SelectedText = "";
-            this.txtApellidoCliente.SelectionLength = 0;
-            this.txtApellidoCliente.SelectionStart = 0;
-            this.txtApellidoCliente.Size = new System.Drawing.Size(215, 23);
-            this.txtApellidoCliente.TabIndex = 112;
-            this.txtApellidoCliente.UseSystemPasswordChar = false;
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.Depth = 0;
-            this.txtNombreCliente.Hint = "";
-            this.txtNombreCliente.Location = new System.Drawing.Point(131, 144);
-            this.txtNombreCliente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.PasswordChar = '\0';
-            this.txtNombreCliente.SelectedText = "";
-            this.txtNombreCliente.SelectionLength = 0;
-            this.txtNombreCliente.SelectionStart = 0;
-            this.txtNombreCliente.Size = new System.Drawing.Size(215, 23);
-            this.txtNombreCliente.TabIndex = 111;
-            this.txtNombreCliente.UseSystemPasswordChar = false;
             // 
             // LblApellido
             // 
@@ -171,30 +126,18 @@
             this.btnCancelarUsuario.Text = "Cancelar";
             this.btnCancelarUsuario.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton1
+            // BtnIngresarCliente
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(39, 85);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(113, 39);
-            this.materialRaisedButton1.TabIndex = 128;
-            this.materialRaisedButton1.Text = "Ingresar Cliente";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.MaterialRaisedButton1_Click);
-            // 
-            // comboTipoDocumento
-            // 
-            this.comboTipoDocumento.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.comboTipoDocumento.FormattingEnabled = true;
-            this.comboTipoDocumento.IntegralHeight = false;
-            this.comboTipoDocumento.ItemHeight = 23;
-            this.comboTipoDocumento.Location = new System.Drawing.Point(504, 144);
-            this.comboTipoDocumento.Name = "comboTipoDocumento";
-            this.comboTipoDocumento.Size = new System.Drawing.Size(215, 29);
-            this.comboTipoDocumento.TabIndex = 129;
-            this.comboTipoDocumento.UseSelectable = true;
+            this.BtnIngresarCliente.Depth = 0;
+            this.BtnIngresarCliente.Location = new System.Drawing.Point(39, 85);
+            this.BtnIngresarCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnIngresarCliente.Name = "BtnIngresarCliente";
+            this.BtnIngresarCliente.Primary = true;
+            this.BtnIngresarCliente.Size = new System.Drawing.Size(113, 39);
+            this.BtnIngresarCliente.TabIndex = 128;
+            this.BtnIngresarCliente.Text = "Ingresar Cliente";
+            this.BtnIngresarCliente.UseVisualStyleBackColor = true;
+            this.BtnIngresarCliente.Click += new System.EventHandler(this.BtnIngresarCliente_Click);
             // 
             // lblTipo
             // 
@@ -215,7 +158,7 @@
             this.comboRolUsuario.FormattingEnabled = true;
             this.comboRolUsuario.IntegralHeight = false;
             this.comboRolUsuario.ItemHeight = 23;
-            this.comboRolUsuario.Location = new System.Drawing.Point(158, 405);
+            this.comboRolUsuario.Location = new System.Drawing.Point(158, 404);
             this.comboRolUsuario.Name = "comboRolUsuario";
             this.comboRolUsuario.Size = new System.Drawing.Size(215, 29);
             this.comboRolUsuario.TabIndex = 132;
@@ -251,6 +194,7 @@
             this.metroDateTime2.Name = "metroDateTime2";
             this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime2.TabIndex = 134;
+            this.metroDateTime2.ValueChanged += new System.EventHandler(this.MetroDateTime2_ValueChanged);
             // 
             // materialLabel1
             // 
@@ -306,29 +250,18 @@
             this.materialLabel3.TabIndex = 138;
             this.materialLabel3.Text = "Cant de personas";
             // 
-            // materialRaisedButton2
+            // BtnIngresarHabitacion
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(39, 227);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(113, 39);
-            this.materialRaisedButton2.TabIndex = 139;
-            this.materialRaisedButton2.Text = "Ingresar Habitacion";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboCategoriaHabitacion
-            // 
-            this.comboCategoriaHabitacion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.comboCategoriaHabitacion.FormattingEnabled = true;
-            this.comboCategoriaHabitacion.IntegralHeight = false;
-            this.comboCategoriaHabitacion.ItemHeight = 23;
-            this.comboCategoriaHabitacion.Location = new System.Drawing.Point(429, 320);
-            this.comboCategoriaHabitacion.Name = "comboCategoriaHabitacion";
-            this.comboCategoriaHabitacion.Size = new System.Drawing.Size(171, 29);
-            this.comboCategoriaHabitacion.TabIndex = 147;
-            this.comboCategoriaHabitacion.UseSelectable = true;
+            this.BtnIngresarHabitacion.Depth = 0;
+            this.BtnIngresarHabitacion.Location = new System.Drawing.Point(39, 227);
+            this.BtnIngresarHabitacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BtnIngresarHabitacion.Name = "BtnIngresarHabitacion";
+            this.BtnIngresarHabitacion.Primary = true;
+            this.BtnIngresarHabitacion.Size = new System.Drawing.Size(113, 39);
+            this.BtnIngresarHabitacion.TabIndex = 139;
+            this.BtnIngresarHabitacion.Text = "Ingresar Habitacion";
+            this.BtnIngresarHabitacion.UseVisualStyleBackColor = true;
+            this.BtnIngresarHabitacion.Click += new System.EventHandler(this.BtnIngresarHabitacion_Click);
             // 
             // lblCategoriaHabitacion
             // 
@@ -342,48 +275,6 @@
             this.lblCategoriaHabitacion.Size = new System.Drawing.Size(74, 19);
             this.lblCategoriaHabitacion.TabIndex = 146;
             this.lblCategoriaHabitacion.Text = "Categoria";
-            // 
-            // comboTipoHabitacion
-            // 
-            this.comboTipoHabitacion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.comboTipoHabitacion.FormattingEnabled = true;
-            this.comboTipoHabitacion.IntegralHeight = false;
-            this.comboTipoHabitacion.ItemHeight = 23;
-            this.comboTipoHabitacion.Location = new System.Drawing.Point(429, 278);
-            this.comboTipoHabitacion.Name = "comboTipoHabitacion";
-            this.comboTipoHabitacion.Size = new System.Drawing.Size(171, 29);
-            this.comboTipoHabitacion.TabIndex = 145;
-            this.comboTipoHabitacion.UseSelectable = true;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Depth = 0;
-            this.txtPrecio.Hint = "";
-            this.txtPrecio.Location = new System.Drawing.Point(130, 330);
-            this.txtPrecio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.PasswordChar = '\0';
-            this.txtPrecio.SelectedText = "";
-            this.txtPrecio.SelectionLength = 0;
-            this.txtPrecio.SelectionStart = 0;
-            this.txtPrecio.Size = new System.Drawing.Size(99, 23);
-            this.txtPrecio.TabIndex = 143;
-            this.txtPrecio.UseSystemPasswordChar = false;
-            // 
-            // txtNumeroHabitacion
-            // 
-            this.txtNumeroHabitacion.Depth = 0;
-            this.txtNumeroHabitacion.Hint = "";
-            this.txtNumeroHabitacion.Location = new System.Drawing.Point(130, 288);
-            this.txtNumeroHabitacion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNumeroHabitacion.Name = "txtNumeroHabitacion";
-            this.txtNumeroHabitacion.PasswordChar = '\0';
-            this.txtNumeroHabitacion.SelectedText = "";
-            this.txtNumeroHabitacion.SelectionLength = 0;
-            this.txtNumeroHabitacion.SelectionStart = 0;
-            this.txtNumeroHabitacion.Size = new System.Drawing.Size(99, 23);
-            this.txtNumeroHabitacion.TabIndex = 141;
-            this.txtNumeroHabitacion.UseSystemPasswordChar = false;
             // 
             // lblTipoHabitacion
             // 
@@ -404,7 +295,7 @@
             this.lblPiso.Depth = 0;
             this.lblPiso.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblPiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPiso.Location = new System.Drawing.Point(45, 330);
+            this.lblPiso.Location = new System.Drawing.Point(55, 330);
             this.lblPiso.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPiso.Name = "lblPiso";
             this.lblPiso.Size = new System.Drawing.Size(52, 19);
@@ -417,7 +308,7 @@
             this.LblNumeroHabitacion.Depth = 0;
             this.LblNumeroHabitacion.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblNumeroHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LblNumeroHabitacion.Location = new System.Drawing.Point(34, 288);
+            this.LblNumeroHabitacion.Location = new System.Drawing.Point(44, 288);
             this.LblNumeroHabitacion.MouseState = MaterialSkin.MouseState.HOVER;
             this.LblNumeroHabitacion.Name = "LblNumeroHabitacion";
             this.LblNumeroHabitacion.Size = new System.Drawing.Size(63, 19);
@@ -454,22 +345,122 @@
             this.materialLabel4.Text = "Monto a Pagar";
             this.materialLabel4.Click += new System.EventHandler(this.MaterialLabel4_Click);
             // 
+            // LblNombreCliente
+            // 
+            this.LblNombreCliente.AutoSize = true;
+            this.LblNombreCliente.Depth = 0;
+            this.LblNombreCliente.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblNombreCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblNombreCliente.Location = new System.Drawing.Point(126, 144);
+            this.LblNombreCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblNombreCliente.Name = "LblNombreCliente";
+            this.LblNombreCliente.Size = new System.Drawing.Size(0, 19);
+            this.LblNombreCliente.TabIndex = 150;
+            // 
+            // LblApellidoCliente
+            // 
+            this.LblApellidoCliente.AutoSize = true;
+            this.LblApellidoCliente.Depth = 0;
+            this.LblApellidoCliente.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblApellidoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblApellidoCliente.Location = new System.Drawing.Point(126, 185);
+            this.LblApellidoCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblApellidoCliente.Name = "LblApellidoCliente";
+            this.LblApellidoCliente.Size = new System.Drawing.Size(0, 19);
+            this.LblApellidoCliente.TabIndex = 151;
+            // 
+            // LblNumeroDocumento
+            // 
+            this.LblNumeroDocumento.AutoSize = true;
+            this.LblNumeroDocumento.Depth = 0;
+            this.LblNumeroDocumento.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblNumeroDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblNumeroDocumento.Location = new System.Drawing.Point(519, 185);
+            this.LblNumeroDocumento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblNumeroDocumento.Name = "LblNumeroDocumento";
+            this.LblNumeroDocumento.Size = new System.Drawing.Size(0, 19);
+            this.LblNumeroDocumento.TabIndex = 153;
+            // 
+            // LblTipoDocumento
+            // 
+            this.LblTipoDocumento.AutoSize = true;
+            this.LblTipoDocumento.Depth = 0;
+            this.LblTipoDocumento.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblTipoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblTipoDocumento.Location = new System.Drawing.Point(519, 144);
+            this.LblTipoDocumento.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblTipoDocumento.Name = "LblTipoDocumento";
+            this.LblTipoDocumento.Size = new System.Drawing.Size(0, 19);
+            this.LblTipoDocumento.TabIndex = 152;
+            // 
+            // LblNroHabitacion
+            // 
+            this.LblNroHabitacion.AutoSize = true;
+            this.LblNroHabitacion.Depth = 0;
+            this.LblNroHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.LblNroHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblNroHabitacion.Location = new System.Drawing.Point(126, 288);
+            this.LblNroHabitacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblNroHabitacion.Name = "LblNroHabitacion";
+            this.LblNroHabitacion.Size = new System.Drawing.Size(0, 18);
+            this.LblNroHabitacion.TabIndex = 154;
+            // 
+            // LblPrecioHabitacion
+            // 
+            this.LblPrecioHabitacion.AutoSize = true;
+            this.LblPrecioHabitacion.Depth = 0;
+            this.LblPrecioHabitacion.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblPrecioHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblPrecioHabitacion.Location = new System.Drawing.Point(126, 330);
+            this.LblPrecioHabitacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblPrecioHabitacion.Name = "LblPrecioHabitacion";
+            this.LblPrecioHabitacion.Size = new System.Drawing.Size(0, 19);
+            this.LblPrecioHabitacion.TabIndex = 155;
+            // 
+            // LblCatHabi
+            // 
+            this.LblCatHabi.AutoSize = true;
+            this.LblCatHabi.Depth = 0;
+            this.LblCatHabi.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblCatHabi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblCatHabi.Location = new System.Drawing.Point(413, 330);
+            this.LblCatHabi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblCatHabi.Name = "LblCatHabi";
+            this.LblCatHabi.Size = new System.Drawing.Size(0, 19);
+            this.LblCatHabi.TabIndex = 157;
+            // 
+            // LblTipoHab
+            // 
+            this.LblTipoHab.AutoSize = true;
+            this.LblTipoHab.Depth = 0;
+            this.LblTipoHab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.LblTipoHab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblTipoHab.Location = new System.Drawing.Point(413, 288);
+            this.LblTipoHab.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblTipoHab.Name = "LblTipoHab";
+            this.LblTipoHab.Size = new System.Drawing.Size(0, 18);
+            this.LblTipoHab.TabIndex = 156;
+            // 
             // ModalReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 611);
+            this.Controls.Add(this.LblCatHabi);
+            this.Controls.Add(this.LblTipoHab);
+            this.Controls.Add(this.LblPrecioHabitacion);
+            this.Controls.Add(this.LblNroHabitacion);
+            this.Controls.Add(this.LblNumeroDocumento);
+            this.Controls.Add(this.LblTipoDocumento);
+            this.Controls.Add(this.LblApellidoCliente);
+            this.Controls.Add(this.LblNombreCliente);
             this.Controls.Add(this.materialSingleLineTextField2);
             this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.comboCategoriaHabitacion);
             this.Controls.Add(this.lblCategoriaHabitacion);
-            this.Controls.Add(this.comboTipoHabitacion);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtNumeroHabitacion);
             this.Controls.Add(this.lblTipoHabitacion);
             this.Controls.Add(this.lblPiso);
             this.Controls.Add(this.LblNumeroHabitacion);
-            this.Controls.Add(this.materialRaisedButton2);
+            this.Controls.Add(this.BtnIngresarHabitacion);
             this.Controls.Add(this.materialSingleLineTextField1);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
@@ -478,15 +469,11 @@
             this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.comboRolUsuario);
             this.Controls.Add(this.lblRol);
-            this.Controls.Add(this.comboTipoDocumento);
             this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.BtnIngresarCliente);
             this.Controls.Add(this.btnCancelarUsuario);
-            this.Controls.Add(this.txtDocumentoCliente);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.btnRegistrarHuesped);
-            this.Controls.Add(this.txtApellidoCliente);
-            this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalReserva";
@@ -499,17 +486,12 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumentoCliente;
         private MaterialSkin.Controls.MaterialLabel lblDocumento;
         private MaterialSkin.Controls.MaterialRaisedButton btnRegistrarHuesped;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidoCliente;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreCliente;
         private MaterialSkin.Controls.MaterialLabel LblApellido;
         private MaterialSkin.Controls.MaterialLabel LblNombre;
         private MaterialSkin.Controls.MaterialFlatButton btnCancelarUsuario;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MetroFramework.Controls.MetroComboBox comboTipoDocumento;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnIngresarCliente;
         private MaterialSkin.Controls.MaterialLabel lblTipo;
         private MetroFramework.Controls.MetroComboBox comboRolUsuario;
         private MaterialSkin.Controls.MaterialLabel lblRol;
@@ -519,16 +501,20 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MetroFramework.Controls.MetroComboBox comboCategoriaHabitacion;
+        private MaterialSkin.Controls.MaterialRaisedButton BtnIngresarHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblCategoriaHabitacion;
-        private MetroFramework.Controls.MetroComboBox comboTipoHabitacion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecio;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNumeroHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblTipoHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblPiso;
         private MaterialSkin.Controls.MaterialLabel LblNumeroHabitacion;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel LblNombreCliente;
+        private MaterialSkin.Controls.MaterialLabel LblApellidoCliente;
+        private MaterialSkin.Controls.MaterialLabel LblNumeroDocumento;
+        private MaterialSkin.Controls.MaterialLabel LblTipoDocumento;
+        private MaterialSkin.Controls.MaterialLabel LblNroHabitacion;
+        private MaterialSkin.Controls.MaterialLabel LblPrecioHabitacion;
+        private MaterialSkin.Controls.MaterialLabel LblCatHabi;
+        private MaterialSkin.Controls.MaterialLabel LblTipoHab;
     }
 }

@@ -200,6 +200,9 @@
     <EmbeddedResource Include="Vistas\Grillas\GrillaClientes.resx">
       <DependentUpon>GrillaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Grillas\GrillaHabitaciones.resx">
+      <DependentUpon>GrillaHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
     </EmbeddedResource>

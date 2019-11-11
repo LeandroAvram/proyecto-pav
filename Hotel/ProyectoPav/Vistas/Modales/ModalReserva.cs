@@ -1,19 +1,15 @@
 ﻿using MaterialSkin.Controls;
 using MaterialSkin;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Entidades;
+using ProyectoPav.Vistas.Grillas;
 
 namespace ProyectoPav.Vistas.Modales
 {
     public partial class ModalReserva : MaterialForm
     {
+        public Cliente clienteSeleccionado;
+        public Habitacion habitacionSeleccionada;
         public ModalReserva()
         {
             InitializeComponent();
@@ -28,11 +24,6 @@ namespace ProyectoPav.Vistas.Modales
 
         }
 
-        private void MaterialDivider1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LblRol_Click(object sender, EventArgs e)
         {
 
@@ -43,10 +34,17 @@ namespace ProyectoPav.Vistas.Modales
 
         }
 
-        private void MaterialRaisedButton1_Click(object sender, EventArgs e)
+        private void BtnIngresarCliente_Click(object sender, EventArgs e)
         {
-            Vistas.Grillas.GrillaClientes grillaCliente = new Vistas.Grillas.GrillaClientes();
+            GrillaClientes grillaCliente = new GrillaClientes(this);
             grillaCliente.ShowDialog();
+            if (clienteSeleccionado != null)
+            {
+                LblApellidoCliente.Text = clienteSeleccionado.Apellido;
+                LblNombreCliente.Text = clienteSeleccionado.Nombre;
+                LblTipoDocumento.Text = clienteSeleccionado.TipoDocumento.Nombre;
+                LblNumeroDocumento.Text = clienteSeleccionado.NroDocumento;
+            }
         }
 
         private void MaterialLabel4_Click(object sender, EventArgs e)
@@ -55,6 +53,34 @@ namespace ProyectoPav.Vistas.Modales
         }
 
         private void MaterialSingleLineTextField2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnIngresarHabitacion_Click(object sender, EventArgs e)
+        {
+            GrillaHabitaciones grillaHabitaciones = new GrillaHabitaciones(this);
+            grillaHabitaciones.ShowDialog();
+            if (habitacionSeleccionada != null)
+            {
+                LblCatHabi.Text = habitacionSeleccionada.catHab.nombre;
+                LblPrecioHabitacion.Text = habitacionSeleccionada.precio.ToString();
+                LblNroHabitacion.Text = habitacionSeleccionada.nro_habitacion.ToString();
+                LblTipoHab.Text = habitacionSeleccionada.tipoHab.nombre;
+            }
+        }
+
+        private void MetroDateTime2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtDocumentoCliente_Click(object sender, EventArgs e)
         {
 
         }
