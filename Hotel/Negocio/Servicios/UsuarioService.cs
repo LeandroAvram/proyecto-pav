@@ -23,6 +23,11 @@ namespace Negocio.Servicios
             return userService.GetAll();
         }
 
+        public bool LoginUser(string user, string pass)
+        {
+            return userService.Login(user, pass);
+        }
+
         public DataTable ComboRol(string tabla)
         {
             return userService.getComboRol(tabla);

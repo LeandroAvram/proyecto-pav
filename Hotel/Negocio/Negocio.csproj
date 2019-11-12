@@ -47,6 +47,10 @@
     <Compile Include="Servicios\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9544551c-6881-4afc-9671-2b55425d3af7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{82095550-cdac-4565-80c0-fccb4b91b7f1}</Project>
       <Name>DataAccess</Name>

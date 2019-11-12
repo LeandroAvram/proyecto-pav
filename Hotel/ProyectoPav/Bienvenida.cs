@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace ProyectoPav
 {
@@ -37,9 +38,20 @@ namespace ProyectoPav
             {
                 timer2.Stop();
                 this.Close();
-                PrincipalApp prin = new PrincipalApp();
-                prin.WindowState = FormWindowState.Maximized;
-                prin.Show();
+                if(UserLoginCache.IdRolUsuario == 1)
+                {
+                    PrincipalApp prin = new PrincipalApp();
+                    prin.WindowState = FormWindowState.Maximized;
+                    prin.Show();
+                }
+                else
+                {
+
+                    PrincipalAppUser prin2 = new PrincipalAppUser();
+                    prin2.WindowState = FormWindowState.Maximized;
+                    prin2.Show();
+                }
+                
             }
         }
 
