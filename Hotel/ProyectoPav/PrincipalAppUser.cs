@@ -12,9 +12,9 @@ using ProyectoPav.Vistas.Modales;
 
 namespace ProyectoPav
 {
-    public partial class PrincipalApp : Form
+    public partial class PrincipalAppUser : Form
     {
-        public PrincipalApp()
+        public PrincipalAppUser()
         {
             InitializeComponent();
         }
@@ -193,11 +193,6 @@ namespace ProyectoPav
         {
             btnUsuarios.Image = Presentacion.Properties.Resources.cama1;
             btnUsuarios.ForeColor = Color.White;
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Btn_maximizar_Click(object sender, EventArgs e)

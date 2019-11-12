@@ -12,6 +12,7 @@ namespace DataAccess.Dao.Interfaz
 
         IList<Usuario> GetAll();
 
+        bool Login(string user, string pass);
         bool Update(Usuario oUsuario);
     }
 }

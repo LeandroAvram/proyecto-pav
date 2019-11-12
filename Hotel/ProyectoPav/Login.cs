@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Negocio.Servicios;
 
 namespace ProyectoPav
 {
     public partial class Login : Form
     {
+        private readonly UsuarioService userService;
         public Login()
         {
             InitializeComponent();
+            userService = new UsuarioService();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -89,9 +92,18 @@ namespace ProyectoPav
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Bienvenida formbienvenida = new Bienvenida();
-            formbienvenida.Show();
+            
+            var rpta = userService.LoginUser(txtUser.Text, txtPass.Text);
+            if (rpta== true)
+            {
+                this.Hide();
+                Bienvenida formbienvenida = new Bienvenida();
+                formbienvenida.Show();
+            }else
+            {
+                MessageBox.Show("Usuario o Password incorrecto");
+            }
+            
         }
 
         private void Login_KeyPress(object sender, KeyPressEventArgs e)

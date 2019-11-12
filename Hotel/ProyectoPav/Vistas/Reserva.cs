@@ -85,5 +85,16 @@ namespace ProyectoPav.Vistas
             Vistas.Modales.ModalReserva user = new Vistas.Modales.ModalReserva();
             user.ShowDialog();
         }
+
+        private void JFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JFlatButton3_Click(object sender, EventArgs e)
+        {
+            Vistas.Modales.ModalPago pago = new Vistas.Modales.ModalPago();
+            pago.ShowDialog();
+        }
     }
 }

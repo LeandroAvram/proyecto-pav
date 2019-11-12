@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DataAccess.Dao.Interfaz;
 using DataAccess.Helper;
 using Entidades;
+using Common.Cache;
 
 
 namespace DataAccess.Dao.Implementacion
@@ -51,6 +52,7 @@ namespace DataAccess.Dao.Implementacion
                                            " INNER JOIN T_Rol r ON u.id_rol = r.id_rol WHERE u.estado = 'S'");
             var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
 
+          
             foreach(DataRow row in resultado.Rows)
             {
                 listadoUsuarios.Add(ObjectMapping(row));
@@ -58,6 +60,32 @@ namespace DataAccess.Dao.Implementacion
             return listadoUsuarios;
         }
 
+        public bool Login(string user, string pass)
+        {
+            String str_sql = "SELECT * FROM T_Usuario WHERE email='"+user+"' AND contraseña='"+pass+"';";
+
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+
+            if (resultado.Rows.Count == 1)
+            {
+                foreach (DataRow row in resultado.Rows)
+                {
+                    UserLoginCache.IdUser = Convert.ToInt32(row["id_usuario"].ToString());
+                    UserLoginCache.nombre = row["nombre"].ToString();
+                    UserLoginCache.apellido = row["apellido"].ToString();
+                    UserLoginCache.email = row["email"].ToString();
+                    UserLoginCache.telefono = row["telefono"].ToString();
+                    UserLoginCache.pass = row["contraseña"].ToString();
+                    UserLoginCache.IdRolUsuario = Convert.ToInt32(row["id_rol"].ToString());
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+        }
 
         private Usuario ObjectMapping(DataRow row)
         {
