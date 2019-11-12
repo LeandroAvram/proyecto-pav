@@ -9,13 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio.Servicios;
 
 namespace ProyectoPav.Vistas
 {
     public partial class Reserva : MaterialForm
     {
+        private ReservaService reservaService;
         public Reserva()
         {
+            reservaService = new ReservaService();
             InitializeComponent();
             /* MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
              materialSkinManager.AddFormToManage(this);
@@ -33,6 +36,8 @@ namespace ProyectoPav.Vistas
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
+            dgvReservas.DataSource = reservaService.ObtenerTodos();
+
         }
 
         private void MaterialLabel1_Click(object sender, EventArgs e)
