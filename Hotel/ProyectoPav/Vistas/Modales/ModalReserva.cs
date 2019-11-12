@@ -1,7 +1,10 @@
 ﻿using MaterialSkin.Controls;
 using MaterialSkin;
 using System;
+using System.Windows.Forms;
+using Common.Cache;
 using Entidades;
+using Negocio.Servicios;
 using ProyectoPav.Vistas.Grillas;
 
 namespace ProyectoPav.Vistas.Modales
@@ -10,6 +13,7 @@ namespace ProyectoPav.Vistas.Modales
     {
         public Cliente clienteSeleccionado;
         public Habitacion habitacionSeleccionada;
+        private ReservaService reservaService;
         public ModalReserva()
         {
             InitializeComponent();
@@ -17,21 +21,12 @@ namespace ProyectoPav.Vistas.Modales
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new ColorScheme(Primary.LightBlue400, Primary.Blue500, Primary.Blue500, Accent.Orange700, TextShade.WHITE);
+            reservaService = new ReservaService();
         }
 
         private void ModalReserva_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void LblRol_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ComboRolUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            LlenarCombo(comboTipoReserva, "t_tipo_reserva", "id_tipo_reserva", "nombre");
         }
 
         private void BtnIngresarCliente_Click(object sender, EventArgs e)
@@ -47,16 +42,13 @@ namespace ProyectoPav.Vistas.Modales
             }
         }
 
-        private void MaterialLabel4_Click(object sender, EventArgs e)
+        private void LlenarCombo(ComboBox cbo, string tabla, string value, string display)
         {
-
+            cbo.DataSource = reservaService.ComboTipoReserva(tabla);
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
         }
-
-        private void MaterialSingleLineTextField2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void BtnIngresarHabitacion_Click(object sender, EventArgs e)
         {
             GrillaHabitaciones grillaHabitaciones = new GrillaHabitaciones(this);
@@ -75,14 +67,30 @@ namespace ProyectoPav.Vistas.Modales
 
         }
 
-        private void ComboTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnRegistrarReserva_Click(object sender, EventArgs e)
         {
+            var oReserva = new ReservaMod
+            {
+                id_tipo_reserva = (int) comboTipoReserva.SelectedValue,
+                id_habitacion = habitacionSeleccionada.Id_habitacion,
+                id_usuario = UserLoginCache.IdUser,
+                id_cliente = clienteSeleccionado.Id,
+                fecha_ingreso = datePickerIngreso.Value,
+                fecha_egreso  = datePickerEgreso.Value,
+                cant_persona = Int32.Parse(txtCantPersonas.Text)
+            };
 
-        }
+            if (reservaService.CrearReserva(oReserva))
+            {
+                MessageBox.Show("Reserva creada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("La reserva no se pudo crear!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-        private void TxtDocumentoCliente_Click(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

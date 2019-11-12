@@ -70,7 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 685);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label2
             // 
@@ -184,7 +183,6 @@
             this.label1.Size = new System.Drawing.Size(123, 28);
             this.label1.TabIndex = 104;
             this.label1.Text = "RESERVAS";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // metroPanel1
             // 
@@ -199,7 +197,6 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.MetroPanel1_Paint);
             // 
             // panel2
             // 
@@ -209,7 +206,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1121, 7);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // dgvReservas
             // 

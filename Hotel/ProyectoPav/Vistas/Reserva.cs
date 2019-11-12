@@ -40,47 +40,7 @@ namespace ProyectoPav.Vistas
 
         }
 
-        private void MaterialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Material_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MetroPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void JFlatButton3_MouseMove(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MetroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -89,6 +49,7 @@ namespace ProyectoPav.Vistas
         {
             Vistas.Modales.ModalReserva user = new Vistas.Modales.ModalReserva();
             user.ShowDialog();
+            dgvReservas.DataSource = reservaService.ObtenerTodos();
         }
 
         private void JFlatButton2_Click(object sender, EventArgs e)

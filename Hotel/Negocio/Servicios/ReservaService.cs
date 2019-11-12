@@ -18,9 +18,19 @@ namespace Negocio.Servicios
             reservaRepo = new ReservaDao();
         }
 
+        public bool CrearReserva(ReservaMod oReserva)
+        {
+            return reservaRepo.Create(oReserva);
+        }
+
         public IList<ReservaDatos> ObtenerTodos()
         {
             return reservaRepo.GetAll();
+        }
+
+        public DataTable ComboTipoReserva(string tabla)
+        {
+            return reservaRepo.getComboTipoReserva(tabla);
         }
     }
 }

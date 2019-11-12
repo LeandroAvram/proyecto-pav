@@ -12,7 +12,7 @@ using Common.Cache;
 
 namespace DataAccess.Dao.Implementacion
 {
-    public class UserDao : Interfaz.IUserDao<Usuario>
+    public class UserDao<T> : Interfaz.IUserDao<Usuario>
     {
         public DataTable getComboRol(string tabla)
         {

@@ -107,7 +107,11 @@ namespace ProyectoPav.Vistas.Modales
                                 {
                                     MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
-                                    this.Close();
+                                    Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Usuario no insertado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
 
                             }

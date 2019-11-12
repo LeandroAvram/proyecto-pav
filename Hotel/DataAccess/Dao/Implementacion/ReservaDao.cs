@@ -10,19 +10,24 @@ namespace DataAccess.Dao.Implementacion
     {
         public bool Create(ReservaMod oReserva)
         {
-            //string str_sql = "INSERT INTO T_Usuario (nombre, apellido, email, telefono, contraseña, id_rol, estado)" +
-            //                 "VALUES (@nombre, @apellido, @email, @telefono, @contraseña, @id_rol, @estado)";
-            //var parametros = new Dictionary<string, object>();
-            //parametros.Add("nombre", oUsuario.nombre);
-            //parametros.Add("apellido", oUsuario.apellido);
-            //parametros.Add("email", oUsuario.email);
-            //parametros.Add("telefono", oUsuario.telefono);
-            //parametros.Add("contraseña", oUsuario.pass);
-            //parametros.Add("id_rol", oUsuario.rolUsuario.IdRolUsuario);
-            //parametros.Add("estado", "S");
+            string str_sql = "INSERT INTO t_reserva (id_tipo_reserva, id_habitacion, id_usuario, id_cliente, id_estado_reserva, fecha_ingreso, fecha_egreso, cant_persona)" +
+                             "VALUES (@id_tipo_reserva, @id_habitacion, @id_usuario, @id_cliente, @id_estado_reserva, @fecha_ingreso, @fecha_egreso, @cant_persona)";
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id_tipo_reserva", oReserva.id_tipo_reserva);
+            parametros.Add("id_habitacion", oReserva.id_habitacion);
+            parametros.Add("id_usuario", oReserva.id_usuario);
+            parametros.Add("id_cliente", oReserva.id_cliente);
+            parametros.Add("id_estado_reserva", 4);
+            parametros.Add("fecha_ingreso", oReserva.fecha_ingreso.ToString("yyyy/MM/dd"));
+            parametros.Add("fecha_egreso", oReserva.fecha_egreso.ToString("yyyy/MM/dd"));
+            parametros.Add("cant_persona", oReserva.cant_persona);
 
-            //return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
-            return true;
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
+        }
+
+        public DataTable getComboTipoReserva(string tabla)
+        {
+            return DBHelper.GetDBHelper().ConsultarTabla(tabla);
         }
 
         public IList<ReservaDatos> GetAll()

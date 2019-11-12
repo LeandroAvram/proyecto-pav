@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using System.Collections.Generic;
+using System.Data;
 
 namespace DataAccess.Dao.Interfaz
 {
@@ -7,6 +8,8 @@ namespace DataAccess.Dao.Interfaz
     {
         bool Create(ReservaMod oReserva);
 
+        DataTable getComboTipoReserva(string tabla);
+        
         IList<ReservaDatos> GetAll();
     }
 }
