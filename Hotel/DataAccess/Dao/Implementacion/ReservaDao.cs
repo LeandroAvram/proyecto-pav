@@ -29,7 +29,7 @@ namespace DataAccess.Dao.Implementacion
         public bool ModificarEstadoReserva(int estado, int reserva)
         {
             String str_sql = " UPDATE T_Reserva SET id_estado_reserva = @idestado" +
-                               " WHERE id_habitacion = @id";
+                               " WHERE id_reserva = @id";
 
             var parametros = new Dictionary<string, object>();
             parametros.Add("id", reserva);
@@ -37,6 +37,47 @@ namespace DataAccess.Dao.Implementacion
 
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
+        }
+
+        public bool RegistrarPagoReserva(ReservaDatos oReserva, int formPago, DateTime dia, int monto)
+        {
+            DataManager dm = new DataManager();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+                var estado = 2; 
+
+                string sql = "UPDATE T_Reserva SET id_estado_reserva = @idestado WHERE id_reserva = @id";
+                var parametros = new Dictionary<string, object>();
+                parametros.Add("id", oReserva.id_reserva);
+                parametros.Add("idestado", estado);
+                dm.EjecutarSQL(sql, parametros);
+
+                string sql2 = "INSERT INTO T_Pago (id_reserva, precio, id_formapago, fechaPago) VALUES (@id_reserva, @precio, @id_formapago, @fechaPago)";
+                var paramDetalle = new Dictionary<string, object>();
+                paramDetalle.Add("id_reserva", oReserva.id_reserva);
+                paramDetalle.Add("precio", Decimal.ToInt32(oReserva.monto));
+                paramDetalle.Add("id_formapago", formPago);
+                paramDetalle.Add("fechaPago", dia.ToString("yyyy/MM/dd"));
+                dm.EjecutarSQL(sql2, paramDetalle);
+            
+
+
+                dm.Commit();
+
+        }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+            return true;
         }
 
         public DataTable getComboTipoReserva(string tabla)

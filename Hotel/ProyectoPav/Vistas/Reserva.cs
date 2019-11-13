@@ -72,7 +72,10 @@ namespace ProyectoPav.Vistas
         private void JFlatButton3_Click(object sender, EventArgs e)
         {
             Vistas.Modales.ModalPago pago = new Vistas.Modales.ModalPago();
+            var reserva = (ReservaDatos)dgvReservas.CurrentRow.DataBoundItem;
+            pago.InicializarFormulario(reserva);
             pago.ShowDialog();
+            dgvReservas.DataSource = reservaService.ObtenerTodos();
         }
 
         private void BtnFiltro_Click(object sender, EventArgs e)

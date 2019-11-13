@@ -49,6 +49,7 @@
     <Compile Include="Dao\Interfaz\IHabitacionDao.cs" />
     <Compile Include="Dao\Interfaz\IReservaDao.cs" />
     <Compile Include="Dao\Interfaz\IUserDao.cs" />
+    <Compile Include="Helper\DataManager.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
