@@ -56,6 +56,7 @@
             this.btnCancelarHabitacion.TabIndex = 121;
             this.btnCancelarHabitacion.Text = "Cancelar";
             this.btnCancelarHabitacion.UseVisualStyleBackColor = true;
+            this.btnCancelarHabitacion.Click += new System.EventHandler(this.BtnCancelarHabitacion_Click);
             // 
             // btnRegistrarHabitacion
             // 
@@ -96,6 +97,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(171, 23);
             this.txtPrecio.TabIndex = 116;
             this.txtPrecio.UseSystemPasswordChar = false;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_KeyPress);
             // 
             // txtNumeroHabitacion
             // 
@@ -111,6 +113,7 @@
             this.txtNumeroHabitacion.Size = new System.Drawing.Size(171, 23);
             this.txtNumeroHabitacion.TabIndex = 113;
             this.txtNumeroHabitacion.UseSystemPasswordChar = false;
+            this.txtNumeroHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumeroHabitacion_KeyPress);
             // 
             // lblTipoHabitacion
             // 
