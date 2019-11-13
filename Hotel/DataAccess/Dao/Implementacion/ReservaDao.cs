@@ -25,6 +25,19 @@ namespace DataAccess.Dao.Implementacion
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
 
+        public bool ModificarEstadoReserva(int estado, int reserva)
+        {
+            String str_sql = " UPDATE T_Reserva SET id_estado_reserva = @idestado" +
+                               " WHERE id_habitacion = @id";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id", reserva);
+            parametros.Add("idestado", estado);
+
+
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
+        }
+
         public DataTable getComboTipoReserva(string tabla)
         {
             return DBHelper.GetDBHelper().ConsultarTabla(tabla);
@@ -53,6 +66,32 @@ namespace DataAccess.Dao.Implementacion
             }
             return listadoReservas;
         }
+
+        public IList<ReservaDatos> GetAllFilter(int filtro)
+        {
+            List<ReservaDatos> listadoReservas = new List<ReservaDatos>();
+
+            String str_sql = string.Concat("select r.id_reserva, ",
+                "h.nro_habitacion, ",
+                "c.nombre + ' ' + c.apellido as nombreCompleto, ",
+                "CONVERT(VARCHAR(10), r.fecha_ingreso, 103) as fechaIngreso, ",
+                "CONVERT(VARCHAR(10), r.fecha_egreso, 103) as fechaEgreso, ",
+                "er.nombre as estadoReserva, ",
+                "r.cant_persona as cantPersonas ",
+                "from t_reserva r ",
+                "inner join t_habitacion h on r.id_habitacion = h.id_habitacion ",
+                "inner join t_cliente c on r.id_cliente = c.id_cliente ",
+                "inner join t_estado_reserva er on r.id_estado_reserva = er.id_estado_reserva WHERE r.id_estado_reserva = "+ filtro);
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoReservas.Add(ObjectMapping(row));
+            }
+            return listadoReservas;
+        }
+
+        
 
         private ReservaDatos ObjectMapping(DataRow row)
         {

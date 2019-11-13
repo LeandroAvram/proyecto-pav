@@ -109,8 +109,8 @@ namespace ProyectoPav.Vistas.Modales
         }
         private void LlenarCombo(ComboBox cbo, string tabla, string value, string display)
         {
-            cbo.DataSource = habService.combpgetCombOCategoria(tabla);
-            cbo.DataSource = habService.getCombOEstado(tabla);
+            //cbo.DataSource = habService.combpgetCombOCategoria(tabla);
+            //cbo.DataSource = habService.getCombOEstado(tabla);
             cbo.DataSource = habService.getCombOTipoHab(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
