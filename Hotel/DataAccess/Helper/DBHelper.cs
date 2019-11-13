@@ -15,7 +15,11 @@ namespace DataAccess.Helper
 
         private DBHelper()
         {
+<<<<<<< HEAD
             string_conexion = "workstation id=ProyectoPav.mssql.somee.com;packet size=4096;user id=lautaF_SQLLogin_2;pwd=1i2993ibdv;data source=ProyectoPav.mssql.somee.com;persist security info=False;initial catalog=ProyectoPav";
+=======
+            string_conexion = "Data Source=laptop-b7hptv3f\\sqlexpress01;Initial Catalog=db_Hotel;Integrated Security=True";
+>>>>>>> 7e401551d3c0e4bcbb478d0d48927ddf262cfdc9
         }
 
         public static DBHelper GetDBHelper()
@@ -24,6 +28,12 @@ namespace DataAccess.Helper
                 instance = new DBHelper();
             return instance;
         }
+
+        public string obtenerConexionString()
+        {
+            return string_conexion;
+        }
+
 
         //     Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”. Recibe por valor una sentencia sql como string
         public int ejecutarSQL(string strSql)
@@ -88,6 +98,8 @@ namespace DataAccess.Helper
                 {
                     cmd.Parameters.AddWithValue(item.Key, item.Value);
                 }
+
+                
 
                 // Retorna el resultado de ejecutar el comando
                 rtdo = cmd.ExecuteNonQuery();

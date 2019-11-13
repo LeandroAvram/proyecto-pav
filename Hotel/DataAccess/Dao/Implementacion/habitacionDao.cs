@@ -176,5 +176,12 @@ namespace DataAccess.Dao.Implementacion
 
               return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
         }
+<<<<<<< HEAD
+=======
+
+        
+
+      
+>>>>>>> 7e401551d3c0e4bcbb478d0d48927ddf262cfdc9
     }
     }

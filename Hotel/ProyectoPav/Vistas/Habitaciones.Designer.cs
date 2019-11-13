@@ -48,6 +48,7 @@
             this.catHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).BeginInit();
@@ -131,6 +132,7 @@
             this.btnEliminarHabitacion.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btnEliminarHabitacion.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
             this.btnEliminarHabitacion.TabIndex = 108;
+            this.btnEliminarHabitacion.Click += new System.EventHandler(this.BtnEliminarHabitacion_Click);
             // 
             // btn_modificarHab
             // 
@@ -310,6 +312,15 @@
             this.estadoHab.HeaderText = "Estado";
             this.estadoHab.Name = "estadoHab";
             this.estadoHab.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1121, 7);
+            this.panel2.TabIndex = 2;
             // 
             // Habitaciones
             // 

@@ -46,5 +46,10 @@ namespace ProyectoPav.Vistas
             form2.InicializarFormulario(Modales.ModalHabitacion.FormMode.update, habitacion);
             form2.ShowDialog();
         }
+
+        private void BtnEliminarHabitacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

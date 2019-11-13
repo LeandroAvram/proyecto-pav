@@ -65,6 +65,7 @@ namespace ProyectoPav.Vistas
 
         }
 
+<<<<<<< HEAD
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -75,15 +76,20 @@ namespace ProyectoPav.Vistas
 
         }
 
+=======
+>>>>>>> 7e401551d3c0e4bcbb478d0d48927ddf262cfdc9
         private void MetroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+<<<<<<< HEAD
 
         private void BtnNuevaReserva_Click(object sender, EventArgs e)
         {
             Vistas.Modales.ModalReserva user = new Vistas.Modales.ModalReserva();
             user.ShowDialog();
         }
+=======
+>>>>>>> 7e401551d3c0e4bcbb478d0d48927ddf262cfdc9
     }
 }
