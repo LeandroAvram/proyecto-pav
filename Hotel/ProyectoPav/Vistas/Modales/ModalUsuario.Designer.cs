@@ -127,6 +127,7 @@
             this.txtNombreUsuario.Size = new System.Drawing.Size(215, 23);
             this.txtNombreUsuario.TabIndex = 1;
             this.txtNombreUsuario.UseSystemPasswordChar = false;
+            this.txtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreUsuario_KeyPress);
             // 
             // txtApellidoUsuario
             // 
@@ -142,6 +143,7 @@
             this.txtApellidoUsuario.Size = new System.Drawing.Size(215, 23);
             this.txtApellidoUsuario.TabIndex = 2;
             this.txtApellidoUsuario.UseSystemPasswordChar = false;
+            this.txtApellidoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellidoUsuario_KeyPress);
             // 
             // txtMailUsuario
             // 
@@ -158,6 +160,7 @@
             this.txtMailUsuario.TabIndex = 3;
             this.txtMailUsuario.UseSystemPasswordChar = false;
             this.txtMailUsuario.Click += new System.EventHandler(this.MaterialSingleLineTextField3_Click);
+            this.txtMailUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMailUsuario_KeyPress);
             // 
             // comboRolUsuario
             // 
@@ -198,6 +201,7 @@
             this.btnCancelarUsuario.TabIndex = 6;
             this.btnCancelarUsuario.Text = "Cancelar";
             this.btnCancelarUsuario.UseVisualStyleBackColor = true;
+            this.btnCancelarUsuario.Click += new System.EventHandler(this.BtnCancelarUsuario_Click);
             // 
             // lblDatosUsuario
             // 
@@ -252,6 +256,7 @@
             this.txtTelefonoUsuario.Size = new System.Drawing.Size(215, 23);
             this.txtTelefonoUsuario.TabIndex = 92;
             this.txtTelefonoUsuario.UseSystemPasswordChar = false;
+            this.txtTelefonoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefonoUsuario_KeyPress);
             // 
             // txtPassUsuario
             // 
@@ -267,6 +272,7 @@
             this.txtPassUsuario.Size = new System.Drawing.Size(215, 23);
             this.txtPassUsuario.TabIndex = 94;
             this.txtPassUsuario.UseSystemPasswordChar = true;
+            this.txtPassUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassUsuario_KeyPress);
             // 
             // materialLabel1
             // 

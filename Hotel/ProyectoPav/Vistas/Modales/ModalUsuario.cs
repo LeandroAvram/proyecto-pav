@@ -211,5 +211,75 @@ namespace ProyectoPav.Vistas.Modales
             }
             return true;
         }
+
+        private void TxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtNombreUsuario.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtApellidoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtApellidoUsuario.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTelefonoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtTelefonoUsuario.Text.Length > 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtMailUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtMailUsuario.Text.Length > 45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtPassUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtPassUsuario.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnCancelarUsuario_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
