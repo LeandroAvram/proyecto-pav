@@ -43,5 +43,10 @@ namespace Negocio.Servicios
         {
             return reservaRepo.ModificarEstadoReserva(estado, reserva);
         }
+
+        public bool RegistrarPago(ReservaDatos oReserva, int formPago, DateTime dia, int monto)
+        {
+            return reservaRepo.RegistrarPagoReserva(oReserva, formPago, dia, monto);
+        }
     }
 }
