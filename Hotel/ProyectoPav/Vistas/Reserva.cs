@@ -38,12 +38,20 @@ namespace ProyectoPav.Vistas
             skinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
             dgvReservas.DataSource = reservaService.ObtenerTodos();
+            LlenarCombo(comboRolUsuario, "T_Estado_Reserva", "id_estado_reserva", "nombre");
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void LlenarCombo(ComboBox cbo, string tabla, string value, string display)
+        {
+            cbo.DataSource = reservaService.ComboTipoReserva(tabla);
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private void BtnNuevaReserva_Click(object sender, EventArgs e)
@@ -66,6 +74,24 @@ namespace ProyectoPav.Vistas
         {
             Vistas.Modales.ModalPago pago = new Vistas.Modales.ModalPago();
             pago.ShowDialog();
+        }
+
+        private void BtnFiltro_Click(object sender, EventArgs e)
+        {
+            if(comboRolUsuario.SelectedIndex != -1)
+            {
+                dgvReservas.DataSource = reservaService.ObtenerConFiltro(comboRolUsuario.SelectedIndex+1);
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un opcion!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void JFlatButton1_Click(object sender, EventArgs e)
+        {
+            dgvReservas.DataSource = reservaService.ObtenerTodos();
+            comboRolUsuario.SelectedIndex = -1;
         }
     }
 }

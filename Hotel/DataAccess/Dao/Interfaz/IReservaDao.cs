@@ -12,6 +12,8 @@ namespace DataAccess.Dao.Interfaz
         
         IList<ReservaDatos> GetAll();
 
+        IList<ReservaDatos> GetAllFilter(int filtro);
+
         bool ModificarEstadoReserva(int estado, int reserva);
     }
 }

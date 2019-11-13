@@ -28,6 +28,12 @@ namespace Negocio.Servicios
             return reservaRepo.GetAll();
         }
 
+        public IList<ReservaDatos> ObtenerConFiltro(int filtro)
+        {
+            return reservaRepo.GetAllFilter(filtro);
+        }
+        
+
         public DataTable ComboTipoReserva(string tabla)
         {
             return reservaRepo.getComboTipoReserva(tabla);
