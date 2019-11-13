@@ -48,7 +48,6 @@
             this.lblTipoHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.lblPiso = new MaterialSkin.Controls.MaterialLabel();
             this.LblNumeroHabitacion = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMonto = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.LblNombreCliente = new MaterialSkin.Controls.MaterialLabel();
             this.LblApellidoCliente = new MaterialSkin.Controls.MaterialLabel();
@@ -58,6 +57,7 @@
             this.LblPrecioHabitacion = new MaterialSkin.Controls.MaterialLabel();
             this.LblCatHabi = new MaterialSkin.Controls.MaterialLabel();
             this.LblTipoHab = new MaterialSkin.Controls.MaterialLabel();
+            this.lblMonto = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // lblDocumento
@@ -126,6 +126,7 @@
             this.btnCancelarReserva.TabIndex = 7;
             this.btnCancelarReserva.Text = "Cancelar";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.BtnCancelarReserva_Click);
             // 
             // BtnIngresarCliente
             // 
@@ -185,6 +186,7 @@
             this.datePickerIngreso.Name = "datePickerIngreso";
             this.datePickerIngreso.Size = new System.Drawing.Size(200, 29);
             this.datePickerIngreso.TabIndex = 133;
+            this.datePickerIngreso.ValueChanged += new System.EventHandler(this.DatePickerIngreso_ValueChanged);
             // 
             // datePickerEgreso
             // 
@@ -193,7 +195,7 @@
             this.datePickerEgreso.Name = "datePickerEgreso";
             this.datePickerEgreso.Size = new System.Drawing.Size(200, 29);
             this.datePickerEgreso.TabIndex = 134;
-            this.datePickerEgreso.ValueChanged += new System.EventHandler(this.MetroDateTime2_ValueChanged);
+            this.datePickerEgreso.ValueChanged += new System.EventHandler(this.DatePickerEgreso_ValueChanged);
             // 
             // materialLabel1
             // 
@@ -235,6 +237,7 @@
             this.txtCantPersonas.Size = new System.Drawing.Size(215, 23);
             this.txtCantPersonas.TabIndex = 4;
             this.txtCantPersonas.UseSystemPasswordChar = false;
+            this.txtCantPersonas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantPersonas_KeyPress);
             // 
             // materialLabel3
             // 
@@ -313,21 +316,6 @@
             this.LblNumeroHabitacion.Size = new System.Drawing.Size(63, 19);
             this.LblNumeroHabitacion.TabIndex = 140;
             this.LblNumeroHabitacion.Text = "Numero";
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.Depth = 0;
-            this.txtMonto.Hint = "";
-            this.txtMonto.Location = new System.Drawing.Point(549, 486);
-            this.txtMonto.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.PasswordChar = '\0';
-            this.txtMonto.SelectedText = "";
-            this.txtMonto.SelectionLength = 0;
-            this.txtMonto.SelectionStart = 0;
-            this.txtMonto.Size = new System.Drawing.Size(114, 23);
-            this.txtMonto.TabIndex = 5;
-            this.txtMonto.UseSystemPasswordChar = false;
             // 
             // materialLabel4
             // 
@@ -438,11 +426,24 @@
             this.LblTipoHab.Size = new System.Drawing.Size(0, 19);
             this.LblTipoHab.TabIndex = 156;
             // 
+            // lblMonto
+            // 
+            this.lblMonto.AutoSize = true;
+            this.lblMonto.Depth = 0;
+            this.lblMonto.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblMonto.Location = new System.Drawing.Point(538, 486);
+            this.lblMonto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblMonto.Name = "lblMonto";
+            this.lblMonto.Size = new System.Drawing.Size(0, 19);
+            this.lblMonto.TabIndex = 158;
+            // 
             // ModalReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 611);
+            this.Controls.Add(this.lblMonto);
             this.Controls.Add(this.LblCatHabi);
             this.Controls.Add(this.LblTipoHab);
             this.Controls.Add(this.LblPrecioHabitacion);
@@ -451,7 +452,6 @@
             this.Controls.Add(this.LblTipoDocumento);
             this.Controls.Add(this.LblApellidoCliente);
             this.Controls.Add(this.LblNombreCliente);
-            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.lblCategoriaHabitacion);
             this.Controls.Add(this.lblTipoHabitacion);
@@ -503,7 +503,6 @@
         private MaterialSkin.Controls.MaterialLabel lblTipoHabitacion;
         private MaterialSkin.Controls.MaterialLabel lblPiso;
         private MaterialSkin.Controls.MaterialLabel LblNumeroHabitacion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtMonto;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel LblNombreCliente;
         private MaterialSkin.Controls.MaterialLabel LblApellidoCliente;
@@ -513,5 +512,6 @@
         private MaterialSkin.Controls.MaterialLabel LblPrecioHabitacion;
         private MaterialSkin.Controls.MaterialLabel LblCatHabi;
         private MaterialSkin.Controls.MaterialLabel LblTipoHab;
+        private MaterialSkin.Controls.MaterialLabel lblMonto;
     }
 }
