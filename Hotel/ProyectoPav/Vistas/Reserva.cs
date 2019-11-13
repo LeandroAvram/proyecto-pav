@@ -39,7 +39,6 @@ namespace ProyectoPav.Vistas
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
             dgvReservas.DataSource = reservaService.ObtenerTodos();
             LlenarCombo(comboRolUsuario, "T_Estado_Reserva", "id_estado_reserva", "nombre");
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

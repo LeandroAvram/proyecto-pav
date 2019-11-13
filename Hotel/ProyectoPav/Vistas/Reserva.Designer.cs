@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserva));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserva));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.jFlatButton1 = new FlatButton.JFlatButton();
+            this.btnFiltro = new FlatButton.JFlatButton();
             this.comboRolUsuario = new MetroFramework.Controls.MetroComboBox();
             this.jFlatButton3 = new FlatButton.JFlatButton();
             this.jFlatButton2 = new FlatButton.JFlatButton();
@@ -40,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.dgvReservas = new MetroFramework.Controls.MetroGrid();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.id_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nro_habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +50,7 @@
             this.fechaEgreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantPersonas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnFiltro = new FlatButton.JFlatButton();
-            this.jFlatButton1 = new FlatButton.JFlatButton();
+            this.monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
@@ -72,6 +73,60 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 685);
             this.panel1.TabIndex = 0;
+            // 
+            // jFlatButton1
+            // 
+            this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.jFlatButton1.ButtonText = "Todos";
+            this.jFlatButton1.CausesValidation = false;
+            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
+            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
+            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Black;
+            this.jFlatButton1.ImageLeft = null;
+            this.jFlatButton1.ImageRight = null;
+            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Location = new System.Drawing.Point(707, 24);
+            this.jFlatButton1.Name = "jFlatButton1";
+            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton1.Size = new System.Drawing.Size(64, 28);
+            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton1.TabIndex = 123;
+            this.jFlatButton1.Click += new System.EventHandler(this.JFlatButton1_Click);
+            // 
+            // btnFiltro
+            // 
+            this.btnFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnFiltro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnFiltro.ButtonText = "Consultar";
+            this.btnFiltro.CausesValidation = false;
+            this.btnFiltro.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnFiltro.ErrorImageLeft")));
+            this.btnFiltro.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnFiltro.ErrorImageRight")));
+            this.btnFiltro.FocusBackground = System.Drawing.Color.Empty;
+            this.btnFiltro.FocusFontColor = System.Drawing.Color.Empty;
+            this.btnFiltro.ForeColors = System.Drawing.Color.White;
+            this.btnFiltro.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.btnFiltro.HoverFontColor = System.Drawing.Color.Black;
+            this.btnFiltro.ImageLeft = null;
+            this.btnFiltro.ImageRight = null;
+            this.btnFiltro.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.btnFiltro.Location = new System.Drawing.Point(590, 24);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.btnFiltro.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.btnFiltro.RightPictureColor = System.Drawing.Color.Transparent;
+            this.btnFiltro.Size = new System.Drawing.Size(95, 28);
+            this.btnFiltro.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFiltro.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btnFiltro.TabIndex = 122;
+            this.btnFiltro.Click += new System.EventHandler(this.BtnFiltro_Click);
             // 
             // comboRolUsuario
             // 
@@ -216,7 +271,8 @@
             this.fechaIngreso,
             this.fechaEgreso,
             this.estadoReserva,
-            this.cantPersonas});
+            this.cantPersonas,
+            this.monto});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -249,6 +305,15 @@
             this.dgvReservas.UseCustomBackColor = true;
             this.dgvReservas.UseCustomForeColor = true;
             this.dgvReservas.UseStyleColors = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1121, 7);
+            this.panel2.TabIndex = 0;
             // 
             // id_reserva
             // 
@@ -307,68 +372,12 @@
             this.cantPersonas.Name = "cantPersonas";
             this.cantPersonas.ReadOnly = true;
             // 
-            // panel2
+            // monto
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 7);
-            this.panel2.TabIndex = 0;
-            // 
-            // btnFiltro
-            // 
-            this.btnFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnFiltro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnFiltro.ButtonText = "Consultar";
-            this.btnFiltro.CausesValidation = false;
-            this.btnFiltro.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnFiltro.ErrorImageLeft")));
-            this.btnFiltro.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnFiltro.ErrorImageRight")));
-            this.btnFiltro.FocusBackground = System.Drawing.Color.Empty;
-            this.btnFiltro.FocusFontColor = System.Drawing.Color.Empty;
-            this.btnFiltro.ForeColors = System.Drawing.Color.White;
-            this.btnFiltro.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.btnFiltro.HoverFontColor = System.Drawing.Color.Black;
-            this.btnFiltro.ImageLeft = null;
-            this.btnFiltro.ImageRight = null;
-            this.btnFiltro.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.btnFiltro.Location = new System.Drawing.Point(590, 24);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.btnFiltro.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.btnFiltro.RightPictureColor = System.Drawing.Color.Transparent;
-            this.btnFiltro.Size = new System.Drawing.Size(95, 28);
-            this.btnFiltro.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnFiltro.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.btnFiltro.TabIndex = 122;
-            this.btnFiltro.Click += new System.EventHandler(this.BtnFiltro_Click);
-            // 
-            // jFlatButton1
-            // 
-            this.jFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.jFlatButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.jFlatButton1.ButtonText = "Todos";
-            this.jFlatButton1.CausesValidation = false;
-            this.jFlatButton1.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageLeft")));
-            this.jFlatButton1.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton1.ErrorImageRight")));
-            this.jFlatButton1.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton1.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton1.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.jFlatButton1.HoverFontColor = System.Drawing.Color.Black;
-            this.jFlatButton1.ImageLeft = null;
-            this.jFlatButton1.ImageRight = null;
-            this.jFlatButton1.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Location = new System.Drawing.Point(707, 24);
-            this.jFlatButton1.Name = "jFlatButton1";
-            this.jFlatButton1.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton1.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton1.Size = new System.Drawing.Size(64, 28);
-            this.jFlatButton1.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jFlatButton1.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton1.TabIndex = 123;
-            this.jFlatButton1.Click += new System.EventHandler(this.JFlatButton1_Click);
+            this.monto.DataPropertyName = "monto";
+            this.monto.HeaderText = "Monto";
+            this.monto.Name = "monto";
+            this.monto.ReadOnly = true;
             // 
             // Reserva
             // 
@@ -405,6 +414,8 @@
         private FlatButton.JFlatButton jFlatButton2;
         private MetroFramework.Controls.MetroComboBox comboRolUsuario;
         private MetroFramework.Controls.MetroGrid dgvReservas;
+        private FlatButton.JFlatButton btnFiltro;
+        private FlatButton.JFlatButton jFlatButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_reserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn nro_habitacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
@@ -412,7 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaEgreso;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantPersonas;
-        private FlatButton.JFlatButton btnFiltro;
-        private FlatButton.JFlatButton jFlatButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monto;
     }
 }

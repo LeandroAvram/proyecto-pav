@@ -11,5 +11,6 @@ namespace Entidades
         public DateTime fechaEgreso { get; set; }
         public string estadoReserva { get; set; }
         public int cantPersonas { get; set; }
+        public decimal monto { get; set; }
     }
 }

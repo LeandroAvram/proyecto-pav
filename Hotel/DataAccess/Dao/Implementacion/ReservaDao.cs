@@ -10,8 +10,8 @@ namespace DataAccess.Dao.Implementacion
     {
         public bool Create(ReservaMod oReserva)
         {
-            string str_sql = "INSERT INTO t_reserva (id_tipo_reserva, id_habitacion, id_usuario, id_cliente, id_estado_reserva, fecha_ingreso, fecha_egreso, cant_persona)" +
-                             "VALUES (@id_tipo_reserva, @id_habitacion, @id_usuario, @id_cliente, @id_estado_reserva, @fecha_ingreso, @fecha_egreso, @cant_persona)";
+            string str_sql = "INSERT INTO t_reserva (id_tipo_reserva, id_habitacion, id_usuario, id_cliente, id_estado_reserva, fecha_ingreso, fecha_egreso, cant_persona, monto)" +
+                             "VALUES (@id_tipo_reserva, @id_habitacion, @id_usuario, @id_cliente, @id_estado_reserva, @fecha_ingreso, @fecha_egreso, @cant_persona, @monto)";
             var parametros = new Dictionary<string, object>();
             parametros.Add("id_tipo_reserva", oReserva.id_tipo_reserva);
             parametros.Add("id_habitacion", oReserva.id_habitacion);
@@ -21,6 +21,7 @@ namespace DataAccess.Dao.Implementacion
             parametros.Add("fecha_ingreso", oReserva.fecha_ingreso.ToString("yyyy/MM/dd"));
             parametros.Add("fecha_egreso", oReserva.fecha_egreso.ToString("yyyy/MM/dd"));
             parametros.Add("cant_persona", oReserva.cant_persona);
+            parametros.Add("monto", oReserva.monto);
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
@@ -53,7 +54,8 @@ namespace DataAccess.Dao.Implementacion
                 "CONVERT(VARCHAR(10), r.fecha_ingreso, 103) as fechaIngreso, ",
                 "CONVERT(VARCHAR(10), r.fecha_egreso, 103) as fechaEgreso, ",
                 "er.nombre as estadoReserva, ",
-                "r.cant_persona as cantPersonas ",
+                "r.cant_persona as cantPersonas, " +
+                "r.monto ",
                 "from t_reserva r ", 
                 "inner join t_habitacion h on r.id_habitacion = h.id_habitacion ",
                 "inner join t_cliente c on r.id_cliente = c.id_cliente ",
@@ -77,7 +79,8 @@ namespace DataAccess.Dao.Implementacion
                 "CONVERT(VARCHAR(10), r.fecha_ingreso, 103) as fechaIngreso, ",
                 "CONVERT(VARCHAR(10), r.fecha_egreso, 103) as fechaEgreso, ",
                 "er.nombre as estadoReserva, ",
-                "r.cant_persona as cantPersonas ",
+                "r.cant_persona as cantPersonas, " +
+                "r.monto ",
                 "from t_reserva r ",
                 "inner join t_habitacion h on r.id_habitacion = h.id_habitacion ",
                 "inner join t_cliente c on r.id_cliente = c.id_cliente ",
@@ -106,6 +109,7 @@ namespace DataAccess.Dao.Implementacion
                     fechaEgreso = DateTime.ParseExact(row["fechaEgreso"].ToString(), "dd/MM/yyyy", null),
                     estadoReserva = row["estadoReserva"].ToString(),
                     cantPersonas = Convert.ToInt32(row["cantPersonas"]),
+                    monto = Convert.ToDecimal(row["monto"])
                 };
 
                 return oReservaDatos;
