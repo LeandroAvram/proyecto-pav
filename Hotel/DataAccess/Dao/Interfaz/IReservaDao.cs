@@ -11,5 +11,7 @@ namespace DataAccess.Dao.Interfaz
         DataTable getComboTipoReserva(string tabla);
         
         IList<ReservaDatos> GetAll();
+
+        bool ModificarEstadoReserva(int estado, int reserva);
     }
 }

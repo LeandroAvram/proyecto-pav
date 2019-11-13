@@ -32,5 +32,14 @@ namespace ProyectoPav.Vistas.Modales
         {
 
         }
+
+        private void Monto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -25,6 +25,19 @@ namespace DataAccess.Dao.Implementacion
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
 
+        public bool ModificarEstadoReserva(int estado, int reserva)
+        {
+            String str_sql = " UPDATE T_Reserva SET id_estado_reserva = @idestado" +
+                               " WHERE id_habitacion = @id";
+
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("id", reserva);
+            parametros.Add("idestado", estado);
+
+
+            return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
+        }
+
         public DataTable getComboTipoReserva(string tabla)
         {
             return DBHelper.GetDBHelper().ConsultarTabla(tabla);

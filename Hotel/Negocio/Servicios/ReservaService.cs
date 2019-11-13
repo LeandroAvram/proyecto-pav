@@ -32,5 +32,10 @@ namespace Negocio.Servicios
         {
             return reservaRepo.getComboTipoReserva(tabla);
         }
+
+        public bool ModificarEstado(int estado, int reserva)
+        {
+            return reservaRepo.ModificarEstadoReserva(estado, reserva);
+        }
     }
 }

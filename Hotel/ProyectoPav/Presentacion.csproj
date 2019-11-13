@@ -144,6 +144,12 @@
     <Compile Include="Vistas\Habitaciones.Designer.cs">
       <DependentUpon>Habitaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Modales\ModalEstadoReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalEstadoReserva.Designer.cs">
+      <DependentUpon>ModalEstadoReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Modales\ModalPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalEstadoReserva.resx">
+      <DependentUpon>ModalEstadoReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modales\ModalPago.resx">
       <DependentUpon>ModalPago.cs</DependentUpon>

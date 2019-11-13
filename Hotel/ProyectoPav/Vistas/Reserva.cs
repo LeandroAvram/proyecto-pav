@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio.Servicios;
+using Entidades;
 
 namespace ProyectoPav.Vistas
 {
@@ -54,7 +55,11 @@ namespace ProyectoPav.Vistas
 
         private void JFlatButton2_Click(object sender, EventArgs e)
         {
-
+            Vistas.Modales.ModalEstadoReserva form2 = new Vistas.Modales.ModalEstadoReserva();
+            var reserva = (ReservaDatos)dgvReservas.CurrentRow.DataBoundItem;
+            form2.InicializarFormulario(reserva);
+            form2.ShowDialog();
+            dgvReservas.DataSource = reservaService.ObtenerTodos();
         }
 
         private void JFlatButton3_Click(object sender, EventArgs e)
