@@ -15,11 +15,11 @@ namespace DataAccess.Helper
 
         private DBHelper()
         {
-<<<<<<< HEAD
+
             string_conexion = "workstation id=ProyectoPav.mssql.somee.com;packet size=4096;user id=lautaF_SQLLogin_2;pwd=1i2993ibdv;data source=ProyectoPav.mssql.somee.com;persist security info=False;initial catalog=ProyectoPav";
-=======
+
             string_conexion = "Data Source=laptop-b7hptv3f\\sqlexpress01;Initial Catalog=db_Hotel;Integrated Security=True";
->>>>>>> 7e401551d3c0e4bcbb478d0d48927ddf262cfdc9
+
         }
 
         public static DBHelper GetDBHelper()
