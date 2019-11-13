@@ -30,7 +30,7 @@
         {
             this.LblNombre = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblfechaPago = new MaterialSkin.Controls.MaterialLabel();
+            this.lblTotal = new MaterialSkin.Controls.MaterialLabel();
             this.comboRolUsuario = new MetroFramework.Controls.MetroComboBox();
             this.lblRol = new MaterialSkin.Controls.MaterialLabel();
             this.monto = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -76,17 +76,17 @@
             this.materialLabel1.TabIndex = 153;
             this.materialLabel1.Text = "Fecha de Pago";
             // 
-            // lblfechaPago
+            // lblTotal
             // 
-            this.lblfechaPago.AutoSize = true;
-            this.lblfechaPago.Depth = 0;
-            this.lblfechaPago.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblfechaPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblfechaPago.Location = new System.Drawing.Point(493, 244);
-            this.lblfechaPago.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblfechaPago.Name = "lblfechaPago";
-            this.lblfechaPago.Size = new System.Drawing.Size(0, 19);
-            this.lblfechaPago.TabIndex = 154;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Depth = 0;
+            this.lblTotal.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTotal.Location = new System.Drawing.Point(493, 244);
+            this.lblTotal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 19);
+            this.lblTotal.TabIndex = 154;
             // 
             // comboRolUsuario
             // 
@@ -330,7 +330,7 @@
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.comboRolUsuario);
             this.Controls.Add(this.lblRol);
-            this.Controls.Add(this.lblfechaPago);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalPago";
@@ -346,7 +346,7 @@
 
         private MaterialSkin.Controls.MaterialLabel LblNombre;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel lblfechaPago;
+        private MaterialSkin.Controls.MaterialLabel lblTotal;
         private MetroFramework.Controls.MetroComboBox comboRolUsuario;
         private MaterialSkin.Controls.MaterialLabel lblRol;
         private MaterialSkin.Controls.MaterialSingleLineTextField monto;

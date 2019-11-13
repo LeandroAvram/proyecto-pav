@@ -55,6 +55,7 @@ namespace ProyectoPav.Vistas.Modales
             lblFechaIngre.Text = reserva.fechaIngreso.ToShortDateString();
             lblFechaEgreso.Text = reserva.fechaEgreso.ToShortDateString();
             lbldate.Text = DateTime.Today.ToShortDateString();
+            lblTotal.Text = reserva.monto.ToString();
         }
 
         private void LlenarCombo(ComboBox cbo, string tabla, string value, string display)
@@ -72,8 +73,16 @@ namespace ProyectoPav.Vistas.Modales
             if (MessageBox.Show("Desea Realizar el pago!", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 DateTime diactual = DateTime.Today;
-
-                resService.RegistrarPago(reserva, comboRolUsuario.SelectedIndex + 1, diactual, monto);
+                int monto2 = Int32.Parse(monto.Text);
+                if (resService.RegistrarPago(reserva, comboRolUsuario.SelectedIndex + 1, diactual, monto2))
+                {
+                    MessageBox.Show("Se registro el pago con exito", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo registrar", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                }
             }
         }
     }

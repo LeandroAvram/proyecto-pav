@@ -76,7 +76,8 @@ namespace ProyectoPav.Vistas.Modales
                     id_cliente = clienteSeleccionado.Id,
                     fecha_ingreso = datePickerIngreso.Value,
                     fecha_egreso = datePickerEgreso.Value,
-                    cant_persona = Int32.Parse(txtCantPersonas.Text)
+                    cant_persona = Int32.Parse(txtCantPersonas.Text),
+                    monto = Decimal.Parse(lblMonto.Text)
                 };
 
                 if (reservaService.CrearReserva(oReserva))
