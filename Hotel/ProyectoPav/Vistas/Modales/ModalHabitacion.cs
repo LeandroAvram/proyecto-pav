@@ -104,7 +104,9 @@ namespace ProyectoPav.Vistas.Modales
             {
                 txtNumeroHabitacion.Text = oHabitacion.Id_habitacion.ToString();
                 txtPrecio.Text = oHabitacion.precio.ToString();
-
+                comboEstadoHabitacion.Text = oHabitacion.estadoHab.nombre;
+                comboCategoriaHabitacion.Text = oHabitacion.catHab.nombre;
+                comboTipoHabitacion.Text = oHabitacion.tipoHab.nombre;
             }
         }
         private void LlenarCombo(ComboBox cbo, string tabla, string value, string display)
@@ -114,6 +116,7 @@ namespace ProyectoPav.Vistas.Modales
             cbo.DataSource = habService.getCombOTipoHab(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private void BtnRegistrarHabitacion_Click(object sender, System.EventArgs e)
@@ -122,6 +125,7 @@ namespace ProyectoPav.Vistas.Modales
             {
                 case FormMode.insert:
                     {
+                       
                         if (true)//ExisteUsuario()==false
                         {
                             if (ValidarCampos())
@@ -156,17 +160,20 @@ namespace ProyectoPav.Vistas.Modales
                         if (ValidarCampos())
                         {
 
-                            oHabitacion.nro_habitacion = Int32.Parse(txtNumeroHabitacion.Text);
-                            oHabitacion.precio = Int32.Parse(txtPrecio.Text);
-                            oHabitacion.tipoHab = new TipoHabitacion();
-                            oHabitacion.tipoHab.id_tipo_habitacion = (int)comboTipoHabitacion.SelectedValue;
-                            oHabitacion.catHab.id_cat_habitacion = (int)comboCategoriaHabitacion.SelectedValue;
-                            oHabitacion.estadoHab.id_estado_habitacion = (int)comboEstadoHabitacion.SelectedValue;
+                            var ohabit = new Habitacion();
+                            ohabit.nro_habitacion = Int32.Parse(txtNumeroHabitacion.Text);
+                            ohabit.precio = Int32.Parse(txtPrecio.Text);
+                            ohabit.tipoHab = new TipoHabitacion();
+                            ohabit.tipoHab.id_tipo_habitacion = (int)comboTipoHabitacion.SelectedValue;
+                            ohabit.catHab = new Cathabitacion();
+                            ohabit.catHab.id_cat_habitacion = (int)comboCategoriaHabitacion.SelectedValue;
+                            ohabit.estadoHab = new Estadohabit();
+                            ohabit.estadoHab.id_estado_habitacion = (int)comboEstadoHabitacion.SelectedValue;
 
-                            if (habService.ActualizarHabitacion(oHabitacion))
+                            if (habService.ActualizarHabitacion(ohabit))
                             {
                                 MessageBox.Show("Habitacion actualizada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Dispose();
+                                this.Close();
                             }
                             else
                                 MessageBox.Show("Error al actualizar la habitacion!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -235,6 +242,42 @@ namespace ProyectoPav.Vistas.Modales
             }
 
             return true;
+        }
+
+        private void TxtNumeroHabitacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNumeroHabitacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtNumeroHabitacion.Text.Length > 7)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtPrecio.Text.Length > 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnCancelarHabitacion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

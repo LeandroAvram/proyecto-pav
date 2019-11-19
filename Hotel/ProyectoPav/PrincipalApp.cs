@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoPav.Vistas.Modales;
+using Common.Cache;
 
 namespace ProyectoPav
 {
@@ -17,6 +18,7 @@ namespace ProyectoPav
         public PrincipalApp()
         {
             InitializeComponent();
+            lblUser.Text = UserLoginCache.nombre + " " + UserLoginCache.apellido;
         }
         #region Funcionalidades del formulario
         //-------------------------------------------------------------------
@@ -130,8 +132,16 @@ namespace ProyectoPav
         private void BtnModales_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var modalModal = new ModalCentral();
-            modalModal.Show();
+            var login = new Login();
+            login.Show();
+            UserLoginCache.IdUser = 0;
+            UserLoginCache.nombre = "";
+            UserLoginCache.apellido = "";
+            UserLoginCache.email = "";
+            UserLoginCache.IdRolUsuario = 0;
+            UserLoginCache.telefono = "";
+            UserLoginCache.pass = "";
+
 
         }
 

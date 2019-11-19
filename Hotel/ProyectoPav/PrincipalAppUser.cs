@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoPav.Vistas.Modales;
+using Common.Cache;
 
 namespace ProyectoPav
 {
@@ -17,6 +18,7 @@ namespace ProyectoPav
         public PrincipalAppUser()
         {
             InitializeComponent();
+            lblUser.Text = UserLoginCache.nombre + " " + UserLoginCache.apellido;
         }
         #region Funcionalidades del formulario
         //-------------------------------------------------------------------
@@ -130,8 +132,15 @@ namespace ProyectoPav
         private void BtnModales_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var modalModal = new ModalCentral();
-            modalModal.Show();
+            var login = new Login();
+            login.Show();
+            UserLoginCache.IdUser = 0;
+            UserLoginCache.nombre = "";
+            UserLoginCache.apellido = "";
+            UserLoginCache.email = "";
+            UserLoginCache.IdRolUsuario = 0;
+            UserLoginCache.telefono = "";
+            UserLoginCache.pass = "";
 
         }
 
@@ -150,50 +159,9 @@ namespace ProyectoPav
             btnReserva.ForeColor = Color.White;
         }
 
-        private void BtnHab_Enter(object sender, EventArgs e)
-        {
-            btnHabitacion.Image = Presentacion.Properties.Resources.cama_color;
-            btnHabitacion.ForeColor = Color.FromArgb(78, 184, 206);
-            barra_boton.Height = btnHabitacion.Height;
-            barra_boton.Top = btnHabitacion.Top;
-            AbrirFormEnPanel<Vistas.Habitaciones>();
-        }
 
-        private void BtnHab_Leave(object sender, EventArgs e)
-        {
-            btnHabitacion.Image = Presentacion.Properties.Resources.cama1;
-            btnHabitacion.ForeColor = Color.White;
-        }
 
-        private void BtnCli_Enter(object sender, EventArgs e)
-        {
-            btnClientes.Image = Presentacion.Properties.Resources.cama_color;
-            btnClientes.ForeColor = Color.FromArgb(78, 184, 206);
-            barra_boton.Height = btnClientes.Height;
-            barra_boton.Top = btnClientes.Top;
-            AbrirFormEnPanel<Vistas.Clientes>();
-        }
-
-        private void BtnCli_Leave(object sender, EventArgs e)
-        {
-            btnClientes.Image = Presentacion.Properties.Resources.cama1;
-            btnClientes.ForeColor = Color.White;
-        }
-
-        private void BtnUsu_Enter(object sender, EventArgs e)
-        {
-            btnUsuarios.Image = Presentacion.Properties.Resources.cama_color;
-            btnUsuarios.ForeColor = Color.FromArgb(78, 184, 206);
-            barra_boton.Height = btnUsuarios.Height;
-            barra_boton.Top = btnUsuarios.Top;
-            AbrirFormEnPanel<Vistas.Usuarios>();
-        }
-
-        private void BtnUsu_Leave(object sender, EventArgs e)
-        {
-            btnUsuarios.Image = Presentacion.Properties.Resources.cama1;
-            btnUsuarios.ForeColor = Color.White;
-        }
+       
 
         private void Btn_maximizar_Click(object sender, EventArgs e)
         {

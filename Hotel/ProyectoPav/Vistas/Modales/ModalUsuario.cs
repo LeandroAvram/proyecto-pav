@@ -219,7 +219,11 @@ namespace ProyectoPav.Vistas.Modales
             {
                 return;
             }
-            if (txtNombreUsuario.Text.Length > 30)
+            if (!char.IsDigit(ch))
+            {
+                return;
+            }
+            if (txtNombreUsuario.Text.Length > 15)
             {
                 e.Handled = true;
             }

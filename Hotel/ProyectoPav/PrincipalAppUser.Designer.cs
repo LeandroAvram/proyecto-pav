@@ -33,19 +33,16 @@
             this.pan_form = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pan_menu = new System.Windows.Forms.Panel();
-            this.btnHabitacion = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnModales = new System.Windows.Forms.Button();
             this.barra_boton = new System.Windows.Forms.Panel();
-            this.btnClientes = new System.Windows.Forms.Button();
             this.btnReserva = new System.Windows.Forms.Button();
             this.pan_titulo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.pan_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,11 +89,8 @@
             // pan_menu
             // 
             this.pan_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.pan_menu.Controls.Add(this.btnHabitacion);
-            this.pan_menu.Controls.Add(this.btnUsuarios);
             this.pan_menu.Controls.Add(this.btnModales);
             this.pan_menu.Controls.Add(this.barra_boton);
-            this.pan_menu.Controls.Add(this.btnClientes);
             this.pan_menu.Controls.Add(this.btnReserva);
             this.pan_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pan_menu.Location = new System.Drawing.Point(0, 40);
@@ -104,56 +98,20 @@
             this.pan_menu.Size = new System.Drawing.Size(183, 410);
             this.pan_menu.TabIndex = 1;
             // 
-            // btnHabitacion
-            // 
-            this.btnHabitacion.FlatAppearance.BorderSize = 0;
-            this.btnHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabitacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHabitacion.ForeColor = System.Drawing.Color.White;
-            this.btnHabitacion.Image = global::Presentacion.Properties.Resources.cama1;
-            this.btnHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHabitacion.Location = new System.Drawing.Point(12, 127);
-            this.btnHabitacion.Name = "btnHabitacion";
-            this.btnHabitacion.Size = new System.Drawing.Size(171, 37);
-            this.btnHabitacion.TabIndex = 12;
-            this.btnHabitacion.Text = "  Habitacion";
-            this.btnHabitacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHabitacion.UseVisualStyleBackColor = true;
-            this.btnHabitacion.Enter += new System.EventHandler(this.BtnHab_Enter);
-            this.btnHabitacion.Leave += new System.EventHandler(this.BtnHab_Leave);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::Presentacion.Properties.Resources.cama1;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 213);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(171, 37);
-            this.btnUsuarios.TabIndex = 11;
-            this.btnUsuarios.Text = "  Usuarios";
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Enter += new System.EventHandler(this.BtnUsu_Enter);
-            this.btnUsuarios.Leave += new System.EventHandler(this.BtnUsu_Leave);
-            // 
             // btnModales
             // 
+            this.btnModales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModales.FlatAppearance.BorderSize = 0;
             this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModales.ForeColor = System.Drawing.Color.White;
-            this.btnModales.Image = global::Presentacion.Properties.Resources.cama;
             this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModales.Location = new System.Drawing.Point(12, 256);
+            this.btnModales.Location = new System.Drawing.Point(3, 373);
             this.btnModales.Name = "btnModales";
-            this.btnModales.Size = new System.Drawing.Size(171, 37);
+            this.btnModales.Size = new System.Drawing.Size(180, 37);
             this.btnModales.TabIndex = 10;
-            this.btnModales.Text = "    Modales";
-            this.btnModales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModales.Text = "Cerrar Sesion";
             this.btnModales.UseVisualStyleBackColor = true;
             this.btnModales.Click += new System.EventHandler(this.BtnModales_Click);
             // 
@@ -164,24 +122,6 @@
             this.barra_boton.Name = "barra_boton";
             this.barra_boton.Size = new System.Drawing.Size(6, 37);
             this.barra_boton.TabIndex = 9;
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = global::Presentacion.Properties.Resources.cama1;
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(12, 170);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(171, 37);
-            this.btnClientes.TabIndex = 7;
-            this.btnClientes.Text = "  Clientes";
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Enter += new System.EventHandler(this.BtnCli_Enter);
-            this.btnClientes.Leave += new System.EventHandler(this.BtnCli_Leave);
             // 
             // btnReserva
             // 
@@ -209,13 +149,25 @@
             this.pan_titulo.Controls.Add(this.btn_maximizar);
             this.pan_titulo.Controls.Add(this.btn_minimizar);
             this.pan_titulo.Controls.Add(this.btn_cerrar);
-            this.pan_titulo.Controls.Add(this.label1);
+            this.pan_titulo.Controls.Add(this.lblUser);
             this.pan_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pan_titulo.Location = new System.Drawing.Point(0, 0);
             this.pan_titulo.Name = "pan_titulo";
             this.pan_titulo.Size = new System.Drawing.Size(800, 40);
             this.pan_titulo.TabIndex = 0;
             this.pan_titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pan_titulo_MouseMove);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Usuario";
             // 
             // btn_restaurar
             // 
@@ -270,29 +222,17 @@
             this.btn_cerrar.TabStop = false;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sistema de Reserva para hotel";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(342, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Usuario";
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(88, 9);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(50, 22);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User";
             // 
             // PrincipalAppUser
             // 
@@ -324,9 +264,8 @@
         private System.Windows.Forms.Panel pan_titulo;
         private System.Windows.Forms.Panel pan_form;
         private System.Windows.Forms.Panel pan_menu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel barra_boton;
-        private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.PictureBox btn_minimizar;
         private System.Windows.Forms.PictureBox btn_cerrar;
@@ -334,8 +273,6 @@
         private System.Windows.Forms.PictureBox btn_maximizar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnModales;
-        private System.Windows.Forms.Button btnHabitacion;
-        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label label2;
     }
 }
