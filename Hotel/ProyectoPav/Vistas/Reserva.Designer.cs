@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserva));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnreportereserva = new FlatButton.JFlatButton();
             this.jFlatButton1 = new FlatButton.JFlatButton();
             this.btnFiltro = new FlatButton.JFlatButton();
             this.comboRolUsuario = new MetroFramework.Controls.MetroComboBox();
@@ -50,7 +51,7 @@
             this.estadoReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantPersonas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnreportereserva = new FlatButton.JFlatButton();
+            this.jFlatButton4 = new FlatButton.JFlatButton();
             this.panel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.jFlatButton4);
             this.panel1.Controls.Add(this.btnreportereserva);
             this.panel1.Controls.Add(this.jFlatButton1);
             this.panel1.Controls.Add(this.btnFiltro);
@@ -74,6 +76,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 685);
             this.panel1.TabIndex = 0;
+            // 
+            // btnreportereserva
+            // 
+            this.btnreportereserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnreportereserva.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnreportereserva.ButtonText = "Reporte Reserva";
+            this.btnreportereserva.CausesValidation = false;
+            this.btnreportereserva.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ErrorImageLeft")));
+            this.btnreportereserva.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ErrorImageRight")));
+            this.btnreportereserva.FocusBackground = System.Drawing.Color.Empty;
+            this.btnreportereserva.FocusFontColor = System.Drawing.Color.Empty;
+            this.btnreportereserva.ForeColors = System.Drawing.Color.White;
+            this.btnreportereserva.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.btnreportereserva.HoverFontColor = System.Drawing.Color.Black;
+            this.btnreportereserva.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ImageLeft")));
+            this.btnreportereserva.ImageRight = null;
+            this.btnreportereserva.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.btnreportereserva.Location = new System.Drawing.Point(855, 264);
+            this.btnreportereserva.Name = "btnreportereserva";
+            this.btnreportereserva.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.btnreportereserva.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.btnreportereserva.RightPictureColor = System.Drawing.Color.Transparent;
+            this.btnreportereserva.Size = new System.Drawing.Size(254, 43);
+            this.btnreportereserva.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnreportereserva.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btnreportereserva.TabIndex = 124;
+            this.btnreportereserva.Click += new System.EventHandler(this.Btnreportereserva_Click);
             // 
             // jFlatButton1
             // 
@@ -372,32 +401,32 @@
             this.panel2.Size = new System.Drawing.Size(1121, 7);
             this.panel2.TabIndex = 0;
             // 
-            // btnreportereserva
+            // jFlatButton4
             // 
-            this.btnreportereserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnreportereserva.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnreportereserva.ButtonText = "Reporte Reserva";
-            this.btnreportereserva.CausesValidation = false;
-            this.btnreportereserva.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ErrorImageLeft")));
-            this.btnreportereserva.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ErrorImageRight")));
-            this.btnreportereserva.FocusBackground = System.Drawing.Color.Empty;
-            this.btnreportereserva.FocusFontColor = System.Drawing.Color.Empty;
-            this.btnreportereserva.ForeColors = System.Drawing.Color.White;
-            this.btnreportereserva.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.btnreportereserva.HoverFontColor = System.Drawing.Color.Black;
-            this.btnreportereserva.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnreportereserva.ImageLeft")));
-            this.btnreportereserva.ImageRight = null;
-            this.btnreportereserva.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.btnreportereserva.Location = new System.Drawing.Point(855, 264);
-            this.btnreportereserva.Name = "btnreportereserva";
-            this.btnreportereserva.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.btnreportereserva.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.btnreportereserva.RightPictureColor = System.Drawing.Color.Transparent;
-            this.btnreportereserva.Size = new System.Drawing.Size(254, 43);
-            this.btnreportereserva.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnreportereserva.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.btnreportereserva.TabIndex = 124;
-            this.btnreportereserva.Click += new System.EventHandler(this.Btnreportereserva_Click);
+            this.jFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.jFlatButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.jFlatButton4.ButtonText = "Reporte Pagos";
+            this.jFlatButton4.CausesValidation = false;
+            this.jFlatButton4.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton4.ErrorImageLeft")));
+            this.jFlatButton4.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton4.ErrorImageRight")));
+            this.jFlatButton4.FocusBackground = System.Drawing.Color.Empty;
+            this.jFlatButton4.FocusFontColor = System.Drawing.Color.Empty;
+            this.jFlatButton4.ForeColors = System.Drawing.Color.White;
+            this.jFlatButton4.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.jFlatButton4.HoverFontColor = System.Drawing.Color.Black;
+            this.jFlatButton4.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton4.ImageLeft")));
+            this.jFlatButton4.ImageRight = null;
+            this.jFlatButton4.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton4.Location = new System.Drawing.Point(855, 332);
+            this.jFlatButton4.Name = "jFlatButton4";
+            this.jFlatButton4.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton4.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.jFlatButton4.RightPictureColor = System.Drawing.Color.Transparent;
+            this.jFlatButton4.Size = new System.Drawing.Size(254, 43);
+            this.jFlatButton4.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.jFlatButton4.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.jFlatButton4.TabIndex = 125;
+            this.jFlatButton4.Click += new System.EventHandler(this.JFlatButton4_Click);
             // 
             // Reserva
             // 
@@ -444,5 +473,6 @@
         private FlatButton.JFlatButton btnFiltro;
         private FlatButton.JFlatButton jFlatButton1;
         private FlatButton.JFlatButton btnreportereserva;
+        private FlatButton.JFlatButton jFlatButton4;
     }
 }

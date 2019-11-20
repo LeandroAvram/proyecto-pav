@@ -102,5 +102,11 @@ namespace ProyectoPav.Vistas
             frm.ShowDialog();
 
         }
+
+        private void JFlatButton4_Click(object sender, EventArgs e)
+        {
+            Presentacion.Reportes.ventanaReportePagos frm = new Presentacion.Reportes.ventanaReportePagos();
+            frm.ShowDialog();
+        }
     }
 }
