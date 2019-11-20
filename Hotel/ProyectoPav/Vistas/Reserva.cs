@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio.Servicios;
 using Entidades;
+using Common.Cache;
 
 namespace ProyectoPav.Vistas
 {
@@ -39,6 +40,12 @@ namespace ProyectoPav.Vistas
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
             dgvReservas.DataSource = reservaService.ObtenerTodos();
             LlenarCombo(comboRolUsuario, "T_Estado_Reserva", "id_estado_reserva", "nombre");
+            if (UserLoginCache.IdRolUsuario != 1)
+            {
+                btnreportepagos.Visible = false;
+                btnreportereserva.Visible = false;
+
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -94,6 +101,19 @@ namespace ProyectoPav.Vistas
         {
             dgvReservas.DataSource = reservaService.ObtenerTodos();
             comboRolUsuario.SelectedIndex = -1;
+        }
+
+        private void Btnreportereserva_Click(object sender, EventArgs e)
+        {
+            Presentacion.Reportes.ventanaReporteReserva frm = new Presentacion.Reportes.ventanaReporteReserva();
+            frm.ShowDialog();
+
+        }
+
+        private void JFlatButton4_Click(object sender, EventArgs e)
+        {
+            Presentacion.Reportes.ventanaReportePagos frm = new Presentacion.Reportes.ventanaReportePagos();
+            frm.ShowDialog();
         }
     }
 }

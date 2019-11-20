@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnEliminarUsuario = new FlatButton.JFlatButton();
-            this.jFlatButton2 = new FlatButton.JFlatButton();
+            this.btnModificarUsuario = new FlatButton.JFlatButton();
             this.btnNuevoUsuario = new FlatButton.JFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvUsers = new MetroFramework.Controls.MetroGrid();
@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.btnEliminarUsuario);
-            this.panel1.Controls.Add(this.jFlatButton2);
+            this.panel1.Controls.Add(this.btnModificarUsuario);
             this.panel1.Controls.Add(this.btnNuevoUsuario);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -135,32 +135,32 @@
             this.btnEliminarUsuario.TabIndex = 5;
             this.btnEliminarUsuario.Click += new System.EventHandler(this.BtnEliminarUsuario_Click);
             // 
-            // jFlatButton2
+            // btnModificarUsuario
             // 
-            this.jFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.jFlatButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.jFlatButton2.ButtonText = "Modificar Usuario";
-            this.jFlatButton2.CausesValidation = false;
-            this.jFlatButton2.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton2.ErrorImageLeft")));
-            this.jFlatButton2.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("jFlatButton2.ErrorImageRight")));
-            this.jFlatButton2.FocusBackground = System.Drawing.Color.Empty;
-            this.jFlatButton2.FocusFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton2.ForeColors = System.Drawing.Color.White;
-            this.jFlatButton2.HoverBackground = System.Drawing.Color.Empty;
-            this.jFlatButton2.HoverFontColor = System.Drawing.Color.Empty;
-            this.jFlatButton2.ImageLeft = ((System.Drawing.Image)(resources.GetObject("jFlatButton2.ImageLeft")));
-            this.jFlatButton2.ImageRight = null;
-            this.jFlatButton2.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton2.Location = new System.Drawing.Point(463, 606);
-            this.jFlatButton2.Name = "jFlatButton2";
-            this.jFlatButton2.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton2.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.jFlatButton2.RightPictureColor = System.Drawing.Color.Transparent;
-            this.jFlatButton2.Size = new System.Drawing.Size(254, 43);
-            this.jFlatButton2.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.jFlatButton2.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.jFlatButton2.TabIndex = 4;
-            this.jFlatButton2.Click += new System.EventHandler(this.JFlatButton2_Click);
+            this.btnModificarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnModificarUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnModificarUsuario.ButtonText = "Modificar Usuario";
+            this.btnModificarUsuario.CausesValidation = false;
+            this.btnModificarUsuario.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnModificarUsuario.ErrorImageLeft")));
+            this.btnModificarUsuario.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnModificarUsuario.ErrorImageRight")));
+            this.btnModificarUsuario.FocusBackground = System.Drawing.Color.Empty;
+            this.btnModificarUsuario.FocusFontColor = System.Drawing.Color.Empty;
+            this.btnModificarUsuario.ForeColors = System.Drawing.Color.White;
+            this.btnModificarUsuario.HoverBackground = System.Drawing.Color.Empty;
+            this.btnModificarUsuario.HoverFontColor = System.Drawing.Color.Empty;
+            this.btnModificarUsuario.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnModificarUsuario.ImageLeft")));
+            this.btnModificarUsuario.ImageRight = null;
+            this.btnModificarUsuario.LeftPictureColor = System.Drawing.Color.Transparent;
+            this.btnModificarUsuario.Location = new System.Drawing.Point(463, 606);
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
+            this.btnModificarUsuario.PaddingRightPicture = new System.Windows.Forms.Padding(0);
+            this.btnModificarUsuario.RightPictureColor = System.Drawing.Color.Transparent;
+            this.btnModificarUsuario.Size = new System.Drawing.Size(254, 43);
+            this.btnModificarUsuario.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnModificarUsuario.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btnModificarUsuario.TabIndex = 4;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.JFlatButton2_Click);
             // 
             // btnNuevoUsuario
             // 
@@ -359,7 +359,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private FlatButton.JFlatButton btnEliminarUsuario;
-        private FlatButton.JFlatButton jFlatButton2;
+        private FlatButton.JFlatButton btnModificarUsuario;
         private FlatButton.JFlatButton btnNuevoUsuario;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private System.Windows.Forms.Label label1;
