@@ -53,5 +53,10 @@ namespace Negocio.Servicios
         {
             return habService.Delete(oHabitacion);
         }
+
+        public IList<Habitacion> Busqueda(string filtro)
+        {
+            return habService.GetConFiltro(filtro);
+        }
     }
 }

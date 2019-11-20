@@ -18,15 +18,14 @@ namespace ProyectoPav
         public PrincipalApp()
         {
             InitializeComponent();
-            lblUser.Text = UserLoginCache.nombre + " " + UserLoginCache.apellido;
+            
             if(UserLoginCache.IdRolUsuario == 1)
             {
-                txtRol.Text = "Administrador";
-                
+                lblUser.Text ="Administrador: " + UserLoginCache.nombre + " " + UserLoginCache.apellido;
             }
             else
             {
-                txtRol.Text = "Usuario";
+                lblUser.Text = "Usuario: " + UserLoginCache.nombre + " " + UserLoginCache.apellido;
                 btnUsuarios.Visible = false;
             }
         }

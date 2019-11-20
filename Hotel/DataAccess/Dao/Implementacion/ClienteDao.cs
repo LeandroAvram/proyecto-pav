@@ -53,6 +53,34 @@ namespace DataAccess.Dao.Implementacion
             return listadoUsuarios;
         }
 
+        public IList<Cliente> GetConFiltro(string filtro)
+        {
+            List<Cliente> listadoUsuarios = new List<Cliente>();
+
+            String str_sql = string.Concat("SELECT id_cliente, ",
+                                           "       c.nombre, ",
+                                           "       apellido, ",
+                                           "       mail, ",
+                                           "       telefono, ",
+                                           "       c.id_tipo_documento, ",
+                                           "       nro_documento, ",
+                                           "       td.nombre as nombreTipo ",
+                                           "FROM T_Cliente c " +
+                                           "INNER JOIN T_TIPO_DOCUMENTO td on c.id_tipo_documento = td.id_tipo_documento " +
+                                           "WHERE c.estado = 'S' and (id_cliente like '%" + filtro + "%' or c.nombre like '%" + filtro + "%' or apellido like '%" + filtro + "%' or mail like '%" + filtro + "%' or telefono like '%" + filtro + "%' or nro_documento like '%" + filtro + "%' or td.nombre like '%" + filtro + "%')");
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+            if (resultado.Rows.Count == 0)
+            {
+                return listadoUsuarios;
+            }
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoUsuarios.Add(ObjectMapping(row));
+            }
+            return listadoUsuarios;
+        }
+
 
         private Cliente ObjectMapping(DataRow row)
         {

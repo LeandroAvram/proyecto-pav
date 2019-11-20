@@ -44,5 +44,17 @@ namespace ProyectoPav.Vistas
             form2.InicializarFormulario(Modales.ModalHabitacion.FormMode.update, habitacion);
             form2.ShowDialog();
         }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text != string.Empty)
+            {
+                dgvHabitacion.DataSource = ohabitacion.Busqueda(txtBuscar.Text);
+            }
+            else
+            {
+                dgvHabitacion.DataSource = ohabitacion.ObtenerTodos();
+            }
+        }
     }
 }

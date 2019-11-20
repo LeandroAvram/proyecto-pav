@@ -223,6 +223,7 @@
             this.Controls.Add(this.lblPiso);
             this.Controls.Add(this.LblNumeroHabitacion);
             this.Name = "ModalHabitacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Habitacion";
             this.Load += new System.EventHandler(this.ModalHabitacion_Load);
             this.ResumeLayout(false);

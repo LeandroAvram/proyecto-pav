@@ -76,6 +76,7 @@ namespace ProyectoPav.Vistas.Modales
             cbo.DataSource = userService.ComboRol(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private void MaterialSingleLineTextField3_Click(object sender, System.EventArgs e)
@@ -209,6 +210,7 @@ namespace ProyectoPav.Vistas.Modales
             {
                 comboRolUsuario.BackColor = Color.White;
             }
+
             return true;
         }
 

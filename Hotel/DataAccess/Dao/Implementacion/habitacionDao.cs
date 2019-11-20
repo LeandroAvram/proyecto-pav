@@ -72,6 +72,39 @@ namespace DataAccess.Dao.Implementacion
                 }
                 return listadoHab;
         }
+        public IList<Habitacion> GetConFiltro(string filtro)
+        {
+            List<Habitacion> listadoHab = new List<Habitacion>();
+
+            String str_sql = string.Concat("SELECT h.id_habitacion, ",
+                                           "       h.nro_habitacion, ",
+                                           "       h.precio, ",
+                                           "       th.id_tipo_habitacion, ",
+                                           "       th.nombre as nom_tipo_habitacion, ",
+                                           "       ch.id_cat_habitacion, ",
+                                           "       ch.nombre as nom_cat_habitacion, ",
+                                           "       e.id_estado_habitacion, ",
+                                           "       e.nombre as nom_estado_habitacion",
+                                            " FROM T_Habitacion h ",
+                                               "INNER JOIN T_Tipo_Habitacion th ON h.id_tipo_habitacion = th.id_tipo_habitacion ",
+                                               "INNER JOIN T_Categoria_Habitacion ch ON h.id_cat_habitacion = ch.id_cat_habitacion ",
+                                              "INNER JOIN T_Estado_Habitacion e ON h.id_estado_habitacion = e.id_estado_habitacion ",
+                                              "where (h.nro_habitacion like '%" + filtro + "%' or th.nombre like '%" + filtro + "%' or ch.nombre like '%" + filtro + "%' or e.nombre like'%" + filtro + "%')"
+
+                                               );
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+            if (resultado.Rows.Count == 0)
+            {
+                return listadoHab;
+            }
+
+            foreach (DataRow row in resultado.Rows)
+            {
+                listadoHab.Add(ObjectMapping(row));
+            }
+            return listadoHab;
+        }
+        
 
         public IList<Habitacion> FiltrarHabitaciones(FiltrosHabitacion filtros)
         {
