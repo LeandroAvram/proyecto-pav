@@ -182,6 +182,7 @@
             this.btnCancelarUsuario.TabIndex = 163;
             this.btnCancelarUsuario.Text = "Cancelar";
             this.btnCancelarUsuario.UseVisualStyleBackColor = true;
+            this.btnCancelarUsuario.Click += new System.EventHandler(this.btnCancelarUsuario_Click);
             // 
             // btnRegistrarHuesped
             // 
@@ -213,12 +214,12 @@
             // 
             this.lblNombreCom.AutoSize = true;
             this.lblNombreCom.Depth = 0;
-            this.lblNombreCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblNombreCom.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNombreCom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblNombreCom.Location = new System.Drawing.Point(163, 150);
             this.lblNombreCom.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombreCom.Name = "lblNombreCom";
-            this.lblNombreCom.Size = new System.Drawing.Size(0, 18);
+            this.lblNombreCom.Size = new System.Drawing.Size(0, 19);
             this.lblNombreCom.TabIndex = 167;
             // 
             // LblNumeroHabitacion

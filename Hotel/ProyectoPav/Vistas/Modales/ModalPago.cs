@@ -1,13 +1,6 @@
 ﻿using MaterialSkin.Controls;
 using MaterialSkin;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Negocio.Servicios;
@@ -40,7 +33,11 @@ namespace ProyectoPav.Vistas.Modales
         private void Monto_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (!char.IsDigit(ch))
+            if (ch.Equals('\b') || ch.Equals('\r') || ((ch.Equals('.') || ch.Equals(',')) && monto.Text.Length < 15))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || monto.Text.Length > 15)
             {
                 e.Handled = true;
             }
@@ -72,18 +69,48 @@ namespace ProyectoPav.Vistas.Modales
         {
             if (MessageBox.Show("Desea Realizar el pago!", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                DateTime diactual = DateTime.Today;
-                int monto2 = Int32.Parse(monto.Text);
-                if (resService.RegistrarPago(reserva, comboRolUsuario.SelectedIndex + 1, diactual, monto2))
+                if (ValidarMonto())
                 {
-                    MessageBox.Show("Se registro el pago con exito", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DateTime diactual = DateTime.Today;
+                    int monto2 = Int32.Parse(monto.Text);                
+                    if (resService.RegistrarPago(reserva, comboRolUsuario.SelectedIndex + 1, diactual, monto2))
+                    {
+                        MessageBox.Show("Se registro el pago con exito", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         Close();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo registrar", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo registrar", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    } 
+                }                 
             }
+        }
+
+        private bool ValidarMonto()
+        {
+            if (comboRolUsuario.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar una forma de pago", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (monto.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar un monto para realizar el pago", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (Int32.Parse(monto.Text) < Int32.Parse(lblTotal.Text))
+            {
+                MessageBox.Show("Debe ingresar un monto igual o mayor al valor de la reserva", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private void btnCancelarUsuario_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
