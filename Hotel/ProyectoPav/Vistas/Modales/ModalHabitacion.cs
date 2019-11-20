@@ -102,7 +102,7 @@ namespace ProyectoPav.Vistas.Modales
         {
             if (oHabitacion != null)
             {
-                txtNumeroHabitacion.Text = oHabitacion.Id_habitacion.ToString();
+                txtNumeroHabitacion.Text = oHabitacion.nro_habitacion.ToString();
                 txtPrecio.Text = oHabitacion.precio.ToString();
                 comboEstadoHabitacion.Text = oHabitacion.estadoHab.nombre;
                 comboCategoriaHabitacion.Text = oHabitacion.catHab.nombre;
@@ -130,37 +130,39 @@ namespace ProyectoPav.Vistas.Modales
                         {
                             if (ValidarCampos())
                             {
-                                var ohabit = new Habitacion();
-                                ohabit.nro_habitacion = Int32.Parse(txtNumeroHabitacion.Text);
-                                ohabit.precio = Int32.Parse(txtPrecio.Text);
-                                ohabit.tipoHab = new TipoHabitacion();
-                                ohabit.tipoHab.id_tipo_habitacion = (int)comboTipoHabitacion.SelectedValue;
-                                ohabit.catHab = new Cathabitacion();
-                                ohabit.catHab.id_cat_habitacion = (int)comboCategoriaHabitacion.SelectedValue;
-                                ohabit.estadoHab = new Estadohabit();
-                                ohabit.estadoHab.id_estado_habitacion = (int)comboEstadoHabitacion.SelectedValue;
-
-                                if (habService.CrearHabitacion(ohabit))
+                                if (NoExisteHabitacion(Int32.Parse(txtNumeroHabitacion.Text)))
                                 {
-                                    MessageBox.Show("Habitacion insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
-                                    this.Close();
-                                }
+                                    var ohabit = new Habitacion();
+                                    ohabit.nro_habitacion = Int32.Parse(txtNumeroHabitacion.Text);
+                                    ohabit.precio = Int32.Parse(txtPrecio.Text);
+                                    ohabit.tipoHab = new TipoHabitacion();
+                                    ohabit.tipoHab.id_tipo_habitacion = (int)comboTipoHabitacion.SelectedValue;
+                                    ohabit.catHab = new Cathabitacion();
+                                    ohabit.catHab.id_cat_habitacion = (int)comboCategoriaHabitacion.SelectedValue;
+                                    ohabit.estadoHab = new Estadohabit();
+                                    ohabit.estadoHab.id_estado_habitacion = (int)comboEstadoHabitacion.SelectedValue;
 
+                                    if (habService.CrearHabitacion(ohabit))
+                                    {
+                                        MessageBox.Show("Habitacion insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
+                                        this.Close();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Numero de habitacion encontrado!. Ingrese un numero diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Numero de habitacion encontrado!. Ingrese un numero diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         break;
                     }
                 case FormMode.update:
                     {
                         if (ValidarCampos())
-                        {
-
+                        {                          
                             var ohabit = new Habitacion();
+                            ohabit.Id_habitacion = oHabitacion.Id_habitacion;
                             ohabit.nro_habitacion = Int32.Parse(txtNumeroHabitacion.Text);
                             ohabit.precio = Int32.Parse(txtPrecio.Text);
                             ohabit.tipoHab = new TipoHabitacion();
@@ -181,6 +183,11 @@ namespace ProyectoPav.Vistas.Modales
                         break;
                     }
             }
+        }
+
+        private bool NoExisteHabitacion(int nroHabitacion)
+        {
+            return habService.NoExisteHabitacion(nroHabitacion);
         }
 
         private bool ValidarCampos()

@@ -150,8 +150,7 @@ namespace DataAccess.Dao.Implementacion
             return listadoHab;
         }
 
-        private Habitacion ObjectMapping(DataRow row)
-            {
+        private Habitacion ObjectMapping(DataRow row) {
             Habitacion oHabitacion = new Habitacion()
             {
                 Id_habitacion = Convert.ToInt32(row["id_habitacion"].ToString()),
@@ -178,7 +177,7 @@ namespace DataAccess.Dao.Implementacion
             return oHabitacion;
             }
 
-            public bool Update(Habitacion oHabitacion)
+        public bool Update(Habitacion oHabitacion)
             {
                 String str_sql = " UPDATE T_Habitacion SET nro_habitacion = @nro," +
                                  "                      precio = @precio," +
@@ -197,16 +196,21 @@ namespace DataAccess.Dao.Implementacion
                 
 
                 return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
-            }
+        }
 
-            
-
-            public bool Delete(Entidades.Habitacion oHabitacion)
+        public bool Delete(Entidades.Habitacion oHabitacion)
             {
               String str_sql = " Delete from T_Habitacion " + 
                              "  WHERE Id_habitacion = @id";
 
               return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
         }
+
+        public bool NoExisteHabitacion(int nroHabitacion)
+        {
+            var str_sql = "select * from t_habitacion where nro_habitacion = " + nroHabitacion;
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+            return resultado.Rows.Count == 0;
+        }
     }
-    }
+}

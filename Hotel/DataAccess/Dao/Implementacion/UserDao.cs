@@ -24,13 +24,13 @@ namespace DataAccess.Dao.Implementacion
             string str_sql = "INSERT INTO T_Usuario (nombre, apellido, email, telefono, contraseña, id_rol, estado)" +
                              "VALUES (@nombre, @apellido, @email, @telefono, @contraseña, @id_rol, @estado)";
             var parametros = new Dictionary<string, object>();
-            parametros.Add("nombre", oUsuario.nombre);
-            parametros.Add("apellido", oUsuario.apellido);
-            parametros.Add("email", oUsuario.email);
+            parametros.Add("nombre", "'" + oUsuario.nombre + "'");
+            parametros.Add("apellido", "'" + oUsuario.apellido + "'");
+            parametros.Add("email", "'" + oUsuario.email + "'");
             parametros.Add("telefono", oUsuario.telefono);
-            parametros.Add("contraseña", oUsuario.pass);
+            parametros.Add("contraseña", "'" + oUsuario.pass + "'");
             parametros.Add("id_rol", oUsuario.rolUsuario.IdRolUsuario);
-            parametros.Add("estado", "S");
+            parametros.Add("estado", "'S'");
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
@@ -149,5 +149,11 @@ namespace DataAccess.Dao.Implementacion
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
 
+        public bool NoExisteUsuario(string mail)
+        {
+            var str_sql = "select * from T_Usuario where email = '" + mail + "'";
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+            return resultado.Rows.Count == 0;
+        }
     }
 }

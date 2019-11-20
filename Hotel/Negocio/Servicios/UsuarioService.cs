@@ -39,6 +39,10 @@ namespace Negocio.Servicios
             return userService.Update(oUsuario);
         }
 
+        public bool NoExisteUsuario(string mail)
+        {
+            return userService.NoExisteUsuario(mail);
+        }
         public bool ModificarEstadoUsuario(Usuario oUsuarioSelected)
         {
             oUsuarioSelected.estado = "N";

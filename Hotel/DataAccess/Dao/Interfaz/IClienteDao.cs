@@ -15,5 +15,6 @@ namespace DataAccess.Dao.Interfaz
         IList<Cliente> GetAll();
         IList<T> GetConFiltro(string filtro);
         bool Update(Cliente oCliente);
+        bool NoExisteHuesped(string dni);
     }
 }

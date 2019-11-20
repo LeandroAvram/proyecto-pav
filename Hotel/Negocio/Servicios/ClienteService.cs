@@ -44,5 +44,10 @@ namespace Negocio.Servicios
         {
             return clienteService.GetConFiltro(filtro);
         }
+
+        public bool NoExisteHuesped(string dni)
+        {
+            return clienteService.NoExisteHuesped(dni);
+        }
     }
 }

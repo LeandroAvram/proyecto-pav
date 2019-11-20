@@ -95,26 +95,30 @@ namespace ProyectoPav.Vistas.Modales
                         {
                             if(ValidarCampos())
                             {
-                                var oUsuario = new Usuario();
-                                oUsuario.nombre = txtNombreUsuario.Text;
-                                oUsuario.apellido = txtApellidoUsuario.Text;
-                                oUsuario.telefono = txtTelefonoUsuario.Text;
-                                oUsuario.email = txtMailUsuario.Text;
-                                oUsuario.pass = txtPassUsuario.Text;
-                                oUsuario.rolUsuario = new RolUsuario();
-                                oUsuario.rolUsuario.IdRolUsuario = (int)comboRolUsuario.SelectedValue;
-
-                                if(userService.CrearUsuario(oUsuario))
+                                if (NoExisteUsuario(txtMailUsuario.Text))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
-                                    Close();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Usuario no insertado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                    var oUsuario = new Usuario();
+                                    oUsuario.nombre = txtNombreUsuario.Text;
+                                    oUsuario.apellido = txtApellidoUsuario.Text;
+                                    oUsuario.telefono = txtTelefonoUsuario.Text;
+                                    oUsuario.email = txtMailUsuario.Text;
+                                    oUsuario.pass = txtPassUsuario.Text;
+                                    oUsuario.rolUsuario = new RolUsuario();
+                                    oUsuario.rolUsuario.IdRolUsuario = (int)comboRolUsuario.SelectedValue;
 
+                                    if (userService.CrearUsuario(oUsuario))
+                                    {
+                                        MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
+                                        Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Usuario no insertado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                } else {
+                                    MessageBox.Show("Ya existe un usuario con el mail ingresado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         }
                         else
@@ -147,7 +151,10 @@ namespace ProyectoPav.Vistas.Modales
             }
         }
 
-
+        private bool NoExisteUsuario(string mail)
+        {
+            return userService.NoExisteUsuario(mail);
+        }
         private bool ValidarCampos()
         {
             if(txtNombreUsuario.Text == string.Empty)

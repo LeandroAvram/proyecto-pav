@@ -47,20 +47,28 @@ namespace ProyectoPav.Vistas.Modales
                         {
                             if (ValidarCampos())
                             {
-                                var oCliente = new Cliente();
-                                oCliente.Nombre = txtNombreCliente.Text;
-                                oCliente.Apellido = txtApellidoCliente.Text;
-                                oCliente.Telefono = txtTelefonoCliente.Text;
-                                oCliente.Email = txtMailCliente.Text;
-                                oCliente.NroDocumento = txtDocumentoCliente.Text;
-                                oCliente.TipoDocumento = new TipoDocumento{
-                                    Id = (int) comboTipoDocumento.SelectedValue
-                                };
-
-                                if (clienteService.CrearUsuario(oCliente))
+                                if (NoExisteHuesped(txtDocumentoCliente.Text))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    Close();
+                                    var oCliente = new Cliente();
+                                    oCliente.Nombre = txtNombreCliente.Text;
+                                    oCliente.Apellido = txtApellidoCliente.Text;
+                                    oCliente.Telefono = txtTelefonoCliente.Text;
+                                    oCliente.Email = txtMailCliente.Text;
+                                    oCliente.NroDocumento = txtDocumentoCliente.Text;
+                                    oCliente.TipoDocumento = new TipoDocumento
+                                    {
+                                        Id = (int)comboTipoDocumento.SelectedValue
+                                    };
+
+                                    if (clienteService.CrearUsuario(oCliente))
+                                    {
+                                        MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        Close();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ya existe un huesped con el dni ingresado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
 
                             }
@@ -97,6 +105,11 @@ namespace ProyectoPav.Vistas.Modales
                         break;
                     }
             }
+        }
+
+        private bool NoExisteHuesped(string dni)
+        {
+            return clienteService.NoExisteHuesped(dni);
         }
 
         private void ModalHuesped_Load(object sender, System.EventArgs e)

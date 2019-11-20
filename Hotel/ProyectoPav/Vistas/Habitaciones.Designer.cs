@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnEliminarHabitacion = new FlatButton.JFlatButton();
             this.btn_modificarHab = new FlatButton.JFlatButton();
             this.btnNuevaHabitacion = new FlatButton.JFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,7 +58,6 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtBuscar);
-            this.panel1.Controls.Add(this.btnEliminarHabitacion);
             this.panel1.Controls.Add(this.btn_modificarHab);
             this.panel1.Controls.Add(this.btnNuevaHabitacion);
             this.panel1.Controls.Add(this.panel3);
@@ -83,10 +81,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 28);
+            this.label1.Size = new System.Drawing.Size(168, 29);
             this.label1.TabIndex = 110;
             this.label1.Text = "HABITACION";
             // 
@@ -105,32 +103,6 @@
             this.txtBuscar.TabIndex = 109;
             this.txtBuscar.UseSystemPasswordChar = false;
             this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
-            // btnEliminarHabitacion
-            // 
-            this.btnEliminarHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnEliminarHabitacion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnEliminarHabitacion.ButtonText = "Eliminar Habitacion";
-            this.btnEliminarHabitacion.CausesValidation = false;
-            this.btnEliminarHabitacion.ErrorImageLeft = ((System.Drawing.Image)(resources.GetObject("btnEliminarHabitacion.ErrorImageLeft")));
-            this.btnEliminarHabitacion.ErrorImageRight = ((System.Drawing.Image)(resources.GetObject("btnEliminarHabitacion.ErrorImageRight")));
-            this.btnEliminarHabitacion.FocusBackground = System.Drawing.Color.Empty;
-            this.btnEliminarHabitacion.FocusFontColor = System.Drawing.Color.Empty;
-            this.btnEliminarHabitacion.ForeColors = System.Drawing.Color.White;
-            this.btnEliminarHabitacion.HoverBackground = System.Drawing.Color.Empty;
-            this.btnEliminarHabitacion.HoverFontColor = System.Drawing.Color.Empty;
-            this.btnEliminarHabitacion.ImageLeft = ((System.Drawing.Image)(resources.GetObject("btnEliminarHabitacion.ImageLeft")));
-            this.btnEliminarHabitacion.ImageRight = null;
-            this.btnEliminarHabitacion.LeftPictureColor = System.Drawing.Color.Transparent;
-            this.btnEliminarHabitacion.Location = new System.Drawing.Point(773, 601);
-            this.btnEliminarHabitacion.Name = "btnEliminarHabitacion";
-            this.btnEliminarHabitacion.PaddingLeftPicture = new System.Windows.Forms.Padding(0);
-            this.btnEliminarHabitacion.PaddingRightPicture = new System.Windows.Forms.Padding(0);
-            this.btnEliminarHabitacion.RightPictureColor = System.Drawing.Color.Transparent;
-            this.btnEliminarHabitacion.Size = new System.Drawing.Size(254, 43);
-            this.btnEliminarHabitacion.SizeModeLeft = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnEliminarHabitacion.SizeModeRight = System.Windows.Forms.PictureBoxSizeMode.Normal;
-            this.btnEliminarHabitacion.TabIndex = 108;
             // 
             // btn_modificarHab
             // 
@@ -333,7 +305,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
-        private FlatButton.JFlatButton btnEliminarHabitacion;
         private FlatButton.JFlatButton btn_modificarHab;
         private FlatButton.JFlatButton btnNuevaHabitacion;
         private System.Windows.Forms.Panel panel3;
