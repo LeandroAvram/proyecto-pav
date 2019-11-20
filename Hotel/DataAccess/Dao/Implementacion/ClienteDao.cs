@@ -79,7 +79,8 @@ namespace DataAccess.Dao.Implementacion
                              "                      mail = @mail," +
                              "                      telefono = @telefono," +
                              "                      id_tipo_documento = @id_tipo_documento," +
-                             "                      nro_documento = @nro_documento " +
+                             "                      nro_documento = @nro_documento, " +
+                             "                      estado = @estado " +
                              "  WHERE id_cliente = @id_cliente";
 
             var parametros = new Dictionary<string, object>();
@@ -88,8 +89,9 @@ namespace DataAccess.Dao.Implementacion
             parametros.Add("apellido", oCliente.Apellido);
             parametros.Add("mail", oCliente.Email);
             parametros.Add("telefono", oCliente.Telefono);
-            parametros.Add("id_tipo_documento", oCliente.TipoDocumento);
+            parametros.Add("id_tipo_documento", oCliente.TipoDocumento.Id);
             parametros.Add("nro_documento", oCliente.NroDocumento);
+            parametros.Add("estado", oCliente.Estado);
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }

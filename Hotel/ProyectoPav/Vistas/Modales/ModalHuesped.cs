@@ -28,6 +28,7 @@ namespace ProyectoPav.Vistas.Modales
         {
             formMode = op;
             oClienteSelected = clienteSelected;
+            oClienteSelected.Estado = "S";
         }
 
         public enum FormMode
@@ -80,6 +81,7 @@ namespace ProyectoPav.Vistas.Modales
                             oClienteSelected.Email = txtMailCliente.Text;
                             oClienteSelected.NroDocumento =txtDocumentoCliente.Text;
                             oClienteSelected.TipoDocumento = new TipoDocumento
+                           
                             {
                                 Id = (int)comboTipoDocumento.SelectedValue
                             };

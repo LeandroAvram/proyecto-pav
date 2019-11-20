@@ -95,5 +95,12 @@ namespace ProyectoPav.Vistas
             dgvReservas.DataSource = reservaService.ObtenerTodos();
             comboRolUsuario.SelectedIndex = -1;
         }
+
+        private void Btnreportereserva_Click(object sender, EventArgs e)
+        {
+            Presentacion.Reportes.ventanaReporteReserva frm = new Presentacion.Reportes.ventanaReporteReserva();
+            frm.ShowDialog();
+
+        }
     }
 }
