@@ -28,6 +28,7 @@ namespace ProyectoPav.Vistas.Modales
         {
             formMode = op;
             oClienteSelected = clienteSelected;
+            oClienteSelected.Estado = "S";
         }
 
         public enum FormMode
@@ -59,8 +60,7 @@ namespace ProyectoPav.Vistas.Modales
                                 if (clienteService.CrearUsuario(oCliente))
                                 {
                                     MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
-                                    this.Close();
+                                    Close();
                                 }
 
                             }
@@ -81,6 +81,7 @@ namespace ProyectoPav.Vistas.Modales
                             oClienteSelected.Email = txtMailCliente.Text;
                             oClienteSelected.NroDocumento =txtDocumentoCliente.Text;
                             oClienteSelected.TipoDocumento = new TipoDocumento
+                           
                             {
                                 Id = (int)comboTipoDocumento.SelectedValue
                             };
@@ -128,6 +129,8 @@ namespace ProyectoPav.Vistas.Modales
                 txtTelefonoCliente.Text = oClienteSelected.Telefono.ToString();
                 txtMailCliente.Text = oClienteSelected.Email;
                 txtDocumentoCliente.Text = oClienteSelected.NroDocumento.ToString();
+
+                comboTipoDocumento.Text = oClienteSelected.TipoDocumento.Nombre;
             }
         }
 
@@ -136,6 +139,7 @@ namespace ProyectoPav.Vistas.Modales
             cbo.DataSource = clienteService.ComboTipoDocumento(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private bool ValidarCampos()
@@ -211,6 +215,71 @@ namespace ProyectoPav.Vistas.Modales
         private void BtnCancelarHuesped_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtNombreCliente.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtApellidoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtApellidoCliente.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTelefonoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtTelefonoCliente.Text.Length > 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtMailCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtMailCliente.Text.Length > 45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtDocumentoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtDocumentoCliente.Text.Length > 9)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

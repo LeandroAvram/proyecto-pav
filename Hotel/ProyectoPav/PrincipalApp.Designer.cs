@@ -33,6 +33,7 @@
             this.pan_form = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pan_menu = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHabitacion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnModales = new System.Windows.Forms.Button();
@@ -44,11 +45,12 @@
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
             this.btn_cerrar = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.pan_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pan_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pan_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -91,6 +93,7 @@
             // pan_menu
             // 
             this.pan_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.pan_menu.Controls.Add(this.pictureBox2);
             this.pan_menu.Controls.Add(this.btnHabitacion);
             this.pan_menu.Controls.Add(this.btnUsuarios);
             this.pan_menu.Controls.Add(this.btnModales);
@@ -102,6 +105,15 @@
             this.pan_menu.Name = "pan_menu";
             this.pan_menu.Size = new System.Drawing.Size(183, 410);
             this.pan_menu.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentacion.Properties.Resources.icons8_hotel_building_50;
+            this.pictureBox2.Location = new System.Drawing.Point(57, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 52);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
             // btnHabitacion
             // 
@@ -141,18 +153,18 @@
             // 
             // btnModales
             // 
+            this.btnModales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModales.FlatAppearance.BorderSize = 0;
             this.btnModales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModales.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModales.ForeColor = System.Drawing.Color.White;
-            this.btnModales.Image = global::Presentacion.Properties.Resources.cama;
             this.btnModales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModales.Location = new System.Drawing.Point(12, 256);
+            this.btnModales.Location = new System.Drawing.Point(0, 373);
             this.btnModales.Name = "btnModales";
-            this.btnModales.Size = new System.Drawing.Size(171, 37);
+            this.btnModales.Size = new System.Drawing.Size(183, 37);
             this.btnModales.TabIndex = 10;
-            this.btnModales.Text = "    Modales";
-            this.btnModales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModales.Text = "Cerrar Sesion";
             this.btnModales.UseVisualStyleBackColor = true;
             this.btnModales.Click += new System.EventHandler(this.BtnModales_Click);
             // 
@@ -207,7 +219,7 @@
             this.pan_titulo.Controls.Add(this.btn_maximizar);
             this.pan_titulo.Controls.Add(this.btn_minimizar);
             this.pan_titulo.Controls.Add(this.btn_cerrar);
-            this.pan_titulo.Controls.Add(this.label1);
+            this.pan_titulo.Controls.Add(this.lblUser);
             this.pan_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pan_titulo.Location = new System.Drawing.Point(0, 0);
             this.pan_titulo.Name = "pan_titulo";
@@ -268,17 +280,17 @@
             this.btn_cerrar.TabStop = false;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sistema de Reserva para hotel";
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(12, 8);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(50, 22);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User";
             // 
             // PrincipalApp
             // 
@@ -294,6 +306,7 @@
             this.pan_form.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pan_menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pan_titulo.ResumeLayout(false);
             this.pan_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
@@ -310,7 +323,7 @@
         private System.Windows.Forms.Panel pan_titulo;
         private System.Windows.Forms.Panel pan_form;
         private System.Windows.Forms.Panel pan_menu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel barra_boton;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnReserva;
@@ -322,5 +335,6 @@
         private System.Windows.Forms.Button btnModales;
         private System.Windows.Forms.Button btnHabitacion;
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

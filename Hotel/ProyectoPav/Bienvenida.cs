@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace ProyectoPav
 {
@@ -40,6 +41,7 @@ namespace ProyectoPav
                 PrincipalApp prin = new PrincipalApp();
                 prin.WindowState = FormWindowState.Maximized;
                 prin.Show();
+                
             }
         }
 

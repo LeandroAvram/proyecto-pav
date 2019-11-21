@@ -73,7 +73,8 @@
             this.txtDocumentoCliente.SelectionStart = 0;
             this.txtDocumentoCliente.Size = new System.Drawing.Size(215, 23);
             this.txtDocumentoCliente.TabIndex = 6;
-            this.txtDocumentoCliente.UseSystemPasswordChar = true;
+            this.txtDocumentoCliente.UseSystemPasswordChar = false;
+            this.txtDocumentoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDocumentoCliente_KeyPress);
             // 
             // lblDocumento
             // 
@@ -102,6 +103,7 @@
             this.txtTelefonoCliente.Size = new System.Drawing.Size(215, 23);
             this.txtTelefonoCliente.TabIndex = 3;
             this.txtTelefonoCliente.UseSystemPasswordChar = false;
+            this.txtTelefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefonoCliente_KeyPress);
             // 
             // lblTelefono
             // 
@@ -185,6 +187,7 @@
             this.txtMailCliente.TabIndex = 4;
             this.txtMailCliente.UseSystemPasswordChar = false;
             this.txtMailCliente.Click += new System.EventHandler(this.TxtMailCliente_Click);
+            this.txtMailCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMailCliente_KeyPress);
             // 
             // txtApellidoCliente
             // 
@@ -200,6 +203,7 @@
             this.txtApellidoCliente.Size = new System.Drawing.Size(215, 23);
             this.txtApellidoCliente.TabIndex = 2;
             this.txtApellidoCliente.UseSystemPasswordChar = false;
+            this.txtApellidoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellidoCliente_KeyPress);
             // 
             // txtNombreCliente
             // 
@@ -215,6 +219,7 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(215, 23);
             this.txtNombreCliente.TabIndex = 1;
             this.txtNombreCliente.UseSystemPasswordChar = false;
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombreCliente_KeyPress);
             // 
             // lblTipo
             // 
@@ -291,6 +296,7 @@
             this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalHuesped";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Cliente";
             this.Load += new System.EventHandler(this.ModalHuesped_Load);
             this.ResumeLayout(false);

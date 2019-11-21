@@ -75,5 +75,17 @@ namespace ProyectoPav.Vistas
                     MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBuscar.Text != string.Empty)
+            {
+
+                dgvUsers.DataSource = oUserService.Busqueda(txtBuscar.Text);
+            }else
+            {
+                dgvUsers.DataSource = oUserService.ObtenerTodos();
+            }
+        }
     }
 }

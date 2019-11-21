@@ -36,7 +36,13 @@ namespace Negocio.Servicios
 
         public bool EliminarCliente(Cliente cliente)
         {
-            return true;
+            cliente.Estado = "N";
+            return clienteService.Update(cliente);
+        }
+
+        public IList<Cliente> Busqueda(string filtro)
+        {
+            return clienteService.GetConFiltro(filtro);
         }
     }
 }

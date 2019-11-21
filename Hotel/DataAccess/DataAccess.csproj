@@ -43,14 +43,21 @@
   <ItemGroup>
     <Compile Include="Dao\Implementacion\ClienteDao.cs" />
     <Compile Include="Dao\Implementacion\habitacionDao.cs" />
+    <Compile Include="Dao\Implementacion\ReservaDao.cs" />
     <Compile Include="Dao\Implementacion\UserDao.cs" />
     <Compile Include="Dao\Interfaz\IClienteDao.cs" />
     <Compile Include="Dao\Interfaz\IHabitacionDao.cs" />
+    <Compile Include="Dao\Interfaz\IReservaDao.cs" />
     <Compile Include="Dao\Interfaz\IUserDao.cs" />
+    <Compile Include="Helper\DataManager.cs" />
     <Compile Include="Helper\DBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9544551c-6881-4afc-9671-2b55425d3af7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{ae4fb336-9055-429c-8b61-fc17c44875d0}</Project>
       <Name>Entidades</Name>

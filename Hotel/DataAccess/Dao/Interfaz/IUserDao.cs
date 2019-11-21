@@ -8,10 +8,12 @@ namespace DataAccess.Dao.Interfaz
     {
         DataTable getComboRol(string tabla);
 
-       bool Create(Usuario oUsuario);
+       bool Create(T oUsuario);
 
-        IList<Usuario> GetAll();
+        IList<T> GetAll();
+        IList<T> GetConFiltro( string filtro);
 
-        bool Update(Usuario oUsuario);
+        bool Login(string user, string pass);
+        bool Update(T oUsuario);
     }
 }

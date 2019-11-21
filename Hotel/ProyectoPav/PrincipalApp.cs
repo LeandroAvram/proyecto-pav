@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoPav.Vistas.Modales;
+using Common.Cache;
 
 namespace ProyectoPav
 {
@@ -17,6 +18,16 @@ namespace ProyectoPav
         public PrincipalApp()
         {
             InitializeComponent();
+            
+            if(UserLoginCache.IdRolUsuario == 1)
+            {
+                lblUser.Text ="Administrador: " + UserLoginCache.nombre + " " + UserLoginCache.apellido;
+            }
+            else
+            {
+                lblUser.Text = "Usuario: " + UserLoginCache.nombre + " " + UserLoginCache.apellido;
+                btnUsuarios.Visible = false;
+            }
         }
         #region Funcionalidades del formulario
         //-------------------------------------------------------------------
@@ -130,8 +141,16 @@ namespace ProyectoPav
         private void BtnModales_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var modalModal = new ModalCentral();
-            modalModal.Show();
+            var login = new Login();
+            login.Show();
+            UserLoginCache.IdUser = 0;
+            UserLoginCache.nombre = "";
+            UserLoginCache.apellido = "";
+            UserLoginCache.email = "";
+            UserLoginCache.IdRolUsuario = 0;
+            UserLoginCache.telefono = "";
+            UserLoginCache.pass = "";
+
 
         }
 
@@ -193,6 +212,11 @@ namespace ProyectoPav
         {
             btnUsuarios.Image = Presentacion.Properties.Resources.cama1;
             btnUsuarios.ForeColor = Color.White;
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Btn_maximizar_Click(object sender, EventArgs e)

@@ -76,6 +76,7 @@ namespace ProyectoPav.Vistas.Modales
             cbo.DataSource = userService.ComboRol(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private void MaterialSingleLineTextField3_Click(object sender, System.EventArgs e)
@@ -107,7 +108,11 @@ namespace ProyectoPav.Vistas.Modales
                                 {
                                     MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     //Vistas.Usuarios.dgvUsers.DataSource = oUserService.ObtenerTodos();
-                                    this.Close();
+                                    Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Usuario no insertado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
 
                             }
@@ -205,7 +210,82 @@ namespace ProyectoPav.Vistas.Modales
             {
                 comboRolUsuario.BackColor = Color.White;
             }
+
             return true;
+        }
+
+        private void TxtNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch))
+            {
+                return;
+            }
+            if (txtNombreUsuario.Text.Length > 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtApellidoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtApellidoUsuario.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtTelefonoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (!char.IsDigit(ch) || txtTelefonoUsuario.Text.Length > 15)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtMailUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtMailUsuario.Text.Length > 45)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtPassUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (ch.Equals('\b') || ch.Equals('\r'))
+            {
+                return;
+            }
+            if (txtPassUsuario.Text.Length > 30)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnCancelarUsuario_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

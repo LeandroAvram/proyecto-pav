@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReservaDatos.cs" />
+    <Compile Include="ReservaMod.cs" />
     <Compile Include="FiltrosHabitacion.cs" />
     <Compile Include="Cathabitacion.cs" />
     <Compile Include="Estadohabit.cs" />

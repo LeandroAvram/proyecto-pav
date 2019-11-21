@@ -78,6 +78,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -114,6 +126,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSetPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSetReservas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReservas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ventanaReportePagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ventanaReportePagos.Designer.cs">
+      <DependentUpon>ventanaReportePagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ventanaReporteReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ventanaReporteReserva.Designer.cs">
+      <DependentUpon>ventanaReporteReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Vistas\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +172,18 @@
     </Compile>
     <Compile Include="Vistas\Habitaciones.Designer.cs">
       <DependentUpon>Habitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalEstadoReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalEstadoReserva.Designer.cs">
+      <DependentUpon>ModalEstadoReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Modales\ModalPago.Designer.cs">
+      <DependentUpon>ModalPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Modales\ModalReserva.cs">
       <SubType>Form</SubType>
@@ -194,6 +241,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportPagosrdlc.rdlc" />
+    <EmbeddedResource Include="Reportes\ventanaReportePagos.resx">
+      <DependentUpon>ventanaReportePagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ventanaReporteReserva.resx">
+      <DependentUpon>ventanaReporteReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Habitaciones.resx">
       <DependentUpon>Habitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalEstadoReserva.resx">
+      <DependentUpon>ModalEstadoReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Modales\ModalPago.resx">
+      <DependentUpon>ModalPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modales\ModalReserva.resx">
       <DependentUpon>ModalReserva.cs</DependentUpon>
@@ -247,6 +308,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSetPagos.xsc">
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetPagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPagos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetPagos.xss">
+      <DependentUpon>DataSetPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetReservas.xsc">
+      <DependentUpon>DataSetReservas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetReservas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReservas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetReservas.xss">
+      <DependentUpon>DataSetReservas.xsd</DependentUpon>
+    </None>
     <None Include="Resources\cama.png" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +363,10 @@
     <None Include="Resources\usuario-color.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9544551c-6881-4afc-9671-2b55425d3af7}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{ae4fb336-9055-429c-8b61-fc17c44875d0}</Project>
       <Name>Entidades</Name>
@@ -289,6 +376,23 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-building-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

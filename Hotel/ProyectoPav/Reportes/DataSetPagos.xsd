@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPagos" targetNamespace="http://tempuri.org/DataSetPagos.xsd" xmlns:mstns="http://tempuri.org/DataSetPagos.xsd" xmlns="http://tempuri.org/DataSetPagos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=DESKTOP-P0MOIVD\SQLEXPRESS;Initial Catalog=db_Hotel;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-p0moivd\sqlexpress.db_Hotel.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_HotelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_HotelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Presentacion.Properties.Settings.GlobalReference.Default.db_HotelConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_HotelConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        T_Forma_Pago.*, T_Pago.*, T_Cliente.*, T_Reserva.*
+FROM            T_Forma_Pago INNER JOIN
+                         T_Pago ON T_Forma_Pago.id_formaPago = T_Pago.id_formapago INNER JOIN
+                         T_Reserva ON T_Pago.id_reserva = T_Reserva.id_reserva INNER JOIN
+                         T_Cliente ON T_Reserva.id_cliente = T_Cliente.id_cliente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_formaPago" DataSetColumn="id_formaPago" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="id_pago" DataSetColumn="id_pago" />
+              <Mapping SourceColumn="id_reserva" DataSetColumn="id_reserva" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="id_formapago1" DataSetColumn="id_formapago1" />
+              <Mapping SourceColumn="fechaPago" DataSetColumn="fechaPago" />
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="nombre1" DataSetColumn="nombre1" />
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="mail" DataSetColumn="mail" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="id_tipo_documento" DataSetColumn="id_tipo_documento" />
+              <Mapping SourceColumn="nro_documento" DataSetColumn="nro_documento" />
+              <Mapping SourceColumn="id_vehiculo" DataSetColumn="id_vehiculo" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="id_reserva1" DataSetColumn="id_reserva1" />
+              <Mapping SourceColumn="id_tipo_reserva" DataSetColumn="id_tipo_reserva" />
+              <Mapping SourceColumn="id_habitacion" DataSetColumn="id_habitacion" />
+              <Mapping SourceColumn="id_usuario" DataSetColumn="id_usuario" />
+              <Mapping SourceColumn="id_cliente1" DataSetColumn="id_cliente1" />
+              <Mapping SourceColumn="id_estado_reserva" DataSetColumn="id_estado_reserva" />
+              <Mapping SourceColumn="fecha_ingreso" DataSetColumn="fecha_ingreso" />
+              <Mapping SourceColumn="fecha_egreso" DataSetColumn="fecha_egreso" />
+              <Mapping SourceColumn="cant_persona" DataSetColumn="cant_persona" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPagos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPagos" msprop:Generator_UserDSName="DataSetPagos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_formaPago" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_formaPago" msprop:Generator_ColumnPropNameInRow="id_formaPago" msprop:Generator_ColumnPropNameInTable="id_formaPagoColumn" msprop:Generator_UserColumnName="id_formaPago" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_pago" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_pago" msprop:Generator_ColumnPropNameInRow="id_pago" msprop:Generator_ColumnPropNameInTable="id_pagoColumn" msprop:Generator_UserColumnName="id_pago" type="xs:int" />
+              <xs:element name="id_reserva" msprop:Generator_ColumnVarNameInTable="columnid_reserva" msprop:Generator_ColumnPropNameInRow="id_reserva" msprop:Generator_ColumnPropNameInTable="id_reservaColumn" msprop:Generator_UserColumnName="id_reserva" type="xs:int" />
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:int" />
+              <xs:element name="id_formapago1" msprop:Generator_ColumnVarNameInTable="columnid_formapago1" msprop:Generator_ColumnPropNameInRow="id_formapago1" msprop:Generator_ColumnPropNameInTable="id_formapago1Column" msprop:Generator_UserColumnName="id_formapago1" type="xs:int" />
+              <xs:element name="fechaPago" msprop:Generator_ColumnVarNameInTable="columnfechaPago" msprop:Generator_ColumnPropNameInRow="fechaPago" msprop:Generator_ColumnPropNameInTable="fechaPagoColumn" msprop:Generator_UserColumnName="fechaPago" type="xs:dateTime" />
+              <xs:element name="id_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_UserColumnName="id_cliente" type="xs:int" />
+              <xs:element name="nombre1" msprop:Generator_ColumnVarNameInTable="columnnombre1" msprop:Generator_ColumnPropNameInRow="nombre1" msprop:Generator_ColumnPropNameInTable="nombre1Column" msprop:Generator_UserColumnName="nombre1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mail" msprop:Generator_ColumnVarNameInTable="columnmail" msprop:Generator_ColumnPropNameInRow="mail" msprop:Generator_ColumnPropNameInTable="mailColumn" msprop:Generator_UserColumnName="mail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_tipo_documento" msprop:Generator_ColumnVarNameInTable="columnid_tipo_documento" msprop:Generator_ColumnPropNameInRow="id_tipo_documento" msprop:Generator_ColumnPropNameInTable="id_tipo_documentoColumn" msprop:Generator_UserColumnName="id_tipo_documento" type="xs:int" />
+              <xs:element name="nro_documento" msprop:Generator_ColumnVarNameInTable="columnnro_documento" msprop:Generator_ColumnPropNameInRow="nro_documento" msprop:Generator_ColumnPropNameInTable="nro_documentoColumn" msprop:Generator_UserColumnName="nro_documento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_vehiculo" msprop:Generator_ColumnVarNameInTable="columnid_vehiculo" msprop:Generator_ColumnPropNameInRow="id_vehiculo" msprop:Generator_ColumnPropNameInTable="id_vehiculoColumn" msprop:Generator_UserColumnName="id_vehiculo" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_reserva1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_reserva1" msprop:Generator_ColumnPropNameInRow="id_reserva1" msprop:Generator_ColumnPropNameInTable="id_reserva1Column" msprop:Generator_UserColumnName="id_reserva1" type="xs:int" />
+              <xs:element name="id_tipo_reserva" msprop:Generator_ColumnVarNameInTable="columnid_tipo_reserva" msprop:Generator_ColumnPropNameInRow="id_tipo_reserva" msprop:Generator_ColumnPropNameInTable="id_tipo_reservaColumn" msprop:Generator_UserColumnName="id_tipo_reserva" type="xs:int" />
+              <xs:element name="id_habitacion" msprop:Generator_ColumnVarNameInTable="columnid_habitacion" msprop:Generator_ColumnPropNameInRow="id_habitacion" msprop:Generator_ColumnPropNameInTable="id_habitacionColumn" msprop:Generator_UserColumnName="id_habitacion" type="xs:int" />
+              <xs:element name="id_usuario" msprop:Generator_ColumnVarNameInTable="columnid_usuario" msprop:Generator_ColumnPropNameInRow="id_usuario" msprop:Generator_ColumnPropNameInTable="id_usuarioColumn" msprop:Generator_UserColumnName="id_usuario" type="xs:int" />
+              <xs:element name="id_cliente1" msprop:Generator_ColumnVarNameInTable="columnid_cliente1" msprop:Generator_ColumnPropNameInRow="id_cliente1" msprop:Generator_ColumnPropNameInTable="id_cliente1Column" msprop:Generator_UserColumnName="id_cliente1" type="xs:int" />
+              <xs:element name="id_estado_reserva" msprop:Generator_ColumnVarNameInTable="columnid_estado_reserva" msprop:Generator_ColumnPropNameInRow="id_estado_reserva" msprop:Generator_ColumnPropNameInTable="id_estado_reservaColumn" msprop:Generator_UserColumnName="id_estado_reserva" type="xs:int" />
+              <xs:element name="fecha_ingreso" msprop:Generator_ColumnVarNameInTable="columnfecha_ingreso" msprop:Generator_ColumnPropNameInRow="fecha_ingreso" msprop:Generator_ColumnPropNameInTable="fecha_ingresoColumn" msprop:Generator_UserColumnName="fecha_ingreso" type="xs:dateTime" />
+              <xs:element name="fecha_egreso" msprop:Generator_ColumnVarNameInTable="columnfecha_egreso" msprop:Generator_ColumnPropNameInRow="fecha_egreso" msprop:Generator_ColumnPropNameInTable="fecha_egresoColumn" msprop:Generator_UserColumnName="fecha_egreso" type="xs:dateTime" />
+              <xs:element name="cant_persona" msprop:Generator_ColumnVarNameInTable="columncant_persona" msprop:Generator_ColumnPropNameInRow="cant_persona" msprop:Generator_ColumnPropNameInTable="cant_personaColumn" msprop:Generator_UserColumnName="cant_persona" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_formaPago" />
+      <xs:field xpath="mstns:id_pago" />
+      <xs:field xpath="mstns:id_cliente" />
+      <xs:field xpath="mstns:id_reserva1" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
