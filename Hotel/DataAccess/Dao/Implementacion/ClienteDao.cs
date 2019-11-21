@@ -123,5 +123,12 @@ namespace DataAccess.Dao.Implementacion
 
             return (DBHelper.GetDBHelper().EjecutarSQL(str_sql, parametros) == 1);
         }
+
+        public bool NoExisteHuesped(string dni)
+        {
+            var str_sql = "select * from T_Cliente where nro_documento = " + dni;
+            var resultado = DBHelper.GetDBHelper().ConsultaSQL(str_sql);
+            return resultado.Rows.Count == 0;
+        }
     }
 }

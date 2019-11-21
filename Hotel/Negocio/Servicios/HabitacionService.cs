@@ -58,5 +58,10 @@ namespace Negocio.Servicios
         {
             return habService.GetConFiltro(filtro);
         }
+
+        public bool NoExisteHabitacion(int nroHabitacion)
+        {
+            return habService.NoExisteHabitacion(nroHabitacion);
+        }
     }
 }

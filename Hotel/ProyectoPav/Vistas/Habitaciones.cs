@@ -24,7 +24,6 @@ namespace ProyectoPav.Vistas
             {
                 btn_modificarHab.Visible = false;
                 btnNuevaHabitacion.Visible = false;
-                btnEliminarHabitacion.Visible = false;
 
             }
         }
@@ -43,6 +42,7 @@ namespace ProyectoPav.Vistas
             var habitacion = (Habitacion)dgvHabitacion.CurrentRow.DataBoundItem;
             form2.InicializarFormulario(Modales.ModalHabitacion.FormMode.update, habitacion);
             form2.ShowDialog();
+            dgvHabitacion.DataSource = ohabitacion.ObtenerTodos();
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)

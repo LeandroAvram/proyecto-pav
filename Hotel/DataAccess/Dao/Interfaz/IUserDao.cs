@@ -15,5 +15,6 @@ namespace DataAccess.Dao.Interfaz
 
         bool Login(string user, string pass);
         bool Update(T oUsuario);
+        bool NoExisteUsuario(string mail);
     }
 }
