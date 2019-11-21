@@ -19,6 +19,16 @@ namespace ProyectoPav
         {
             InitializeComponent();
             lblUser.Text = UserLoginCache.nombre + " " + UserLoginCache.apellido;
+            if(UserLoginCache.IdRolUsuario == 1)
+            {
+                txtRol.Text = "Administrador";
+                
+            }
+            else
+            {
+                txtRol.Text = "Usuario";
+                btnUsuarios.Visible = false;
+            }
         }
         #region Funcionalidades del formulario
         //-------------------------------------------------------------------

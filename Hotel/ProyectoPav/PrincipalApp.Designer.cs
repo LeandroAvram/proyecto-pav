@@ -40,7 +40,7 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnReserva = new System.Windows.Forms.Button();
             this.pan_titulo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtRol = new System.Windows.Forms.Label();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
@@ -204,7 +204,7 @@
             // pan_titulo
             // 
             this.pan_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.pan_titulo.Controls.Add(this.label2);
+            this.pan_titulo.Controls.Add(this.txtRol);
             this.pan_titulo.Controls.Add(this.btn_restaurar);
             this.pan_titulo.Controls.Add(this.btn_maximizar);
             this.pan_titulo.Controls.Add(this.btn_minimizar);
@@ -217,18 +217,18 @@
             this.pan_titulo.TabIndex = 0;
             this.pan_titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pan_titulo_MouseMove);
             // 
-            // label2
+            // txtRol
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Administrador";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            this.txtRol.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtRol.AutoSize = true;
+            this.txtRol.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.Color.White;
+            this.txtRol.Location = new System.Drawing.Point(12, 8);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(127, 22);
+            this.txtRol.TabIndex = 6;
+            this.txtRol.Text = "Administrador";
+            this.txtRol.Click += new System.EventHandler(this.Label2_Click);
             // 
             // btn_restaurar
             // 
@@ -337,6 +337,6 @@
         private System.Windows.Forms.Button btnModales;
         private System.Windows.Forms.Button btnHabitacion;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtRol;
     }
 }

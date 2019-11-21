@@ -4,6 +4,7 @@ using MaterialSkin.Controls;
 using Negocio.Servicios;
 using System;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace ProyectoPav.Vistas
 {
@@ -20,6 +21,13 @@ namespace ProyectoPav.Vistas
             skinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.LightBlue400, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, Accent.Orange700, MaterialSkin.TextShade.WHITE);
             ohabitacion = new HabitacionService();
             dgvHabitacion.DataSource = ohabitacion.ObtenerTodos();
+            if (UserLoginCache.IdRolUsuario != 1)
+            {
+                btn_modificarHab.Visible = false;
+                btnNuevaHabitacion.Visible = false;
+                btnEliminarHabitacion.Visible = false;
+
+            }
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)

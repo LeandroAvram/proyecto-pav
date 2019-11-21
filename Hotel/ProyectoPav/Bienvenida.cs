@@ -38,19 +38,9 @@ namespace ProyectoPav
             {
                 timer2.Stop();
                 this.Close();
-                if(UserLoginCache.IdRolUsuario == 1)
-                {
-                    PrincipalApp prin = new PrincipalApp();
-                    prin.WindowState = FormWindowState.Maximized;
-                    prin.Show();
-                }
-                else
-                {
-
-                    PrincipalAppUser prin2 = new PrincipalAppUser();
-                    prin2.WindowState = FormWindowState.Maximized;
-                    prin2.Show();
-                }
+                PrincipalApp prin = new PrincipalApp();
+                prin.WindowState = FormWindowState.Maximized;
+                prin.Show();
                 
             }
         }
