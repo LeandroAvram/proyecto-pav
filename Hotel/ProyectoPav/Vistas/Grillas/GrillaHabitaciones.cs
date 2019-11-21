@@ -34,22 +34,6 @@ namespace ProyectoPav.Vistas.Grillas
             dgvHabitacion.DataSource = oHabitacion.ObtenerTodos();
         }
 
-        private void BtnFiltrarHabitaciones_Click(object sender, EventArgs e)
-        {
-            if (DateIngreso.Text == "" || DateEgreso.Text == "")
-            {
-                //TODO validacion de fechas requeridas
-                return;
-            }
-
-            //TODO generacion de filtros
-            var filtros = new FiltrosHabitacion 
-            {
-            };
-
-            dgvHabitacion.DataSource = oHabitacion.FiltrarHabitaciones(filtros);
-        }
-
         private void BtnSeleccionarHabitacion_Click(object sender, EventArgs e)
         {
             if (dgvHabitacion.CurrentRow.DataBoundItem != null)
@@ -62,6 +46,18 @@ namespace ProyectoPav.Vistas.Grillas
                 return;
             }
             Close();
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text != string.Empty)
+            {
+                dgvHabitacion.DataSource = oHabitacion.Busqueda(txtBuscar.Text);
+            }
+            else
+            {
+                dgvHabitacion.DataSource = oHabitacion.ObtenerTodos();
+            }
         }
     }
 }
