@@ -14,5 +14,6 @@ namespace DataAccess.Dao.Interfaz
       IList<Habitacion> FiltrarHabitaciones(FiltrosHabitacion filtros);
       bool Update(Habitacion ohabitacion);
       bool Delete(Habitacion ohabitacion);
+      IList<Habitacion> GetConFiltro(string filtro);
     }
 }

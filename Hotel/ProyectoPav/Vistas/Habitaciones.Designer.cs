@@ -41,13 +41,13 @@
             this.btnNuevaHabitacion = new FlatButton.JFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvHabitacion = new MetroFramework.Controls.MetroGrid();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nro_habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.catHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoHab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).BeginInit();
@@ -105,6 +105,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(251, 23);
             this.txtBuscar.TabIndex = 109;
             this.txtBuscar.UseSystemPasswordChar = false;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // btnEliminarHabitacion
             // 
@@ -254,15 +255,6 @@
             this.dgvHabitacion.UseStyleColors = true;
             this.dgvHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvHabitacion_CellContentClick);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1121, 7);
-            this.panel2.TabIndex = 2;
-            // 
             // id
             // 
             this.id.DataPropertyName = "id_habitacion";
@@ -310,6 +302,15 @@
             this.estadoHab.HeaderText = "Estado";
             this.estadoHab.Name = "estadoHab";
             this.estadoHab.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1121, 7);
+            this.panel2.TabIndex = 2;
             // 
             // Habitaciones
             // 
