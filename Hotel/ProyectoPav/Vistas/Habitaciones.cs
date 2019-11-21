@@ -3,7 +3,6 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using Negocio.Servicios;
 using System;
-using System.Windows.Forms;
 using Common.Cache;
 
 namespace ProyectoPav.Vistas
@@ -30,15 +29,6 @@ namespace ProyectoPav.Vistas
             }
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DgvHabitacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void BtnNuevaHabitacion_Click(object sender, EventArgs e)
         {

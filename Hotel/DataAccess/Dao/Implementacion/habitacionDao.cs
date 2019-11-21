@@ -180,8 +180,7 @@ namespace DataAccess.Dao.Implementacion
 
             public bool Update(Habitacion oHabitacion)
             {
-                String str_sql = " UPDATE T_Habitacion SET Id_habitacion = @id," +
-                                 "                      nro_habitacion = @nro," +
+                String str_sql = " UPDATE T_Habitacion SET nro_habitacion = @nro," +
                                  "                      precio = @precio," +
                                  "                      id_tipo_habitacion = @tipoHab," +
                                  "                      id_cat_habitacion = @categoria," +

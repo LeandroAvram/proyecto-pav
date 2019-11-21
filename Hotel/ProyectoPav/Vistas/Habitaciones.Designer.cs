@@ -69,7 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 685);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label2
             // 
@@ -253,7 +252,6 @@
             this.dgvHabitacion.UseCustomBackColor = true;
             this.dgvHabitacion.UseCustomForeColor = true;
             this.dgvHabitacion.UseStyleColors = true;
-            this.dgvHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvHabitacion_CellContentClick);
             // 
             // id
             // 

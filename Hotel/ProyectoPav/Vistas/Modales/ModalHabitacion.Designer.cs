@@ -113,7 +113,6 @@
             this.txtNumeroHabitacion.Size = new System.Drawing.Size(171, 23);
             this.txtNumeroHabitacion.TabIndex = 113;
             this.txtNumeroHabitacion.UseSystemPasswordChar = false;
-            this.txtNumeroHabitacion.Click += new System.EventHandler(this.TxtNumeroHabitacion_Click);
             this.txtNumeroHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumeroHabitacion_KeyPress);
             // 
             // lblTipoHabitacion

@@ -205,10 +205,8 @@ namespace ProyectoPav.Vistas.Modales
             {
                 txtPrecio.BackColor = Color.White;
             }
-            
 
-            
-          if (comboEstadoHabitacion.Text == string.Empty)
+            if (comboEstadoHabitacion.Text == string.Empty)
             {
                 comboEstadoHabitacion.BackColor = Color.Red;
                 comboEstadoHabitacion.Focus();
@@ -244,9 +242,9 @@ namespace ProyectoPav.Vistas.Modales
             return true;
         }
 
-        private void TxtNumeroHabitacion_Click(object sender, EventArgs e)
+        private void BtnCancelarHabitacion_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void TxtNumeroHabitacion_KeyPress(object sender, KeyPressEventArgs e)
@@ -256,7 +254,7 @@ namespace ProyectoPav.Vistas.Modales
             {
                 return;
             }
-            if (!char.IsDigit(ch) || txtNumeroHabitacion.Text.Length > 7)
+            if (!char.IsDigit(ch) || txtNumeroHabitacion.Text.Length > 6)
             {
                 e.Handled = true;
             }
@@ -265,19 +263,14 @@ namespace ProyectoPav.Vistas.Modales
         private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (ch.Equals('\b') || ch.Equals('\r'))
+                if (ch.Equals('\b') || ch.Equals('\r') || ((ch.Equals('.') || ch.Equals(',')) && txtPrecio.Text.Length < 15))
             {
                 return;
             }
-            if (!char.IsDigit(ch) || txtPrecio.Text.Length > 8)
+            if (!char.IsDigit(ch) || txtPrecio.Text.Length > 15)
             {
                 e.Handled = true;
             }
-        }
-
-        private void BtnCancelarHabitacion_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
