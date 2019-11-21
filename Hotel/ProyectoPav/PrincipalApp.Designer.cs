@@ -33,6 +33,7 @@
             this.pan_form = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pan_menu = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnHabitacion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnModales = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnReserva = new System.Windows.Forms.Button();
             this.pan_titulo = new System.Windows.Forms.Panel();
-            this.txtRol = new System.Windows.Forms.Label();
             this.btn_restaurar = new System.Windows.Forms.PictureBox();
             this.btn_maximizar = new System.Windows.Forms.PictureBox();
             this.btn_minimizar = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,7 @@
             this.pan_form.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pan_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pan_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_maximizar)).BeginInit();
@@ -92,6 +93,7 @@
             // pan_menu
             // 
             this.pan_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.pan_menu.Controls.Add(this.pictureBox2);
             this.pan_menu.Controls.Add(this.btnHabitacion);
             this.pan_menu.Controls.Add(this.btnUsuarios);
             this.pan_menu.Controls.Add(this.btnModales);
@@ -103,6 +105,15 @@
             this.pan_menu.Name = "pan_menu";
             this.pan_menu.Size = new System.Drawing.Size(183, 410);
             this.pan_menu.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentacion.Properties.Resources.icons8_hotel_building_50;
+            this.pictureBox2.Location = new System.Drawing.Point(57, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 52);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
             // 
             // btnHabitacion
             // 
@@ -204,7 +215,6 @@
             // pan_titulo
             // 
             this.pan_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.pan_titulo.Controls.Add(this.txtRol);
             this.pan_titulo.Controls.Add(this.btn_restaurar);
             this.pan_titulo.Controls.Add(this.btn_maximizar);
             this.pan_titulo.Controls.Add(this.btn_minimizar);
@@ -216,19 +226,6 @@
             this.pan_titulo.Size = new System.Drawing.Size(800, 40);
             this.pan_titulo.TabIndex = 0;
             this.pan_titulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Pan_titulo_MouseMove);
-            // 
-            // txtRol
-            // 
-            this.txtRol.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtRol.AutoSize = true;
-            this.txtRol.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRol.ForeColor = System.Drawing.Color.White;
-            this.txtRol.Location = new System.Drawing.Point(12, 8);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(127, 22);
-            this.txtRol.TabIndex = 6;
-            this.txtRol.Text = "Administrador";
-            this.txtRol.Click += new System.EventHandler(this.Label2_Click);
             // 
             // btn_restaurar
             // 
@@ -289,7 +286,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(145, 8);
+            this.lblUser.Location = new System.Drawing.Point(12, 8);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(50, 22);
             this.lblUser.TabIndex = 1;
@@ -309,6 +306,7 @@
             this.pan_form.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pan_menu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pan_titulo.ResumeLayout(false);
             this.pan_titulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_restaurar)).EndInit();
@@ -337,6 +335,6 @@
         private System.Windows.Forms.Button btnModales;
         private System.Windows.Forms.Button btnHabitacion;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Label txtRol;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

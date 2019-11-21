@@ -45,5 +45,10 @@ namespace Negocio.Servicios
 
             return userService.Update(oUsuarioSelected);
         }
+
+        public IList<Usuario> Busqueda(string filtro)
+        {
+            return userService.GetConFiltro(filtro);
+        }
     }
 }

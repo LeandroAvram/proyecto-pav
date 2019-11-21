@@ -107,6 +107,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(251, 23);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.UseSystemPasswordChar = false;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // btnEliminarUsuario
             // 

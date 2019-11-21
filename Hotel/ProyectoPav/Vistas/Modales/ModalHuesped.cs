@@ -129,6 +129,8 @@ namespace ProyectoPav.Vistas.Modales
                 txtTelefonoCliente.Text = oClienteSelected.Telefono.ToString();
                 txtMailCliente.Text = oClienteSelected.Email;
                 txtDocumentoCliente.Text = oClienteSelected.NroDocumento.ToString();
+
+                comboTipoDocumento.Text = oClienteSelected.TipoDocumento.Nombre;
             }
         }
 
@@ -137,6 +139,7 @@ namespace ProyectoPav.Vistas.Modales
             cbo.DataSource = clienteService.ComboTipoDocumento(tabla);
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private bool ValidarCampos()

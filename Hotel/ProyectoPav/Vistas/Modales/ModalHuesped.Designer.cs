@@ -296,6 +296,7 @@
             this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalHuesped";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Cliente";
             this.Load += new System.EventHandler(this.ModalHuesped_Load);
             this.ResumeLayout(false);

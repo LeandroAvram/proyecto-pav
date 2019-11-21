@@ -39,5 +39,10 @@ namespace Negocio.Servicios
             cliente.Estado = "N";
             return clienteService.Update(cliente);
         }
+
+        public IList<Cliente> Busqueda(string filtro)
+        {
+            return clienteService.GetConFiltro(filtro);
+        }
     }
 }

@@ -311,6 +311,7 @@
             this.Controls.Add(this.LblApellido);
             this.Controls.Add(this.LblNombre);
             this.Name = "ModalUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Nuevo Usuario";
             this.Load += new System.EventHandler(this.ModalUsuario_Load);
             this.ResumeLayout(false);

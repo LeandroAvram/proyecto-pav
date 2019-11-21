@@ -11,6 +11,7 @@ namespace DataAccess.Dao.Interfaz
        bool Create(T oUsuario);
 
         IList<T> GetAll();
+        IList<T> GetConFiltro( string filtro);
 
         bool Login(string user, string pass);
         bool Update(T oUsuario);

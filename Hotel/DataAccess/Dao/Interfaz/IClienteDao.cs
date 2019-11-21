@@ -13,6 +13,7 @@ namespace DataAccess.Dao.Interfaz
         DataTable getComboTipoDocumento(string tabla);
         bool Create(Cliente cliente);
         IList<Cliente> GetAll();
+        IList<T> GetConFiltro(string filtro);
         bool Update(Cliente oCliente);
     }
 }
